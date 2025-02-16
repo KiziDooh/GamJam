@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmq45103ai7oy"]
+[gd_scene load_steps=8 format=3 uid="uid://dmq45103ai7oy"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_mrmbn"]
 [ext_resource type="PackedScene" uid="uid://b6c3rwc7r6xl" path="res://scenes/bunny.tscn" id="3_rvuoq"]
@@ -18,6 +18,12 @@ background_mode = 2
 sky = SubResource("Sky_q6vde")
 tonemap_mode = 2
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
+albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
+metallic = 0.06
+metallic_texture_channel = 1
+roughness = 0.81
+
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -36,6 +42,7 @@ can_sprint = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, 0.999852, 0.987595, 0.629733)
+material_override = SubResource("StandardMaterial3D_afntl")
 use_collision = true
 size = Vector3(26.4658, 1, 30.3584)
 
