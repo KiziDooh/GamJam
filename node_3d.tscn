@@ -33,3 +33,7 @@ can_sprint = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997703, 1.05212, 0.276973)
 use_collision = true
 size = Vector3(26.4658, 1, 30.3584)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 6)
+use_collision = true
