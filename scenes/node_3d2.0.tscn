@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bv3mtcckad750"]
+[gd_scene load_steps=12 format=3 uid="uid://bkeycdakvh2p"]
 
 [ext_resource type="Script" path="res://scenes/scripts/health_bar.gd" id="1_g12i0"]
 [ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://scenes/models/tree.tscn" id="2_mjekm"]
@@ -31,6 +31,7 @@ offset_bottom = 633.0
 value = 100.0
 exp_edit = true
 script = ExtResource("1_g12i0")
+metadata/_edit_use_anchors_ = true
 
 [node name="trees" type="Node" parent="."]
 
