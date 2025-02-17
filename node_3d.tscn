@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmq45103ai7oy"]
+[gd_scene load_steps=12 format=3 uid="uid://dmq45103ai7oy"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_mrmbn"]
 [ext_resource type="PackedScene" uid="uid://dxlpb1ipv50mf" path="res://scenes/bench.blend" id="2_jy4l7"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://scenes/tree.tscn" id="4_vs3k8"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/knife.tscn" id="5_w4fps"]
 [ext_resource type="PackedScene" uid="uid://2cnw73r23tsu" path="res://mean bunny.blend" id="5_w55xl"]
+[ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/glitch-transition-sfx-182152.mp3" id="7_1tpfl"]
+[ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/glitch-01-231255.mp3" id="8_u6v1r"]
+[ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/tv-glitch-6245.mp3" id="9_84ro0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
@@ -15,7 +18,6 @@ metallic_texture_channel = 1
 roughness = 0.81
 
 [node name="Node3D" type="Node3D"]
-visible = false
 
 [node name="trees" type="Node" parent="."]
 
@@ -112,3 +114,13 @@ transform = Transform3D(0.1, 0, -4.37114e-09, -4.37114e-09, 1.91069e-16, -0.1, 0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource("4_4qra6")
 autoplay = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sound"]
+stream = ExtResource("8_u6v1r")
+autoplay = true
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Sound"]
+stream = ExtResource("7_1tpfl")
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="Sound"]
+stream = ExtResource("9_84ro0")
