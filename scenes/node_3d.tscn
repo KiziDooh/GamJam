@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cbps161a76m82"]
+[gd_scene load_steps=11 format=3 uid="uid://cbps161a76m82"]
 
 [ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://scenes/tree.tscn" id="1_ewhv0"]
-[ext_resource type="PackedScene" uid="uid://dxlpb1ipv50mf" path="res://scenes/bench.blend" id="2_rm5fm"]
+[ext_resource type="PackedScene" uid="uid://dq68h5hqmtmei" path="res://scenes/bench.tscn" id="2_ytd1k"]
 [ext_resource type="PackedScene" uid="uid://b6c3rwc7r6xl" path="res://scenes/bunny.tscn" id="3_57div"]
-[ext_resource type="PackedScene" uid="uid://2cnw73r23tsu" path="res://mean bunny.blend" id="4_mcui7"]
+[ext_resource type="PackedScene" uid="uid://kd33syfdbkol" path="res://scenes/mean bunny.tscn" id="4_4w5ww"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_0pos4"]
-[ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/knife.tscn" id="6_g2m0d"]
 [ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://the stain.wav" id="7_x3cuu"]
 [ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/glitch-01-231255.mp3" id="8_xf5mf"]
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/glitch-transition-sfx-182152.mp3" id="9_iit38"]
@@ -80,16 +79,16 @@ transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, -94.0642, 6, -0.8
 use_collision = true
 size = Vector3(1, 10.8486, 30.7002)
 
-[node name="bench" parent="Walls" instance=ExtResource("2_rm5fm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0393, 1.4876, -3.67256)
+[node name="bench2" parent="Walls" instance=ExtResource("2_ytd1k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5779, 1.48759, -3.27572)
 
 [node name="Bunnies" type="Node" parent="."]
 
 [node name="bunny" parent="Bunnies" instance=ExtResource("3_57div")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
 
-[node name="Dream bunny" parent="Bunnies" instance=ExtResource("4_mcui7")]
-transform = Transform3D(0.968794, 0.176978, 0.173542, -0.173542, 0.984208, -0.0348995, -0.176978, 0.00369346, 0.984208, 3.55314, 4.5, 21.335)
+[node name="mean bunny" parent="Bunnies" instance=ExtResource("4_4w5ww")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 26.4596)
 
 [node name="Enviroment" type="Node" parent="."]
 
@@ -105,9 +104,6 @@ shadow_enabled = true
 [node name="ProtoController" parent="Character" instance=ExtResource("5_0pos4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997703, 2.18435, 0.276973)
 can_sprint = true
-
-[node name="knife" parent="Character" instance=ExtResource("6_g2m0d")]
-transform = Transform3D(0.1, 0, -4.37114e-09, -4.37114e-09, 1.91069e-16, -0.1, 0, 0.1, 1.91069e-16, -11.0357, 3.43032, -4.05165)
 
 [node name="Sound" type="Node" parent="."]
 
