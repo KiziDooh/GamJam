@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://cbps161a76m82"]
 
 [ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://scenes/tree.tscn" id="1_ewhv0"]
-[ext_resource type="PackedScene" uid="uid://dq68h5hqmtmei" path="res://scenes/bench.tscn" id="2_ytd1k"]
+[ext_resource type="PackedScene" path="res://scenes/bench.tscn" id="2_ytd1k"]
 [ext_resource type="PackedScene" uid="uid://b6c3rwc7r6xl" path="res://scenes/bunny.tscn" id="3_57div"]
-[ext_resource type="PackedScene" uid="uid://kd33syfdbkol" path="res://scenes/mean bunny.tscn" id="4_4w5ww"]
+[ext_resource type="PackedScene" path="res://scenes/mean bunny.tscn" id="4_4w5ww"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_0pos4"]
 [ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://the stain.wav" id="7_x3cuu"]
 [ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/glitch-01-231255.mp3" id="8_xf5mf"]
@@ -85,7 +85,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5779, 1.48759, -3.27572)
 [node name="Bunnies" type="Node" parent="."]
 
 [node name="bunny" parent="Bunnies" instance=ExtResource("3_57div")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
+transform = Transform3D(-0.297467, 0.0389034, 0, -0.0389034, -0.297467, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
 
 [node name="mean bunny" parent="Bunnies" instance=ExtResource("4_4w5ww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 26.4596)
