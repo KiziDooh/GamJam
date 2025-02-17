@@ -1,35 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://cbps161a76m82"]
+[gd_scene load_steps=11 format=3 uid="uid://cbps161a76m82"]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://co0kguxm7bymv" path="res://scenes/tree.tscn" id="1_ewhv0"]
-[ext_resource type="PackedScene" uid="uid://nudnvj2xdcdn" path="res://scenes/bench.tscn" id="2_ytd1k"]
-[ext_resource type="PackedScene" uid="uid://b31u14y2xrxm7" path="res://scenes/bunny.tscn" id="3_57div"]
-[ext_resource type="PackedScene" uid="uid://d4es06dfol6my" path="res://scenes/mean bunny.tscn" id="4_4w5ww"]
+[ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://scenes/tree.tscn" id="1_ewhv0"]
+[ext_resource type="PackedScene" uid="uid://dq68h5hqmtmei" path="res://scenes/bench.tscn" id="2_ytd1k"]
+[ext_resource type="PackedScene" uid="uid://b6c3rwc7r6xl" path="res://scenes/bunny.tscn" id="3_57div"]
+[ext_resource type="PackedScene" uid="uid://kd33syfdbkol" path="res://scenes/mean bunny.tscn" id="4_4w5ww"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_0pos4"]
-[ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="6_kacbf"]
-[ext_resource type="AudioStream" path="res://the stain.wav" id="7_x3cuu"]
-[ext_resource type="AudioStream" path="res://scenes/glitch-01-231255.mp3" id="8_xf5mf"]
-[ext_resource type="AudioStream" path="res://scenes/glitch-transition-sfx-182152.mp3" id="9_iit38"]
-[ext_resource type="AudioStream" path="res://scenes/tv-glitch-6245.mp3" id="10_leu3j"]
-=======
-=======
->>>>>>> parent of 815489f (Update node_3d.tscn)
-[ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://Scenes/Assets/Models/tree.tscn" id="1_ewhv0"]
-[ext_resource type="PackedScene" uid="uid://dq68h5hqmtmei" path="res://Scenes/Assets/Models/bench.tscn" id="2_ytd1k"]
-[ext_resource type="PackedScene" uid="uid://b6c3rwc7r6xl" path="res://Scenes/Assets/Models/bunny.tscn" id="3_57div"]
-[ext_resource type="PackedScene" uid="uid://kd33syfdbkol" path="res://Scenes/Assets/Models/mean bunny.tscn" id="4_4w5ww"]
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://AddOns/proto_controller/proto_controller.tscn" id="5_0pos4"]
-[ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://Scenes/Assets/Audio/the stain.wav" id="7_x3cuu"]
-[ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://Scenes/Assets/Audio/glitch-01-231255.mp3" id="8_xf5mf"]
-[ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://Scenes/Assets/Audio/glitch-transition-sfx-182152.mp3" id="9_iit38"]
-[ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://Scenes/Assets/Audio/tv-glitch-6245.mp3" id="10_leu3j"]
-
-[sub_resource type="Theme" id="Theme_tulby"]
-<<<<<<< HEAD
->>>>>>> parent of 815489f (Update node_3d.tscn)
-=======
->>>>>>> parent of 815489f (Update node_3d.tscn)
+[ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://the stain.wav" id="7_x3cuu"]
+[ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/glitch-01-231255.mp3" id="8_xf5mf"]
+[ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/glitch-transition-sfx-182152.mp3" id="9_iit38"]
+[ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/tv-glitch-6245.mp3" id="10_leu3j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
@@ -106,15 +85,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5779, 1.48759, -3.27572)
 [node name="Bunnies" type="Node" parent="."]
 
 [node name="bunny" parent="Bunnies" instance=ExtResource("3_57div")]
-<<<<<<< HEAD
-<<<<<<< HEAD
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
-=======
-transform = Transform3D(0.299465, 0.0179122, 0, -0.0179122, 0.299465, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
->>>>>>> parent of 815489f (Update node_3d.tscn)
-=======
-transform = Transform3D(0.299465, 0.0179122, 0, -0.0179122, 0.299465, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
->>>>>>> parent of 815489f (Update node_3d.tscn)
+transform = Transform3D(-0.297467, 0.0389034, 0, -0.0389034, -0.297467, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
 
 [node name="mean bunny" parent="Bunnies" instance=ExtResource("4_4w5ww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 26.4596)
@@ -132,7 +103,6 @@ shadow_enabled = true
 
 [node name="ProtoController" parent="Character" instance=ExtResource("5_0pos4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997703, 2.18435, 0.276973)
-script = ExtResource("6_kacbf")
 can_sprint = true
 
 [node name="Sound" type="Node" parent="."]
