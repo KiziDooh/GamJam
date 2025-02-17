@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmq45103ai7oy"]
+[gd_scene load_steps=10 format=3 uid="uid://dmq45103ai7oy"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_mrmbn"]
 [ext_resource type="PackedScene" uid="uid://b6c3rwc7r6xl" path="res://scenes/bunny.tscn" id="3_rvuoq"]
 [ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://the stain.wav" id="4_4qra6"]
 [ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://scenes/tree.tscn" id="4_vs3k8"]
+[ext_resource type="PackedScene" uid="uid://2cnw73r23tsu" path="res://mean bunny.blend" id="5_w55xl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7yfef"]
 sky_top_color = Color(0.157331, 0.391332, 0.943009, 1)
@@ -75,7 +76,7 @@ size = Vector3(1, 10.8486, 30.7002)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12.7241, 0.678766, 0.391416)
 
 [node name="tree2" parent="." instance=ExtResource("4_vs3k8")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.43971, 0.678766, 21.2101)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.229298, 0.678766, 17.4291)
 
 [node name="tree3" parent="." instance=ExtResource("4_vs3k8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -49.3354, 0.678766, 32.8645)
@@ -104,3 +105,6 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4qra6")
 autoplay = true
+
+[node name="Dream bunny" parent="." instance=ExtResource("5_w55xl")]
+transform = Transform3D(0.968794, 0.176978, 0.173542, -0.173542, 0.984208, -0.0348995, -0.176978, 0.00369346, 0.984208, 3.55314, 4.5, 21.335)
