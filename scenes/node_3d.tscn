@@ -1,14 +1,23 @@
-[gd_scene load_steps=11 format=3 uid="uid://cbps161a76m82"]
+[gd_scene load_steps=12 format=3 uid="uid://cbps161a76m82"]
 
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://scenes/tree.tscn" id="1_ewhv0"]
 [ext_resource type="PackedScene" uid="uid://dq68h5hqmtmei" path="res://scenes/bench.tscn" id="2_ytd1k"]
 [ext_resource type="PackedScene" uid="uid://b6c3rwc7r6xl" path="res://scenes/bunny.tscn" id="3_57div"]
 [ext_resource type="PackedScene" uid="uid://kd33syfdbkol" path="res://scenes/mean bunny.tscn" id="4_4w5ww"]
+=======
+[ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://scenes/models/tree.tscn" id="1_ewhv0"]
+[ext_resource type="PackedScene" uid="uid://dq68h5hqmtmei" path="res://scenes/models/bench.tscn" id="2_ytd1k"]
+[ext_resource type="PackedScene" uid="uid://b6c3rwc7r6xl" path="res://scenes/models/bunny.tscn" id="3_57div"]
+[ext_resource type="PackedScene" uid="uid://kd33syfdbkol" path="res://scenes/models/mean bunny.tscn" id="4_4w5ww"]
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_0pos4"]
-[ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://the stain.wav" id="7_x3cuu"]
-[ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/glitch-01-231255.mp3" id="8_xf5mf"]
-[ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/glitch-transition-sfx-182152.mp3" id="9_iit38"]
-[ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/tv-glitch-6245.mp3" id="10_leu3j"]
+[ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://scenes/Sound/the stain.wav" id="7_x3cuu"]
+[ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/Sound/glitch-01-231255.mp3" id="8_xf5mf"]
+[ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/Sound/glitch-transition-sfx-182152.mp3" id="9_iit38"]
+[ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/Sound/tv-glitch-6245.mp3" id="10_leu3j"]
+
+[sub_resource type="Theme" id="Theme_beqtt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
@@ -18,33 +27,54 @@ roughness = 0.81
 
 [node name="Node3D" type="Node3D"]
 
-[node name="trees" type="Node" parent="."]
+[node name="UI" type="Node" parent="."]
 
-[node name="tree" parent="trees" instance=ExtResource("1_ewhv0")]
+[node name="PanelContainer" type="PanelContainer" parent="UI"]
+offset_left = 74.0
+offset_top = 45.0
+offset_right = 132.0
+offset_bottom = 95.0
+theme = SubResource("Theme_beqtt")
+
+[node name="GridContainer" type="GridContainer" parent="UI/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "HP: 100"
+
+[node name="Label2" type="Label" parent="UI/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "ST: 100"
+horizontal_alignment = 1
+
+[node name="Trees" type="Node" parent="."]
+
+[node name="tree" parent="Trees" instance=ExtResource("1_ewhv0")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12.7241, 0.678766, 0.391416)
 
-[node name="tree2" parent="trees" instance=ExtResource("1_ewhv0")]
+[node name="tree2" parent="Trees" instance=ExtResource("1_ewhv0")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.229298, 0.678766, 17.4291)
 
-[node name="tree3" parent="trees" instance=ExtResource("1_ewhv0")]
+[node name="tree3" parent="Trees" instance=ExtResource("1_ewhv0")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -49.3354, 0.678766, 32.8645)
 
-[node name="tree4" parent="trees" instance=ExtResource("1_ewhv0")]
+[node name="tree4" parent="Trees" instance=ExtResource("1_ewhv0")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 33.406, 0.678766, 32.8645)
 
-[node name="tree5" parent="trees" instance=ExtResource("1_ewhv0")]
+[node name="tree5" parent="Trees" instance=ExtResource("1_ewhv0")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10.9141, 0.678766, -30.2146)
 
-[node name="tree6" parent="trees" instance=ExtResource("1_ewhv0")]
+[node name="tree6" parent="Trees" instance=ExtResource("1_ewhv0")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 44.1272, 0.678766, -6.19382)
 
-[node name="tree7" parent="trees" instance=ExtResource("1_ewhv0")]
+[node name="tree7" parent="Trees" instance=ExtResource("1_ewhv0")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.7676, 0.678766, -37.4331)
 
-[node name="tree8" parent="trees" instance=ExtResource("1_ewhv0")]
+[node name="tree8" parent="Trees" instance=ExtResource("1_ewhv0")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -29.4844, 0.678766, -12.9733)
 
-[node name="tree9" parent="trees" instance=ExtResource("1_ewhv0")]
+[node name="tree9" parent="Trees" instance=ExtResource("1_ewhv0")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.82116, 0.678766, -43.5724)
 
 [node name="Walls" type="Node" parent="."]
