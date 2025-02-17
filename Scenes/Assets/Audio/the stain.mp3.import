@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/the stain.mp3-d69242b14945ebd2abea10b77dcef64
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
