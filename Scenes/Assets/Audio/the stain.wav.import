@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ddaugu21t7pd6"
-path="res://.godot/imported/the stain.wav-877b51861d9bd3ef65acd7526b7e4eea.sample"
+path="res://.godot/imported/the stain.wav-36c21e75e7e2b66ac799ae7591ac8373.sample"
 
 [deps]
 
-source_file="res://Scenes/Assets/Audio/the stain.wav"
-dest_files=["res://.godot/imported/the stain.wav-877b51861d9bd3ef65acd7526b7e4eea.sample"]
+source_file="res://scenes/Assets/Audio/the stain.wav"
+dest_files=["res://.godot/imported/the stain.wav-36c21e75e7e2b66ac799ae7591ac8373.sample"]
 
 [params]
 

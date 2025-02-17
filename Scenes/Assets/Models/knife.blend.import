@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://0rq0gpxymxo2"
-valid=false
+path="res://.godot/imported/knife.blend-419cf64c42bb0437b33217a2b3e63f7b.scn"
 
 [deps]
 
-source_file="res://Scenes/Assets/Models/knife.blend"
+source_file="res://scenes/Assets/Models/knife.blend"
+dest_files=["res://.godot/imported/knife.blend-419cf64c42bb0437b33217a2b3e63f7b.scn"]
 
 [params]
 

@@ -1,28 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://cbps161a76m82"]
 
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://Scenes/Assets/Models/tree.tscn" id="1_ewhv0"]
-[ext_resource type="PackedScene" uid="uid://dq68h5hqmtmei" path="res://Scenes/Assets/Models/bench.tscn" id="2_ytd1k"]
-[ext_resource type="PackedScene" uid="uid://b6c3rwc7r6xl" path="res://Scenes/Assets/Models/bunny.tscn" id="3_57div"]
-[ext_resource type="PackedScene" uid="uid://kd33syfdbkol" path="res://Scenes/Assets/Models/mean bunny.tscn" id="4_4w5ww"]
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://AddOns/proto_controller/proto_controller.tscn" id="5_0pos4"]
-[ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://Scenes/Assets/Audio/the stain.wav" id="7_x3cuu"]
-[ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://Scenes/Assets/Audio/glitch-01-231255.mp3" id="8_xf5mf"]
-[ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://Scenes/Assets/Audio/glitch-transition-sfx-182152.mp3" id="9_iit38"]
-[ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://Scenes/Assets/Audio/tv-glitch-6245.mp3" id="10_leu3j"]
-
-[sub_resource type="Theme" id="Theme_tulby"]
-=======
-[ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://scenes/tree.tscn" id="1_ewhv0"]
-[ext_resource type="PackedScene" uid="uid://dq68h5hqmtmei" path="res://scenes/bench.tscn" id="2_ytd1k"]
-[ext_resource type="PackedScene" uid="uid://b6c3rwc7r6xl" path="res://scenes/bunny.tscn" id="3_57div"]
-[ext_resource type="PackedScene" uid="uid://kd33syfdbkol" path="res://scenes/mean bunny.tscn" id="4_4w5ww"]
+[ext_resource type="PackedScene" uid="uid://co0kguxm7bymv" path="res://scenes/tree.tscn" id="1_ewhv0"]
+[ext_resource type="PackedScene" uid="uid://nudnvj2xdcdn" path="res://scenes/bench.tscn" id="2_ytd1k"]
+[ext_resource type="PackedScene" uid="uid://b31u14y2xrxm7" path="res://scenes/bunny.tscn" id="3_57div"]
+[ext_resource type="PackedScene" uid="uid://d4es06dfol6my" path="res://scenes/mean bunny.tscn" id="4_4w5ww"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_0pos4"]
-[ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://the stain.wav" id="7_x3cuu"]
-[ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/glitch-01-231255.mp3" id="8_xf5mf"]
-[ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/glitch-transition-sfx-182152.mp3" id="9_iit38"]
-[ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/tv-glitch-6245.mp3" id="10_leu3j"]
->>>>>>> a85c9ede9f7485984445cf46d443e746d6f28a1b
+[ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="6_kacbf"]
+[ext_resource type="AudioStream" path="res://the stain.wav" id="7_x3cuu"]
+[ext_resource type="AudioStream" path="res://scenes/glitch-01-231255.mp3" id="8_xf5mf"]
+[ext_resource type="AudioStream" path="res://scenes/glitch-transition-sfx-182152.mp3" id="9_iit38"]
+[ext_resource type="AudioStream" path="res://scenes/tv-glitch-6245.mp3" id="10_leu3j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
@@ -31,34 +18,6 @@ metallic_texture_channel = 1
 roughness = 0.81
 
 [node name="Node3D" type="Node3D"]
-
-[node name="UI" type="Node" parent="."]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="UI"]
-
-[node name="PanelContainer" type="PanelContainer" parent="UI/CanvasLayer"]
-offset_left = 95.0
-offset_top = 62.0
-offset_right = 172.0
-offset_bottom = 142.0
-theme = SubResource("Theme_tulby")
-
-[node name="GridContainer" type="GridContainer" parent="UI/CanvasLayer/PanelContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="UI/CanvasLayer/PanelContainer/GridContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "HP: 100"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="UI/CanvasLayer/PanelContainer/GridContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "ST: 100"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="trees" type="Node" parent="."]
 
@@ -127,11 +86,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5779, 1.48759, -3.27572)
 [node name="Bunnies" type="Node" parent="."]
 
 [node name="bunny" parent="Bunnies" instance=ExtResource("3_57div")]
-<<<<<<< HEAD
-transform = Transform3D(0.299465, 0.0179122, 0, -0.0179122, 0.299465, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
-=======
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
->>>>>>> a85c9ede9f7485984445cf46d443e746d6f28a1b
 
 [node name="mean bunny" parent="Bunnies" instance=ExtResource("4_4w5ww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 26.4596)
@@ -149,7 +104,8 @@ shadow_enabled = true
 [node name="Character" type="Node" parent="."]
 
 [node name="ProtoController" parent="Character" instance=ExtResource("5_0pos4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6816, 1.96241, -0.240138)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997703, 2.18435, 0.276973)
+script = ExtResource("6_kacbf")
 can_sprint = true
 
 [node name="Sound" type="Node" parent="."]

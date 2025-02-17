@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dscwppqlmh85r"
-path="res://.godot/imported/the stain.mp3-4c7be21c5dc89751b9787d3c20f1bae8.mp3str"
+path="res://.godot/imported/the stain.mp3-d69242b14945ebd2abea10b77dcef64d.mp3str"
 
 [deps]
 
-source_file="res://Scenes/Assets/Audio/the stain.mp3"
-dest_files=["res://.godot/imported/the stain.mp3-4c7be21c5dc89751b9787d3c20f1bae8.mp3str"]
+source_file="res://scenes/Assets/Audio/the stain.mp3"
+dest_files=["res://.godot/imported/the stain.mp3-d69242b14945ebd2abea10b77dcef64d.mp3str"]
 
 [params]
 

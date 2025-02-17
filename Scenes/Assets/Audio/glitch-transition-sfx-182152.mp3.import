@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c48o2w0yel72c"
-path="res://.godot/imported/glitch-transition-sfx-182152.mp3-935db47ea0f42ee288b8393bc8171c6e.mp3str"
+path="res://.godot/imported/glitch-transition-sfx-182152.mp3-cbb53900686a6dfa66ba9fecb54f927a.mp3str"
 
 [deps]
 
-source_file="res://Scenes/Assets/Audio/glitch-transition-sfx-182152.mp3"
-dest_files=["res://.godot/imported/glitch-transition-sfx-182152.mp3-935db47ea0f42ee288b8393bc8171c6e.mp3str"]
+source_file="res://scenes/Assets/Audio/glitch-transition-sfx-182152.mp3"
+dest_files=["res://.godot/imported/glitch-transition-sfx-182152.mp3-cbb53900686a6dfa66ba9fecb54f927a.mp3str"]
 
 [params]
 

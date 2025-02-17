@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cw28unuiawi0s"
-path="res://.godot/imported/glitch-01-231255.mp3-983670a4e9c7a5f3229d6a67181c8bed.mp3str"
+path="res://.godot/imported/glitch-01-231255.mp3-761866d9e4530e8c896ea6449c013bd9.mp3str"
 
 [deps]
 
-source_file="res://Scenes/Assets/Audio/glitch-01-231255.mp3"
-dest_files=["res://.godot/imported/glitch-01-231255.mp3-983670a4e9c7a5f3229d6a67181c8bed.mp3str"]
+source_file="res://scenes/Assets/Audio/glitch-01-231255.mp3"
+dest_files=["res://.godot/imported/glitch-01-231255.mp3-761866d9e4530e8c896ea6449c013bd9.mp3str"]
 
 [params]
 
