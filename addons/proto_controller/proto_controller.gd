@@ -5,6 +5,14 @@
 
 extends CharacterBody3D
 
+class_name Player
+
+signal health_changed
+
+## Health 
+@export var max_health = 100
+@export var current_health : int = max_health
+
 ## Can we move around?
 @export var can_move : bool = true
 ## Are we affected by gravity?
@@ -57,6 +65,10 @@ func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
+
+func damaged():
+	current_health -= 10
+	health_changed.emit()
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
