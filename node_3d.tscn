@@ -14,20 +14,6 @@ roughness = 0.81
 
 [node name="Node3D" type="Node3D"]
 
-[node name="ProtoController" parent="." instance=ExtResource("1_mrmbn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997703, 2.18435, 0.276973)
-can_sprint = true
-
-[node name="bunny" parent="." instance=ExtResource("3_rvuoq")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_4qra6")
-autoplay = true
-
-[node name="Dream bunny" parent="." instance=ExtResource("5_w55xl")]
-transform = Transform3D(0.968794, 0.176978, 0.173542, -0.173542, 0.984208, -0.0348995, -0.176978, 0.00369346, 0.984208, 3.55314, 4.5, 21.335)
-
 [node name="trees" type="Node" parent="."]
 
 [node name="tree" parent="trees" instance=ExtResource("4_vs3k8")]
@@ -89,15 +75,31 @@ transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, -94.0642, 6, -0.8
 use_collision = true
 size = Vector3(1, 10.8486, 30.7002)
 
-[node name="Node" type="Node" parent="."]
+[node name="Bunnies" type="Node" parent="."]
 
-[node name="Node2" type="Node" parent="."]
+[node name="bunny" parent="Bunnies" instance=ExtResource("3_rvuoq")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node2"]
+[node name="Dream bunny" parent="Bunnies" instance=ExtResource("5_w55xl")]
+transform = Transform3D(0.968794, 0.176978, 0.173542, -0.173542, 0.984208, -0.0348995, -0.176978, 0.00369346, 0.984208, 3.55314, 4.5, 21.335)
+
+[node name="Enviroment" type="Node" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Enviroment"]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 8.45032, 0)
 light_energy = 0.838
 light_indirect_energy = 1.646
 light_volumetric_fog_energy = 1.162
 shadow_enabled = true
 
-[node name="Node3D" type="Node3D" parent="Node2"]
+[node name="Character" type="Node" parent="."]
+
+[node name="ProtoController" parent="Character" instance=ExtResource("1_mrmbn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997703, 2.18435, 0.276973)
+can_sprint = true
+
+[node name="Sound" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("4_4qra6")
+autoplay = true
