@@ -41,3 +41,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 [node name="knife" parent="Head/Camera3D" instance=ExtResource("2_j8sau")]
 transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 0.267227, -0.588391, -0.845978)
 visible = false
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+visible = false
+light_color = Color(0.881382, 0.867135, 0.686244, 1)
+light_energy = 3.635
+light_volumetric_fog_energy = 0.439
