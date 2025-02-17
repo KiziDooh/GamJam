@@ -1,6 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cbps161a76m82"]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://co0kguxm7bymv" path="res://scenes/tree.tscn" id="1_ewhv0"]
 [ext_resource type="PackedScene" uid="uid://nudnvj2xdcdn" path="res://scenes/bench.tscn" id="2_ytd1k"]
 [ext_resource type="PackedScene" uid="uid://b31u14y2xrxm7" path="res://scenes/bunny.tscn" id="3_57div"]
@@ -12,6 +13,8 @@
 [ext_resource type="AudioStream" path="res://scenes/glitch-transition-sfx-182152.mp3" id="9_iit38"]
 [ext_resource type="AudioStream" path="res://scenes/tv-glitch-6245.mp3" id="10_leu3j"]
 =======
+=======
+>>>>>>> parent of 815489f (Update node_3d.tscn)
 [ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://Scenes/Assets/Models/tree.tscn" id="1_ewhv0"]
 [ext_resource type="PackedScene" uid="uid://dq68h5hqmtmei" path="res://Scenes/Assets/Models/bench.tscn" id="2_ytd1k"]
 [ext_resource type="PackedScene" uid="uid://b6c3rwc7r6xl" path="res://Scenes/Assets/Models/bunny.tscn" id="3_57div"]
@@ -23,6 +26,9 @@
 [ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://Scenes/Assets/Audio/tv-glitch-6245.mp3" id="10_leu3j"]
 
 [sub_resource type="Theme" id="Theme_tulby"]
+<<<<<<< HEAD
+>>>>>>> parent of 815489f (Update node_3d.tscn)
+=======
 >>>>>>> parent of 815489f (Update node_3d.tscn)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
@@ -101,7 +107,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5779, 1.48759, -3.27572)
 
 [node name="bunny" parent="Bunnies" instance=ExtResource("3_57div")]
 <<<<<<< HEAD
+<<<<<<< HEAD
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
+=======
+transform = Transform3D(0.299465, 0.0179122, 0, -0.0179122, 0.299465, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
+>>>>>>> parent of 815489f (Update node_3d.tscn)
 =======
 transform = Transform3D(0.299465, 0.0179122, 0, -0.0179122, 0.299465, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
 >>>>>>> parent of 815489f (Update node_3d.tscn)
