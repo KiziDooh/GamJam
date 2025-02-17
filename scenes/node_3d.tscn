@@ -1,0 +1,125 @@
+[gd_scene load_steps=12 format=3 uid="uid://cbps161a76m82"]
+
+[ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://scenes/tree.tscn" id="1_ewhv0"]
+[ext_resource type="PackedScene" uid="uid://dxlpb1ipv50mf" path="res://scenes/bench.blend" id="2_rm5fm"]
+[ext_resource type="PackedScene" uid="uid://b6c3rwc7r6xl" path="res://scenes/bunny.tscn" id="3_57div"]
+[ext_resource type="PackedScene" uid="uid://2cnw73r23tsu" path="res://mean bunny.blend" id="4_mcui7"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_0pos4"]
+[ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/knife.tscn" id="6_g2m0d"]
+[ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://the stain.wav" id="7_x3cuu"]
+[ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/glitch-01-231255.mp3" id="8_xf5mf"]
+[ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/glitch-transition-sfx-182152.mp3" id="9_iit38"]
+[ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/tv-glitch-6245.mp3" id="10_leu3j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
+albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
+metallic = 0.06
+metallic_texture_channel = 1
+roughness = 0.81
+
+[node name="Node3D" type="Node3D"]
+
+[node name="trees" type="Node" parent="."]
+
+[node name="tree" parent="trees" instance=ExtResource("1_ewhv0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12.7241, 0.678766, 0.391416)
+
+[node name="tree2" parent="trees" instance=ExtResource("1_ewhv0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.229298, 0.678766, 17.4291)
+
+[node name="tree3" parent="trees" instance=ExtResource("1_ewhv0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -49.3354, 0.678766, 32.8645)
+
+[node name="tree4" parent="trees" instance=ExtResource("1_ewhv0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 33.406, 0.678766, 32.8645)
+
+[node name="tree5" parent="trees" instance=ExtResource("1_ewhv0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10.9141, 0.678766, -30.2146)
+
+[node name="tree6" parent="trees" instance=ExtResource("1_ewhv0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 44.1272, 0.678766, -6.19382)
+
+[node name="tree7" parent="trees" instance=ExtResource("1_ewhv0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.7676, 0.678766, -37.4331)
+
+[node name="tree8" parent="trees" instance=ExtResource("1_ewhv0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -29.4844, 0.678766, -12.9733)
+
+[node name="tree9" parent="trees" instance=ExtResource("1_ewhv0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.82116, 0.678766, -43.5724)
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Grass" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, 0.999852, 0.987595, 0.629733)
+material_override = SubResource("StandardMaterial3D_afntl")
+use_collision = true
+size = Vector3(26.4658, 1, 30.3584)
+
+[node name="Box" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 6)
+use_collision = true
+
+[node name="Wall" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, 0.289132, 5.70165, -79.1695)
+use_collision = true
+size = Vector3(26.125, 11.0205, 1)
+
+[node name="Wall2" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, 0.289132, 5.70165, 81.3047)
+use_collision = true
+size = Vector3(26.125, 11.0205, 1)
+
+[node name="Wall3" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, 92.2217, 6, -0.884305)
+use_collision = true
+size = Vector3(1, 10.8486, 30.7002)
+
+[node name="Wall4" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, -94.0642, 6, -0.884305)
+use_collision = true
+size = Vector3(1, 10.8486, 30.7002)
+
+[node name="bench" parent="Walls" instance=ExtResource("2_rm5fm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0393, 1.4876, -3.67256)
+
+[node name="Bunnies" type="Node" parent="."]
+
+[node name="bunny" parent="Bunnies" instance=ExtResource("3_57div")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
+
+[node name="Dream bunny" parent="Bunnies" instance=ExtResource("4_mcui7")]
+transform = Transform3D(0.968794, 0.176978, 0.173542, -0.173542, 0.984208, -0.0348995, -0.176978, 0.00369346, 0.984208, 3.55314, 4.5, 21.335)
+
+[node name="Enviroment" type="Node" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Enviroment"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 8.45032, 0)
+light_energy = 0.838
+light_indirect_energy = 1.646
+light_volumetric_fog_energy = 1.162
+shadow_enabled = true
+
+[node name="Character" type="Node" parent="."]
+
+[node name="ProtoController" parent="Character" instance=ExtResource("5_0pos4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997703, 2.18435, 0.276973)
+can_sprint = true
+
+[node name="knife" parent="Character" instance=ExtResource("6_g2m0d")]
+transform = Transform3D(0.1, 0, -4.37114e-09, -4.37114e-09, 1.91069e-16, -0.1, 0, 0.1, 1.91069e-16, -11.0357, 3.43032, -4.05165)
+
+[node name="Sound" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("7_x3cuu")
+autoplay = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sound"]
+stream = ExtResource("8_xf5mf")
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Sound"]
+stream = ExtResource("9_iit38")
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="Sound"]
+stream = ExtResource("10_leu3j")
