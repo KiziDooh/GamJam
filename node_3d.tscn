@@ -117,7 +117,6 @@ autoplay = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sound"]
 stream = ExtResource("8_u6v1r")
-autoplay = true
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Sound"]
 stream = ExtResource("7_1tpfl")
