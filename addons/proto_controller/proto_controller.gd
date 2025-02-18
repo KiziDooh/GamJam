@@ -7,11 +7,7 @@ extends CharacterBody3D
 
 class_name Player
 
-signal health_changed
 
-## Health 
-@export var max_health = 100
-@export var current_health : int = max_health
 
 ## Can we move around?
 @export var can_move : bool = true
@@ -65,10 +61,6 @@ func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
-
-func damaged():
-	current_health -= 10
-	health_changed.emit()
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
@@ -188,3 +180,8 @@ func check_input_mappings():
 	if can_freefly and not InputMap.has_action(input_freefly):
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
+
+
+func _on_health_health_depleated():
+	queue_free()
+	print("You Died") # Replace with function body.

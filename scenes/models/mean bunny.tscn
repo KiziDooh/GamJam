@@ -1,4 +1,6 @@
-[gd_scene load_steps=47 format=4 uid="uid://cun06movtekqn"]
+[gd_scene load_steps=49 format=4 uid="uid://cun06movtekqn"]
+
+[ext_resource type="Script" path="res://scenes/scripts/hitbox.gd" id="1_i3f15"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y1xax"]
 resource_name = "bunny"
@@ -614,6 +616,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dd132")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8wwiu"]
+size = Vector3(3.56812, 5.48816, 3.66263)
+
 [node name="mean bunny" type="Node3D"]
 
 [node name="Sphere" type="MeshInstance3D" parent="."]
@@ -705,3 +710,11 @@ skeleton = NodePath("")
 transform = Transform3D(-0.0748386, -1.27539e-11, -7.67649e-11, 1.27539e-11, 0.070818, -0.0241998, 7.67649e-11, -0.0241998, -0.070818, -0.398192, 0.573496, -1.17095)
 mesh = SubResource("ArrayMesh_su3iw")
 skeleton = NodePath("")
+
+[node name="HitBox" type="Area3D" parent="."]
+collision_mask = 0
+script = ExtResource("1_i3f15")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0635986, -1.24823, 0.378769)
+shape = SubResource("BoxShape3D_8wwiu")

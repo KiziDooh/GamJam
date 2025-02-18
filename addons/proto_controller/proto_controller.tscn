@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=10 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/models/knife.tscn" id="2_j8sau"]
 [ext_resource type="PackedScene" uid="uid://dq5jgidsk2le6" path="res://scenes/models/flashlight.tscn" id="3_ifqqc"]
+[ext_resource type="Script" path="res://scenes/scripts/health.gd" id="4_7hyiv"]
+[ext_resource type="Script" path="res://scenes/scripts/hurtbox.gd" id="5_kuwjw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -14,6 +16,8 @@ height = 1.8
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iof21"]
 radius = 0.4
 height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y04je"]
 
 [node name="ProtoController" type="CharacterBody3D"]
 script = ExtResource("1_ucva2")
@@ -52,3 +56,17 @@ light_volumetric_fog_energy = 2.54
 
 [node name="flashlight" parent="Head/Camera3D" instance=ExtResource("3_ifqqc")]
 transform = Transform3D(-5.71455e-10, -0.0130734, 0.149429, 0.15, -6.55671e-09, 0, 6.53176e-09, 0.149429, 0.0130734, 0.502473, -0.335419, -0.892615)
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("4_7hyiv")
+
+[node name="HurtBox" type="Area3D" parent="." node_paths=PackedStringArray("health")]
+collision_layer = 0
+script = ExtResource("5_kuwjw")
+health = NodePath("../Health")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.840315, 0)
+shape = SubResource("CapsuleShape3D_y04je")
+
+[connection signal="health_depleated" from="Health" to="." method="_on_health_health_depleated"]
