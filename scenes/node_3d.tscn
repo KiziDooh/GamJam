@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cbps161a76m82"]
+[gd_scene load_steps=15 format=3 uid="uid://cbps161a76m82"]
 
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/tree.tscn" id="1_ewhv0"]
 [ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://scenes/bench.tscn" id="2_ytd1k"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bogp1mhocgx73" path="res://scenes/bunny mean dance.blend" id="5_udl2g"]
 [ext_resource type="Script" path="res://scenes/bunny_mean_dance.gd" id="6_xgxg3"]
 [ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://scenes/audio/the stain.wav" id="7_x3cuu"]
+[ext_resource type="Script" path="res://scenes/ray_cast_3d.gd" id="8_3x4yi"]
 [ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/audio/glitch-01-231255.mp3" id="8_xf5mf"]
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="9_iit38"]
 [ext_resource type="Script" path="res://scenes/scripts/health_bar.gd" id="10_5i6cm"]
@@ -110,8 +111,29 @@ shadow_enabled = true
 [node name="Character" type="Node" parent="."]
 
 [node name="ProtoController" parent="Character" instance=ExtResource("5_0pos4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997703, 2.18435, 0.276973)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997703, 2.06571, 0.276973)
+collision_mask = 5
 can_sprint = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Character/ProtoController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0997703, 0.859577, -0.276973)
+target_position = Vector3(0, 0, 10)
+script = ExtResource("8_3x4yi")
+
+[node name="RayCast3D2" type="RayCast3D" parent="Character/ProtoController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0997703, 5.86387, -0.276973)
+target_position = Vector3(0, 0, 10)
+collision_mask = 4
+
+[node name="RayCast3D3" type="RayCast3D" parent="Character/ProtoController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0997703, 5.86387, -0.276973)
+target_position = Vector3(-10, 0, 0)
+collision_mask = 4
+
+[node name="RayCast3D4" type="RayCast3D" parent="Character/ProtoController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0997703, 5.86387, -0.276973)
+target_position = Vector3(0, 0, -10)
+collision_mask = 4
 
 [node name="Sound" type="Node" parent="."]
 
