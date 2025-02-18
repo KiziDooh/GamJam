@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://we54u8qnqh5x"]
+[gd_scene load_steps=54 format=4 uid="uid://we54u8qnqh5x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
 resource_name = "Material.001"
@@ -748,6 +748,31 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_lw6ac")
 
+[sub_resource type="Gradient" id="Gradient_yptt3"]
+colors = PackedColorArray(0.968627, 0, 0, 1, 0.738191, 0.910523, 0.0808816, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5i8nm"]
+gradient = SubResource("Gradient_yptt3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rd3w1"]
+lifetime_randomness = 0.86
+emission_shape_scale = Vector3(2.5, 3, 2.5)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, 1, 0)
+gravity = Vector3(0, 5, 0)
+scale_min = 0.01
+scale_max = 0.8
+color_ramp = SubResource("GradientTexture1D_5i8nm")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_b23cf"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.87451, 0.345098, 0.0627451, 0.831373)
+
+[sub_resource type="SphereMesh" id="SphereMesh_4pkj5"]
+material = SubResource("ORMMaterial3D_b23cf")
+
 [node name="campfire" type="Node3D"]
 
 [node name="Cube" type="MeshInstance3D" parent="."]
@@ -864,3 +889,15 @@ skeleton = NodePath("")
 transform = Transform3D(0.01924, 2.8118, 0.257422, 0.0945062, 3.71184, -0.180516, -0.301925, 1.34103, -0.0400996, -1.65412, 2.20187, -1.04269)
 mesh = SubResource("ArrayMesh_jprl6")
 skeleton = NodePath("")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.964087, 0)
+gi_mode = 2
+gi_lightmap_scale = 2
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_rd3w1")
+draw_pass_1 = SubResource("SphereMesh_4pkj5")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="GPUParticles3D"]
+light_color = Color(0.807337, 0.382361, 0.0726899, 1)
+light_energy = 3.101
