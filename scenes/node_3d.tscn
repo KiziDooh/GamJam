@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://cbps161a76m82"]
+[gd_scene load_steps=14 format=3 uid="uid://cbps161a76m82"]
 
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/tree.tscn" id="1_ewhv0"]
 [ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://scenes/bench.tscn" id="2_ytd1k"]
 [ext_resource type="PackedScene" uid="uid://c7h80mskb4v0b" path="res://scenes/bunny.tscn" id="3_57div"]
 [ext_resource type="PackedScene" uid="uid://cun06movtekqn" path="res://scenes/mean bunny.tscn" id="4_4w5ww"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_0pos4"]
+[ext_resource type="PackedScene" uid="uid://bogp1mhocgx73" path="res://scenes/bunny mean dance.blend" id="5_udl2g"]
+[ext_resource type="Script" path="res://scenes/bunny_mean_dance.gd" id="6_xgxg3"]
 [ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://scenes/audio/the stain.wav" id="7_x3cuu"]
 [ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/audio/glitch-01-231255.mp3" id="8_xf5mf"]
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="9_iit38"]
@@ -51,7 +53,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.82116, 0.678766, -43.5724)
 [node name="Enviromental Objects" type="Node" parent="."]
 
 [node name="Grass" type="CSGBox3D" parent="Enviromental Objects"]
-transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, 0.999852, 0.987595, 0.629733)
+transform = Transform3D(15.6336, 0, 0, 0, 1.00691, 0, 0, 0, 24.4431, 2.56001, 0.965182, 1.30339)
 material_override = SubResource("StandardMaterial3D_afntl")
 use_collision = true
 size = Vector3(26.4658, 1, 30.3584)
@@ -61,22 +63,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 6)
 use_collision = true
 
 [node name="Wall" type="CSGBox3D" parent="Enviromental Objects"]
-transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, 0.289132, 5.70165, -79.1695)
+transform = Transform3D(15.5262, 0, 0, 0, 1, 0, 0, 0, 24.2753, 0.648877, 5.70165, -353.084)
 use_collision = true
 size = Vector3(26.125, 11.0205, 1)
 
 [node name="Wall2" type="CSGBox3D" parent="Enviromental Objects"]
-transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, 0.289132, 5.70165, 81.3047)
+transform = Transform3D(15.6336, 0, 0, 0, 1.00691, 0, 0, 0, 24.4431, 1.09164, 5.71183, 362.883)
 use_collision = true
 size = Vector3(26.125, 11.0205, 1)
 
 [node name="Wall3" type="CSGBox3D" parent="Enviromental Objects"]
-transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, 92.2217, 6, -0.884305)
+transform = Transform3D(15.5262, 0, 0, 0, 1, 0, 0, 0, 24.2753, 189.281, 6, -4.62388)
 use_collision = true
 size = Vector3(1, 10.8486, 30.7002)
 
 [node name="Wall4" type="CSGBox3D" parent="Enviromental Objects"]
-transform = Transform3D(7.56693, 0, 0, 0, 1, 0, 0, 0, 5.45369, -94.0642, 6, -0.884305)
+transform = Transform3D(15.6336, 0, 0, 0, 1.00691, 0, 0, 0, 24.4431, -193.846, 6.01224, -5.48242)
 use_collision = true
 size = Vector3(1, 10.8486, 30.7002)
 
@@ -86,10 +88,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5779, 1.48759, -3.27572)
 [node name="Bunnies" type="Node" parent="."]
 
 [node name="bunny" parent="Bunnies" instance=ExtResource("3_57div")]
-transform = Transform3D(-0.297467, 0.0389034, 0, -0.0389034, -0.297467, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
 
 [node name="mean bunny" parent="Bunnies" instance=ExtResource("4_4w5ww")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 26.4596)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 28.0874)
+
+[node name="bunny mean dance" parent="Bunnies" instance=ExtResource("5_udl2g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55854, 1.4876, 39.5521)
+script = ExtResource("6_xgxg3")
 
 [node name="Enviroment" type="Node" parent="."]
 
