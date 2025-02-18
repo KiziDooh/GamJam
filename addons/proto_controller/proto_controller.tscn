@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=7 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/models/knife.tscn" id="2_j8sau"]
+[ext_resource type="PackedScene" uid="uid://dq5jgidsk2le6" path="res://scenes/flashlight.tscn" id="3_ifqqc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -43,8 +44,11 @@ transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 
 visible = false
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
-visible = false
+transform = Transform3D(0.999962, 0, 0.00872654, 0, 1, 0, -0.00872654, 0, 0.999962, 0.515586, -0.316157, -0.918347)
 light_color = Color(0.881382, 0.867135, 0.686244, 1)
-light_energy = 3.635
-light_volumetric_fog_energy = 0.439
+light_energy = 4.985
+light_indirect_energy = 3.424
+light_volumetric_fog_energy = 2.54
+
+[node name="flashlight" parent="Head/Camera3D" instance=ExtResource("3_ifqqc")]
+transform = Transform3D(-5.71455e-10, -0.0130734, 0.149429, 0.15, -6.55671e-09, 0, 6.53176e-09, 0.149429, 0.0130734, 0.502473, -0.335419, -0.892615)

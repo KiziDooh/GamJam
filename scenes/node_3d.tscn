@@ -5,11 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://c7h80mskb4v0b" path="res://scenes/bunny.tscn" id="3_57div"]
 [ext_resource type="PackedScene" uid="uid://cun06movtekqn" path="res://scenes/mean bunny.tscn" id="4_4w5ww"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="5_0pos4"]
-[ext_resource type="AudioStream" path="res://the stain.wav" id="7_x3cuu"]
-[ext_resource type="AudioStream" path="res://scenes/glitch-01-231255.mp3" id="8_xf5mf"]
-[ext_resource type="AudioStream" path="res://scenes/glitch-transition-sfx-182152.mp3" id="9_iit38"]
+[ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://scenes/audio/the stain.wav" id="7_x3cuu"]
+[ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/audio/glitch-01-231255.mp3" id="8_xf5mf"]
+[ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="9_iit38"]
 [ext_resource type="Script" path="res://scenes/scripts/health_bar.gd" id="10_5i6cm"]
-[ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/tv-glitch-6245.mp3" id="10_leu3j"]
+[ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/audio/tv-glitch-6245.mp3" id="10_leu3j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
@@ -95,6 +95,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 26.4596)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Enviroment"]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 8.45032, 0)
+visible = false
 light_energy = 0.838
 light_indirect_energy = 1.646
 light_volumetric_fog_energy = 1.162

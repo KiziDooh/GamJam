@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=15 format=3 uid="uid://bkeycdakvh2p"]
 
 [ext_resource type="Script" path="res://scenes/scripts/health_bar.gd" id="1_g12i0"]
 [ext_resource type="PackedScene" uid="uid://jyj66k7bgw1c" path="res://scenes/models/tree.tscn" id="2_mjekm"]
@@ -11,6 +11,20 @@
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="9_utdr1"]
 [ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/audio/tv-glitch-6245.mp3" id="10_dxs62"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u7qnw"]
+sky_top_color = Color(0.452717, 0.701292, 1, 1)
+sky_horizon_color = Color(0.727244, 0.78083, 0.795179, 1)
+ground_bottom_color = Color(0.45626, 0.422028, 0.180717, 1)
+ground_horizon_color = Color(0.727244, 0.78083, 0.795179, 1)
+
+[sub_resource type="Sky" id="Sky_4kjgu"]
+sky_material = SubResource("ProceduralSkyMaterial_u7qnw")
+
+[sub_resource type="Environment" id="Environment_2mftn"]
+background_mode = 2
+sky = SubResource("Sky_4kjgu")
+tonemap_mode = 2
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
 metallic = 0.06
@@ -18,6 +32,9 @@ metallic_texture_channel = 1
 roughness = 0.81
 
 [node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2mftn")
 
 [node name="UI" type="Node" parent="."]
 
