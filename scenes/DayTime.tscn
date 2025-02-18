@@ -136,7 +136,7 @@ shadow_enabled = true
 [node name="Character" type="Node" parent="."]
 
 [node name="ProtoController" parent="Character" instance=ExtResource("6_7x314")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997703, 2.18435, 0.276973)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.184, 0.277)
 can_sprint = true
 
 [node name="Sound" type="Node" parent="."]
