@@ -8,5 +8,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pitch_scale = 0.65
-	#pitch_scale = 0.95
+	#pitch_scale = 0.65
+	pitch_scale = 0.95

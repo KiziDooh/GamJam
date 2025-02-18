@@ -1,5 +1,8 @@
 [gd_scene load_steps=14 format=4 uid="uid://b4rhlybavji58"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_abexb"]
+size = Vector3(3.47852, 4.70605, 2.30566)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppp1u"]
 resource_name = "bunny"
 cull_mode = 2
@@ -222,25 +225,28 @@ _data = {
 "SphereAction": SubResource("Animation_oixi5")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_abexb"]
-size = Vector3(3.47852, 4.70605, 2.30566)
-
 [node name="bunny mean dance" type="Node3D"]
 
-[node name="Sphere_001" type="MeshInstance3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.23989, 1.03363)
+shape = SubResource("BoxShape3D_abexb")
+
+[node name="Sphere_001" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.719173, 0, 0, 0, 0.83544, 0, 0, 0, 0.83544, 0, 4.66263, -0.853486)
 mesh = SubResource("ArrayMesh_wvk6l")
 skeleton = NodePath("")
 
-[node name="Cylinder" type="MeshInstance3D" parent="."]
+[node name="Cylinder" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.274443, 0, 0, 0, 0.236985, 0.13841, 0, -0.13841, 0.236985, 0, 2.19434, 0.213644)
 mesh = SubResource("ArrayMesh_5gewk")
 skeleton = NodePath("")
 
-[node name="Armature" type="Node3D" parent="."]
+[node name="Armature" type="Node3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.0247433, 1.56811, 1.34471)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Armature"]
+[node name="Skeleton3D" type="Skeleton3D" parent="StaticBody3D/Armature"]
 bones/0/name = "Bone"
 bones/0/parent = -1
 bones/0/rest = Transform3D(0.999974, 0.00717463, -7.11949e-05, -0.00717463, 0.999778, -0.0198306, -7.10982e-05, 0.0198306, 0.999803, 0, 1.86996e-08, 1.60354e-08)
@@ -305,17 +311,12 @@ bones/8/position = Vector3(-9.1095e-08, 1.58388, 2.2538e-07)
 bones/8/rotation = Quaternion(0.00823843, 1.63382e-08, 0.897792, 0.440343)
 bones/8/scale = Vector3(1, 1, 1)
 
-[node name="Sphere" type="MeshInstance3D" parent="Armature/Skeleton3D"]
+[node name="Sphere" type="MeshInstance3D" parent="StaticBody3D/Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_5vigq")
 skin = SubResource("Skin_i328g")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D"]
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_g2k8m")
 }
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.23989, 1.03363)
-shape = SubResource("BoxShape3D_abexb")

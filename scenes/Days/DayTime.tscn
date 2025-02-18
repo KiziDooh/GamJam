@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=21 format=3 uid="uid://bkeycdakvh2p"]
 
 [ext_resource type="Script" path="res://scenes/scripts/health_bar.gd" id="1_xmovx"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="2_1sn2w"]
@@ -14,6 +14,8 @@
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="12_bmyrr"]
 [ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/audio/tv-glitch-6245.mp3" id="13_kiirs"]
 [ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://scenes/models/bench.tscn" id="14_a50s4"]
+[ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/models/knife.tscn" id="14_mcsol"]
+[ext_resource type="PackedScene" uid="uid://dq5jgidsk2le6" path="res://scenes/models/flashlight.tscn" id="15_j6i74"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
@@ -128,7 +130,6 @@ transform = Transform3D(0.299471, 0.0178025, 0, -0.0178025, 0.299471, 0, 0, 0, 0
 
 [node name="mean bunny" parent="Bunnies" instance=ExtResource("7_ya2mk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 26.4596)
-visible = false
 
 [node name="Sky" type="Node" parent="."]
 
@@ -169,4 +170,10 @@ stream = ExtResource("13_kiirs")
 [node name="Objects" type="Node" parent="."]
 
 [node name="bench" parent="Objects" instance=ExtResource("14_a50s4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5779, 1.48759, -3.27572)
+transform = Transform3D(0.815087, 0, -0.579338, 0, 1, 0, 0.579338, 0, 0.815087, -12.5779, 1.48759, -3.27572)
+
+[node name="flashlight" parent="Objects" instance=ExtResource("15_j6i74")]
+transform = Transform3D(-0.0235839, -0.0755194, 0.0611605, 0.0971648, -0.0172399, 0.01618, -0.00167503, 0.0632424, 0.0774441, -10.2492, 3.49869, -1.5711)
+
+[node name="knife" parent="Objects" instance=ExtResource("14_mcsol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3887, 1.44976, 15.3176)
