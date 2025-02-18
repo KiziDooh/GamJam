@@ -1,18 +1,18 @@
 [gd_scene load_steps=15 format=3 uid="uid://cbps161a76m82"]
 
-[ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/tree.tscn" id="1_1jiid"]
-[ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://scenes/bench.tscn" id="2_coxnt"]
-[ext_resource type="PackedScene" uid="uid://c7h80mskb4v0b" path="res://scenes/bunny.tscn" id="3_gtq5u"]
-[ext_resource type="PackedScene" uid="uid://cun06movtekqn" path="res://scenes/mean bunny.tscn" id="4_4fk5l"]
-[ext_resource type="PackedScene" uid="uid://b4rhlybavji58" path="res://scenes/bunny mean dance.tscn" id="5_g4vh6"]
-[ext_resource type="Script" path="res://scenes/bunny_mean_dance.gd" id="6_ad0pn"]
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="7_w0kpr"]
-[ext_resource type="Script" path="res://scenes/ray_cast_3d.gd" id="8_qtbdf"]
-[ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://scenes/audio/the stain.wav" id="9_hxwge"]
-[ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/audio/glitch-01-231255.mp3" id="10_emk4u"]
-[ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="11_itl3d"]
-[ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/audio/tv-glitch-6245.mp3" id="12_eqls5"]
-[ext_resource type="Script" path="res://scenes/scripts/health_bar.gd" id="13_fgpa8"]
+[ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="1_av0r8"]
+[ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://scenes/models/bench.tscn" id="2_6oju8"]
+[ext_resource type="PackedScene" uid="uid://c7h80mskb4v0b" path="res://scenes/models/bunny.tscn" id="3_cf4ng"]
+[ext_resource type="PackedScene" uid="uid://cun06movtekqn" path="res://scenes/models/mean bunny.tscn" id="4_3jn4p"]
+[ext_resource type="PackedScene" uid="uid://b4rhlybavji58" path="res://scenes/models/bunny mean dance.tscn" id="5_2no0b"]
+[ext_resource type="Script" path="res://scenes/scripts/bunny_mean_dance.gd" id="6_p5j5x"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="7_x8udb"]
+[ext_resource type="Script" path="res://scenes/scripts/ray_cast_3d.gd" id="8_77ucr"]
+[ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://scenes/audio/the stain.wav" id="9_7vx3d"]
+[ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/audio/glitch-01-231255.mp3" id="10_w3xop"]
+[ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="11_gynyu"]
+[ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/audio/tv-glitch-6245.mp3" id="12_rb1rn"]
+[ext_resource type="Script" path="res://scenes/scripts/health_bar.gd" id="13_o1fln"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
@@ -24,31 +24,31 @@ roughness = 0.81
 
 [node name="trees" type="Node" parent="."]
 
-[node name="tree" parent="trees" instance=ExtResource("1_1jiid")]
+[node name="tree" parent="trees" instance=ExtResource("1_av0r8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12.7241, 0.678766, 0.391416)
 
-[node name="tree2" parent="trees" instance=ExtResource("1_1jiid")]
+[node name="tree2" parent="trees" instance=ExtResource("1_av0r8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.229298, 0.678766, 17.4291)
 
-[node name="tree3" parent="trees" instance=ExtResource("1_1jiid")]
+[node name="tree3" parent="trees" instance=ExtResource("1_av0r8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -49.3354, 0.678766, 32.8645)
 
-[node name="tree4" parent="trees" instance=ExtResource("1_1jiid")]
+[node name="tree4" parent="trees" instance=ExtResource("1_av0r8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 33.406, 0.678766, 32.8645)
 
-[node name="tree5" parent="trees" instance=ExtResource("1_1jiid")]
+[node name="tree5" parent="trees" instance=ExtResource("1_av0r8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10.9141, 0.678766, -30.2146)
 
-[node name="tree6" parent="trees" instance=ExtResource("1_1jiid")]
+[node name="tree6" parent="trees" instance=ExtResource("1_av0r8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 44.1272, 0.678766, -6.19382)
 
-[node name="tree7" parent="trees" instance=ExtResource("1_1jiid")]
+[node name="tree7" parent="trees" instance=ExtResource("1_av0r8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.7676, 0.678766, -37.4331)
 
-[node name="tree8" parent="trees" instance=ExtResource("1_1jiid")]
+[node name="tree8" parent="trees" instance=ExtResource("1_av0r8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -29.4844, 0.678766, -12.9733)
 
-[node name="tree9" parent="trees" instance=ExtResource("1_1jiid")]
+[node name="tree9" parent="trees" instance=ExtResource("1_av0r8")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.82116, 0.678766, -43.5724)
 
 [node name="Enviromental Objects" type="Node" parent="."]
@@ -83,21 +83,21 @@ transform = Transform3D(15.6336, 0, 0, 0, 1.00691, 0, 0, 0, 24.4431, -193.846, 6
 use_collision = true
 size = Vector3(1, 10.8486, 30.7002)
 
-[node name="bench2" parent="Enviromental Objects" instance=ExtResource("2_coxnt")]
+[node name="bench2" parent="Enviromental Objects" instance=ExtResource("2_6oju8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5779, 1.48759, -3.27572)
 
 [node name="Bunnies" type="Node" parent="."]
 
-[node name="bunny" parent="Bunnies" instance=ExtResource("3_gtq5u")]
+[node name="bunny" parent="Bunnies" instance=ExtResource("3_cf4ng")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
 
-[node name="mean bunny" parent="Bunnies" instance=ExtResource("4_4fk5l")]
+[node name="mean bunny" parent="Bunnies" instance=ExtResource("4_3jn4p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 28.0874)
 visible = false
 
-[node name="bunny mean dance2" parent="Bunnies" instance=ExtResource("5_g4vh6")]
+[node name="bunny mean dance2" parent="Bunnies" instance=ExtResource("5_2no0b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04206, 1.46864, 25.8198)
-script = ExtResource("6_ad0pn")
+script = ExtResource("6_p5j5x")
 
 [node name="Enviroment" type="Node" parent="."]
 
@@ -111,7 +111,7 @@ shadow_enabled = true
 
 [node name="Character" type="Node" parent="."]
 
-[node name="ProtoController" parent="Character" instance=ExtResource("7_w0kpr")]
+[node name="ProtoController" parent="Character" instance=ExtResource("7_x8udb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997703, 2.06571, 0.276973)
 collision_mask = 5
 can_sprint = true
@@ -119,7 +119,7 @@ can_sprint = true
 [node name="RayCast3D" type="RayCast3D" parent="Character/ProtoController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0997703, 0.859577, -0.276973)
 target_position = Vector3(0, 0, 10)
-script = ExtResource("8_qtbdf")
+script = ExtResource("8_77ucr")
 
 [node name="RayCast3D2" type="RayCast3D" parent="Character/ProtoController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0997703, 5.86387, -0.276973)
@@ -139,17 +139,17 @@ collision_mask = 4
 [node name="Sound" type="Node" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource("9_hxwge")
+stream = ExtResource("9_7vx3d")
 autoplay = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sound"]
-stream = ExtResource("10_emk4u")
+stream = ExtResource("10_w3xop")
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Sound"]
-stream = ExtResource("11_itl3d")
+stream = ExtResource("11_gynyu")
 
 [node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="Sound"]
-stream = ExtResource("12_eqls5")
+stream = ExtResource("12_rb1rn")
 
 [node name="UI" type="Node" parent="."]
 
@@ -162,5 +162,5 @@ offset_right = 108.0
 offset_bottom = 633.0
 value = 100.0
 exp_edit = true
-script = ExtResource("13_fgpa8")
+script = ExtResource("13_o1fln")
 metadata/_edit_use_anchors_ = true

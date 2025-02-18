@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://b4rhlybavji58"]
+[gd_scene load_steps=14 format=4 uid="uid://b4rhlybavji58"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppp1u"]
 resource_name = "bunny"
@@ -222,6 +222,9 @@ _data = {
 "SphereAction": SubResource("Animation_oixi5")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_abexb"]
+size = Vector3(3.47852, 4.70605, 2.30566)
+
 [node name="bunny mean dance" type="Node3D"]
 
 [node name="Sphere_001" type="MeshInstance3D" parent="."]
@@ -310,3 +313,9 @@ skin = SubResource("Skin_i328g")
 libraries = {
 "": SubResource("AnimationLibrary_g2k8m")
 }
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.23989, 1.03363)
+shape = SubResource("BoxShape3D_abexb")
