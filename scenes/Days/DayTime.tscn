@@ -1,8 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=24 format=3 uid="uid://bkeycdakvh2p"]
 
-[ext_resource type="Script" path="res://scenes/scripts/health_bar.gd" id="1_xmovx"]
+[ext_resource type="Texture2D" uid="uid://bxbtp7qfonqo2" path="res://scenes/ui/Bar_Empty.png" id="1_eo5kg"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="2_1sn2w"]
+[ext_resource type="Script" path="res://scenes/scripts/Health_Bar.gd" id="2_4fp7o"]
+[ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://scenes/ui/Bar_Overset.png" id="2_vrgbp"]
 [ext_resource type="PackedScene" uid="uid://ni4f2lchsyiv" path="res://scenes/models/brockleetree.tscn" id="3_1kf1e"]
+[ext_resource type="Texture2D" uid="uid://cnaaiiymttto7" path="res://scenes/ui/HealthBarFullFixed.png" id="3_vx2l0"]
 [ext_resource type="PackedScene" uid="uid://xc776jhcg36a" path="res://scenes/models/jankassflower.tscn" id="4_3fyem"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://scenes/models/bigtree.tscn" id="5_pwjaj"]
 [ext_resource type="PackedScene" uid="uid://c7h80mskb4v0b" path="res://scenes/models/bunny.tscn" id="6_ao6hn"]
@@ -41,17 +44,24 @@ tonemap_mode = 2
 
 [node name="UI" type="Node" parent="."]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="UI"]
+[node name="UICanvasLayer" type="CanvasLayer" parent="UI"]
 
-[node name="ProgressBar" type="ProgressBar" parent="UI/CanvasLayer"]
-offset_left = 16.0
-offset_top = 606.0
-offset_right = 108.0
-offset_bottom = 633.0
-value = 100.0
-exp_edit = true
-script = ExtResource("1_xmovx")
-metadata/_edit_use_anchors_ = true
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="UI/UICanvasLayer" node_paths=PackedStringArray("character")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+offset_right = 1417.0
+offset_bottom = -2.0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+pivot_offset = Vector2(100, 0)
+mouse_filter = 2
+texture_under = ExtResource("1_eo5kg")
+texture_over = ExtResource("2_vrgbp")
+texture_progress = ExtResource("3_vx2l0")
+script = ExtResource("2_4fp7o")
+character = NodePath("../../../Character/ProtoController")
 
 [node name="Plantus" type="Node" parent="."]
 
