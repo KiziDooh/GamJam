@@ -245,7 +245,40 @@ transform = Transform3D(0.0887373, 0, 0.0461052, 0, 0.1, 0, -0.0461052, 0, 0.088
 transform = Transform3D(-0.0587729, 0, 0.0809058, 0, 0.1, 0, -0.0809058, 0, -0.0587729, 31.2066, 2.01479, 15.2556)
 
 [node name="bigtree" parent="Plantus" instance=ExtResource("5_pwjaj")]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -74.7276, 1.76991, -3.86182)
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -70.1092, 1.76991, -3.86182)
+
+[node name="bigtree2" parent="Plantus" instance=ExtResource("5_pwjaj")]
+transform = Transform3D(1.51381, 0, 0, 0, 1.99644, 0, 0, 0, 1.65965, -23.9538, 0.950475, -2.39656)
+
+[node name="bigtree3" parent="Plantus" instance=ExtResource("5_pwjaj")]
+transform = Transform3D(1.51381, 0, 0, 0, 1.99644, 0, 0, 0, 1.65965, -25.6006, 0.950475, 20.3886)
+
+[node name="bigtree4" parent="Plantus" instance=ExtResource("5_pwjaj")]
+transform = Transform3D(1.51381, 0, 0, 0, 1.99644, 0, 0, 0, 1.65965, -10.3084, 0.950475, 18.6896)
+
+[node name="bigtree5" parent="Plantus" instance=ExtResource("5_pwjaj")]
+transform = Transform3D(1.51381, 0, 0, 0, 1.99644, 0, 0, 0, 1.65965, -36.1927, 0.950475, 11.9397)
+
+[node name="bigtree6" parent="Plantus" instance=ExtResource("5_pwjaj")]
+transform = Transform3D(1.51381, 0, 0, 0, 1.99644, 0, 0, 0, 1.65965, -1.05555, 0.950475, 25.5258)
+
+[node name="bigtree7" parent="Plantus" instance=ExtResource("5_pwjaj")]
+transform = Transform3D(1.51381, 0, 0, 0, 1.99644, 0, 0, 0, 1.65965, 24.0221, 0.950475, 28.117)
+
+[node name="bigtree8" parent="Plantus" instance=ExtResource("5_pwjaj")]
+transform = Transform3D(1.51381, 0, 0, 0, 1.99644, 0, 0, 0, 1.65965, 28.5603, 0.950475, 11.9801)
+
+[node name="bigtree9" parent="Plantus" instance=ExtResource("5_pwjaj")]
+transform = Transform3D(1.51381, 0, 0, 0, 1.99644, 0, 0, 0, 1.65965, 35.2684, 0.950475, -3.49455)
+
+[node name="bigtree10" parent="Plantus" instance=ExtResource("5_pwjaj")]
+transform = Transform3D(1.51381, 0, 0, 0, 1.99644, 0, 0, 0, 1.65965, 13.7519, 0.950475, -8.54073)
+
+[node name="bigtree11" parent="Plantus" instance=ExtResource("5_pwjaj")]
+transform = Transform3D(1.51381, 0, 0, 0, 1.99644, 0, 0, 0, 1.65965, -7.94111, 0.950475, -30.8099)
+
+[node name="bigtree12" parent="Plantus" instance=ExtResource("5_pwjaj")]
+transform = Transform3D(1.51381, 0, 0, 0, 1.99644, 0, 0, 0, 1.65965, -33.3874, 0.950475, -23.863)
 
 [node name="Walls" type="Node" parent="."]
 
