@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cfi67b6xq3e88"
-path="res://.godot/imported/bunny mean dance.blend-1731b18658783e8aec4e507842527650.scn"
+valid=false
 
 [deps]
 
 source_file="res://scenes/scripts/bunny mean dance.blend"
-dest_files=["res://.godot/imported/bunny mean dance.blend-1731b18658783e8aec4e507842527650.scn"]
 
 [params]
 
