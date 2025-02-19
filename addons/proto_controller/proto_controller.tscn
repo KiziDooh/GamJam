@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=19 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/models/knife.tscn" id="2_j8sau"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://scenes/ui/Bar_Overset.png" id="7_ssvos"]
 [ext_resource type="Texture2D" uid="uid://bwv5xkxrcxr4h" path="res://scenes/ui/StaminaBar_Full.png" id="8_y2lov"]
 [ext_resource type="Script" path="res://scenes/scripts/ray_cast_3d.gd" id="12_gdqeh"]
+[ext_resource type="AudioStream" uid="uid://dpx0txhouqn0n" path="res://scenes/audio/audio-editor-output.mp3" id="13_7h3ds"]
+[ext_resource type="AudioStream" uid="uid://tb6volrsbiyb" path="res://scenes/audio/WalkingSound2.mp3" id="14_m26ht"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -110,5 +112,15 @@ target_position = Vector3(-20, 0, 0)
 collide_with_areas = true
 collide_with_bodies = false
 script = ExtResource("12_gdqeh")
+
+[node name="WalkingSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("13_7h3ds")
+volume_db = -10.0
+max_distance = 39.01
+
+[node name="WalkingSound2" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("14_m26ht")
+volume_db = 10.0
+max_distance = 78.02
 
 [connection signal="health_depleated" from="Health" to="." method="_on_health_health_depleated"]

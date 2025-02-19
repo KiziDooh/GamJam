@@ -291,7 +291,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_km5jt")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7awbl"]
-radius = 0.840927
+radius = 0.840925
 height = 1.68185
 
 [node name="bunny" type="Node3D"]

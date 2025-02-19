@@ -116,6 +116,9 @@ func _physics_process(delta: float) -> void:
 	if can_jump:
 		if Input.is_action_just_pressed(input_jump) and is_on_floor():
 			velocity.y = jump_velocity
+			$WalkingSound.playing = false
+			$WalkingSound2.playing = false
+			
 
 	# Modify speed based on sprinting
 	if current_stamina >= 200:
@@ -142,9 +145,21 @@ func _physics_process(delta: float) -> void:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
 		var move_dir := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if move_dir:
+			if $WalkingSound2.playing == false and is_on_floor():
+				if Input.is_action_pressed(input_sprint) and can_sprint == true:
+					$WalkingSound.playing = false
+					$WalkingSound2.set_pitch_scale(randf_range(1, 1.5))
+					$WalkingSound2.play()
+				else:
+					if $WalkingSound.playing == false and is_on_floor():
+						$WalkingSound2.playing = false
+						$WalkingSound.set_pitch_scale(randf_range(1, 1.5))
+						$WalkingSound.play()
 			velocity.x = move_dir.x * move_speed
 			velocity.z = move_dir.z * move_speed
 		else:
+			$WalkingSound.playing = false
+			$WalkingSound2.playing = false
 			velocity.x = move_toward(velocity.x, 0, move_speed)
 			velocity.z = move_toward(velocity.z, 0, move_speed)
 	else:
