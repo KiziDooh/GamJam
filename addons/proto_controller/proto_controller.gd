@@ -90,10 +90,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_F) and $Head/Camera3D/SpotLight3D.visible == true:
 		if cooldown <= 0:
 			$Head/Camera3D/SpotLight3D.visible = false
+			$Head/Camera3D/SpotLight3D/FlashOnSound2.play()
 			cooldown = 0.3
 	elif Input.is_key_pressed(KEY_F) and $Head/Camera3D/SpotLight3D.visible == false:
 		if cooldown <= 0:
 			$Head/Camera3D/SpotLight3D.visible = true
+			$Head/Camera3D/SpotLight3D/FlashOnSound.play()
 			cooldown = 0.3
 
 		

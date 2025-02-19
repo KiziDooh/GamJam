@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=15 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/models/knife.tscn" id="2_j8sau"]
+[ext_resource type="AudioStream" uid="uid://d8uh3ynagmy" path="res://scenes/audio/mixkit-hard-typewriter-click-1119.mp3" id="3_csw78"]
 [ext_resource type="PackedScene" uid="uid://dq5jgidsk2le6" path="res://scenes/models/flashlight.tscn" id="3_ifqqc"]
+[ext_resource type="AudioStream" uid="uid://ccrxi2487vrnd" path="res://scenes/audio/mixkit-typewriter-soft-click-1125.mp3" id="4_0gog2"]
 [ext_resource type="Script" path="res://scenes/scripts/health.gd" id="4_7hyiv"]
 [ext_resource type="Script" path="res://scenes/scripts/hurtbox.gd" id="5_kuwjw"]
 [ext_resource type="Texture2D" uid="uid://bxbtp7qfonqo2" path="res://scenes/ui/Bar_Empty.png" id="6_mvstu"]
@@ -56,6 +58,12 @@ light_color = Color(0.881382, 0.867135, 0.686244, 1)
 light_energy = 4.985
 light_indirect_energy = 3.424
 light_volumetric_fog_energy = 2.54
+
+[node name="FlashOnSound" type="AudioStreamPlayer3D" parent="Head/Camera3D/SpotLight3D"]
+stream = ExtResource("3_csw78")
+
+[node name="FlashOnSound2" type="AudioStreamPlayer3D" parent="Head/Camera3D/SpotLight3D"]
+stream = ExtResource("4_0gog2")
 
 [node name="flashlight" parent="Head/Camera3D" instance=ExtResource("3_ifqqc")]
 transform = Transform3D(-5.71455e-10, -0.0130734, 0.149429, 0.15, -6.55671e-09, 0, 6.53176e-09, 0.149429, 0.0130734, 0.502473, -0.335419, -0.892615)
