@@ -21,44 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://dq5jgidsk2le6" path="res://scenes/models/flashlight.tscn" id="15_j6i74"]
 [ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="20_nkiqi"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
-resource_name = "Material.001"
-cull_mode = 2
-albedo_color = Color(0.420832, 0.420832, 0.420832, 1)
-roughness = 0.5
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_iwah7"]
-_surfaces = [{
-"aabb": AABB(-1.06675, -1.33079, -1.51739, 2.82093, 2.33079, 2.79055),
-"format": 34896613377,
-"index_count": 132,
-"index_data": PackedByteArray("DgADABAADgABAAMAFAARABYAFAANABEAFQAEAAkAFQAPAAQAAgALAAUAAgAHAAsACAAXAAoACAATABcAAAACAAEAAwAFAAQABgAIAAcACQALAAoADAAOAA0ADwARABAAEgAUABMAFQAXABYABgACAAAABgAHAAIAAQAFAAMAAQACAAUABAALAAkABAAFAAsACgAHAAgACgALAAcAEgAIAAYAEgATAAgACQAXABUACQAKABcAFgATABQAFgAXABMADAAUABIADAANABQAFQARAA8AFQAWABEAEAANAA4AEAARAA0AAAAOAAwAAAABAA4ADwADAAQADwAQAAMABgAMABIABgAAAAwA"),
-"name": "Material.001",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("nCI7N/ayAAD0Inldx9UAAAAAKWb7qwAAxyz4u///AABaK/DqddgAAHcJBceI1AAABCcAAD8rAAAOBuMneC8AAAQnjxkAAAAABCf//8hQAAAEJ8HVdi8AAA4Gi9fIUAAAlZEAQXzUAAD8rjN0WdoAAJWR5GjN9QAAY5sm/xnGAAC1mkbXbugAANG96ddUxwAAfpoYJMpPAAAIm49JuC4AALO+ZEu4UgAArcuv3K1dAAD//96mw2IAAK3Ly7RbPAAA")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_0piqd"]
-resource_name = "campfire_Cube_008"
-_surfaces = [{
-"aabb": AABB(-1.06675, -1.33079, -1.51739, 2.82093, 2.33079, 2.79055),
-"attribute_data": PackedByteArray("nyueS58rnkufK55LnyueS55rnwufK/8/nyv/P55r////H55L/x+eS55rX/Sea1/0YJSfC2CUnwtglP//YJT///+fnwtf1J5L/59f9P+fX/RglF/0YJRf9GCUX/RglF/0nytgdJ8rYHSfK2B0nytgdP8fYHT/H2B0nmuey55rnsuea2C0nyv/f58r/3+ea2C0X9RgdP+fYLT/n57L/5+ey2CUYLRglGC0YJT/v2CUYLRglJ7LYJSey2CUnstglJ7LYFSeS2BUnktgVJ5LYFSeS/9fnkuea55LnmueS55rnktgVP8/nmtgNJ5rYDRgVP8//59gNJ6rnkv/n2A0nqueS2CUYDRglGA0YJRgNGCUYDRglP8/YJSeS2CUnktglJ5LYFRgdGBUYHRgVGB0YFRgdJ5rnotgVP9/YFT/f55rnov/X2B0nmtgdJ5rYHSea2B0nqtgdP+fnov/n56LnqtgdGCU/39glGB0YJRgdGCUYHRglJ6LYJSei2CUnotglJ6L"),
-"format": 34896613399,
-"index_count": 132,
-"index_data": PackedByteArray("OgANAEMAOgAEAA0AUwBHAFsAUwA3AEcAVAARACQAVAA9ABEACwAvABcACwAfAC8AIABdACkAIABMAF0AAgAIAAYADgAUABIAGgAiABwAJgAsACoAMQA4ADQAPgBEAEEASgBQAE4AVgBeAFgAGwAJAAMAGwAdAAkABwAWAA8ABwAKABYAEwAtACcAEwAVAC0AKwAeACMAKwAuAB4ASQAhABkASQBNACEAJQBcAFUAJQAoAFwAWQBPAFEAWQBfAE8AMgBSAEsAMgA2AFIAVwBFAD8AVwBaAEUAQgA1ADkAQgBGADUAAQA7ADMAAQAFADsAPAAMABAAPABAAAwAGAAwAEgAGAAAADAA"),
-"material": SubResource("StandardMaterial3D_iwjiw"),
-"name": "Material.001",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 96,
-"vertex_data": PackedByteArray("nCI7N/ayJ7ecIjs39rIlopwiOzf2skG0nCI7N/ayxrz0Inldx9VWu/QieV3H1SWi9CJ5XcfVQbT0Inldx9UYvQAAKWb7q0G0AAApZvurcr0AAClm+6tevQAAKWb7q0/Nxyz4u///9cbHLPi7//+zu8cs+Lv//5Kuxyz4u///kb1aK/Dqddifxlor8Op12OH+Wivw6nXYkq5aK/DqddjnwHcJBceI1JKudwkFx4jUncB3CQXHiNTUvXcJBceI1BnLBCcAAD8ra7cEJwAAPyt/2gQnAAA/KxfTBCcAAD8rWb8OBuMneC8X0w4G4yd4L2fADgbjJ3gvWeEOBuMneC+8zwQnjxkAAJb/BCePGQAAhtoEJ48ZAAAX0wQnjxkAAD3hBCf//8hQuPwEJ///yFDw7gQn///IUDDdBCf//8hQ/sEEJ8HVdi/t7gQnwdV2L3j+BCfB1XYvMN0EJ8HVdi/i4A4Gi9fIUDDdDgaL18hQtMEOBovXyFD84A4Gi9fIUL3NlZEAQXzUYLeVkQBBfNRSuZWRAEF81CfClZEAQXzUJaL8rjN0WdpSufyuM3RZ2vG+/K4zdFnaq8H8rjN0WdorvpWR5GjN9VK5lZHkaM31+7+VkeRozfXbu5WR5GjN9SWiY5sm/xnGi8Vjmyb/Gcbi/GObJv8ZxvK/Y5sm/xnGA+m1mkbXbujpxbWaRtdu6PK/tZpG127oLr21mkbXbug2vNG96ddUx/K/0b3p11THdunRvenXVMczvNG96ddUx8S8fpoYJMpPp7d+mhgkyk9f2n6aGCTKT7zbfpoYJMpPnsAIm49JuC4y/gibj0m4LmjaCJuPSbguvNsIm49JuC6K6LO+ZEu4Urzbs75kS7hSB+mzvmRLuFItwLO+ZEu4UjXArcuv3K1dRv+ty6/crV3i7q3Lr9ytXVz6rcuv3K1dP+j//96mw2Jc+v//3qbDYizq///epsNijOj//96mw2ICv63Ly7RbPN/urcvLtFs8+/yty8u0Wzxc+q3Ly7RbPLfpPQnln2EZ/Kw2SXCgwT/foNgJjPZhGfysNklwoDHOe+42SXCgoj9Ln3rOVe4Wy9nYcuJ4HNkJofZH5MXFrc467oLirxxuQJUBR+TFxYfh5LpH5MXFueD7uvHOFu4Gx83aUwojolAFq2JTNSqcUj9Bm1M1KpwrPzqZeMZny//O99ZRuwu5KQW8YlM1KpwPxqfLJr/jABa1mLEe32axXOSUuhy1lLEQwU2zHt9msafEhcwe32axouOoug7FRczQy3/YKgrOobgVXjZuF89AYBn2rLgVXjYNIuIYSRi8QNkfbjG4FV42UiEfGdkJq/ZhGfmstuJgHS6G972yyq8JKDRGEqTiJB2yyq8JVCN3GNgJv/ayyq8J1zObEhIkORiwITExNQv1o+4FbWI2HSFQNxqRQH/C4LHCBX5iNh0hUMEmLUc2HSFQ4iRYSA8bfkBYHcAxO0AGAjS1gbEEtSupszSyEQS1K6mzIPhKfTTsEcwekDE7tXuxGslKqwS1K6laIu5J")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_iwah7")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
 metallic = 0.06
@@ -78,6 +40,12 @@ sky_material = SubResource("ProceduralSkyMaterial_u7qnw")
 background_mode = 2
 sky = SubResource("Sky_4kjgu")
 tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_color = Color(0.420832, 0.420832, 0.420832, 1)
+roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2xqpn"]
 _surfaces = [{
@@ -110,6 +78,38 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_2xqpn")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_iwah7"]
+_surfaces = [{
+"aabb": AABB(-1.06675, -1.33079, -1.51739, 2.82093, 2.33079, 2.79055),
+"format": 34896613377,
+"index_count": 132,
+"index_data": PackedByteArray("DgADABAADgABAAMAFAARABYAFAANABEAFQAEAAkAFQAPAAQAAgALAAUAAgAHAAsACAAXAAoACAATABcAAAACAAEAAwAFAAQABgAIAAcACQALAAoADAAOAA0ADwARABAAEgAUABMAFQAXABYABgACAAAABgAHAAIAAQAFAAMAAQACAAUABAALAAkABAAFAAsACgAHAAgACgALAAcAEgAIAAYAEgATAAgACQAXABUACQAKABcAFgATABQAFgAXABMADAAUABIADAANABQAFQARAA8AFQAWABEAEAANAA4AEAARAA0AAAAOAAwAAAABAA4ADwADAAQADwAQAAMABgAMABIABgAAAAwA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("nCI7N/ayAAD0Inldx9UAAAAAKWb7qwAAxyz4u///AABaK/DqddgAAHcJBceI1AAABCcAAD8rAAAOBuMneC8AAAQnjxkAAAAABCf//8hQAAAEJ8HVdi8AAA4Gi9fIUAAAlZEAQXzUAAD8rjN0WdoAAJWR5GjN9QAAY5sm/xnGAAC1mkbXbugAANG96ddUxwAAfpoYJMpPAAAIm49JuC4AALO+ZEu4UgAArcuv3K1dAAD//96mw2IAAK3Ly7RbPAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0piqd"]
+resource_name = "campfire_Cube_008"
+_surfaces = [{
+"aabb": AABB(-1.06675, -1.33079, -1.51739, 2.82093, 2.33079, 2.79055),
+"attribute_data": PackedByteArray("nyueS58rnkufK55LnyueS55rnwufK/8/nyv/P55r////H55L/x+eS55rX/Sea1/0YJSfC2CUnwtglP//YJT///+fnwtf1J5L/59f9P+fX/RglF/0YJRf9GCUX/RglF/0nytgdJ8rYHSfK2B0nytgdP8fYHT/H2B0nmuey55rnsuea2C0nyv/f58r/3+ea2C0X9RgdP+fYLT/n57L/5+ey2CUYLRglGC0YJT/v2CUYLRglJ7LYJSey2CUnstglJ7LYFSeS2BUnktgVJ5LYFSeS/9fnkuea55LnmueS55rnktgVP8/nmtgNJ5rYDRgVP8//59gNJ6rnkv/n2A0nqueS2CUYDRglGA0YJRgNGCUYDRglP8/YJSeS2CUnktglJ5LYFRgdGBUYHRgVGB0YFRgdJ5rnotgVP9/YFT/f55rnov/X2B0nmtgdJ5rYHSea2B0nqtgdP+fnov/n56LnqtgdGCU/39glGB0YJRgdGCUYHRglJ6LYJSei2CUnotglJ6L"),
+"format": 34896613399,
+"index_count": 132,
+"index_data": PackedByteArray("OgANAEMAOgAEAA0AUwBHAFsAUwA3AEcAVAARACQAVAA9ABEACwAvABcACwAfAC8AIABdACkAIABMAF0AAgAIAAYADgAUABIAGgAiABwAJgAsACoAMQA4ADQAPgBEAEEASgBQAE4AVgBeAFgAGwAJAAMAGwAdAAkABwAWAA8ABwAKABYAEwAtACcAEwAVAC0AKwAeACMAKwAuAB4ASQAhABkASQBNACEAJQBcAFUAJQAoAFwAWQBPAFEAWQBfAE8AMgBSAEsAMgA2AFIAVwBFAD8AVwBaAEUAQgA1ADkAQgBGADUAAQA7ADMAAQAFADsAPAAMABAAPABAAAwAGAAwAEgAGAAAADAA"),
+"material": SubResource("StandardMaterial3D_iwjiw"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 96,
+"vertex_data": PackedByteArray("nCI7N/ayJ7ecIjs39rIlopwiOzf2skG0nCI7N/ayxrz0Inldx9VWu/QieV3H1SWi9CJ5XcfVQbT0Inldx9UYvQAAKWb7q0G0AAApZvurcr0AAClm+6tevQAAKWb7q0/Nxyz4u///9cbHLPi7//+zu8cs+Lv//5Kuxyz4u///kb1aK/Dqddifxlor8Op12OH+Wivw6nXYkq5aK/DqddjnwHcJBceI1JKudwkFx4jUncB3CQXHiNTUvXcJBceI1BnLBCcAAD8ra7cEJwAAPyt/2gQnAAA/KxfTBCcAAD8rWb8OBuMneC8X0w4G4yd4L2fADgbjJ3gvWeEOBuMneC+8zwQnjxkAAJb/BCePGQAAhtoEJ48ZAAAX0wQnjxkAAD3hBCf//8hQuPwEJ///yFDw7gQn///IUDDdBCf//8hQ/sEEJ8HVdi/t7gQnwdV2L3j+BCfB1XYvMN0EJ8HVdi/i4A4Gi9fIUDDdDgaL18hQtMEOBovXyFD84A4Gi9fIUL3NlZEAQXzUYLeVkQBBfNRSuZWRAEF81CfClZEAQXzUJaL8rjN0WdpSufyuM3RZ2vG+/K4zdFnaq8H8rjN0WdorvpWR5GjN9VK5lZHkaM31+7+VkeRozfXbu5WR5GjN9SWiY5sm/xnGi8Vjmyb/Gcbi/GObJv8ZxvK/Y5sm/xnGA+m1mkbXbujpxbWaRtdu6PK/tZpG127oLr21mkbXbug2vNG96ddUx/K/0b3p11THdunRvenXVMczvNG96ddUx8S8fpoYJMpPp7d+mhgkyk9f2n6aGCTKT7zbfpoYJMpPnsAIm49JuC4y/gibj0m4LmjaCJuPSbguvNsIm49JuC6K6LO+ZEu4Urzbs75kS7hSB+mzvmRLuFItwLO+ZEu4UjXArcuv3K1dRv+ty6/crV3i7q3Lr9ytXVz6rcuv3K1dP+j//96mw2Jc+v//3qbDYizq///epsNijOj//96mw2ICv63Ly7RbPN/urcvLtFs8+/yty8u0Wzxc+q3Ly7RbPLfpPQnln2EZ/Kw2SXCgwT/foNgJjPZhGfysNklwoDHOe+42SXCgoj9Ln3rOVe4Wy9nYcuJ4HNkJofZH5MXFrc467oLirxxuQJUBR+TFxYfh5LpH5MXFueD7uvHOFu4Gx83aUwojolAFq2JTNSqcUj9Bm1M1KpwrPzqZeMZny//O99ZRuwu5KQW8YlM1KpwPxqfLJr/jABa1mLEe32axXOSUuhy1lLEQwU2zHt9msafEhcwe32axouOoug7FRczQy3/YKgrOobgVXjZuF89AYBn2rLgVXjYNIuIYSRi8QNkfbjG4FV42UiEfGdkJq/ZhGfmstuJgHS6G972yyq8JKDRGEqTiJB2yyq8JVCN3GNgJv/ayyq8J1zObEhIkORiwITExNQv1o+4FbWI2HSFQNxqRQH/C4LHCBX5iNh0hUMEmLUc2HSFQ4iRYSA8bfkBYHcAxO0AGAjS1gbEEtSupszSyEQS1K6mzIPhKfTTsEcwekDE7tXuxGslKqwS1K6laIu5J")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_iwah7")
 
 [node name="Day Time" type="Node3D"]
 
@@ -166,6 +166,66 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 52.7676, 0.678766, -37.4331)
 [node name="tree8" parent="Plantus" instance=ExtResource("2_1sn2w")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -29.4844, 0.678766, -12.9733)
 
+[node name="tree10" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -20.6551, 0.678766, 26.7599)
+
+[node name="tree11" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -45.1574, 0.678766, 9.0751)
+
+[node name="tree12" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -36.2415, 0.678766, 22.3248)
+
+[node name="tree13" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -26.4905, 0.678766, 13.6974)
+
+[node name="tree14" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -36.4586, 0.678766, 0.371065)
+
+[node name="tree15" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -16.9463, 0.678766, 16.2059)
+
+[node name="tree16" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.65516, 0.678766, 35.538)
+
+[node name="tree17" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.11459, 0.678766, 30.9808)
+
+[node name="tree18" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 16.5443, 0.678766, 21.0349)
+
+[node name="tree19" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 37.3902, 0.678766, 9.04699)
+
+[node name="tree20" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 21.5123, 0.678766, 10.4794)
+
+[node name="tree21" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 21.5123, 0.678766, -12.3848)
+
+[node name="tree22" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 26.6004, 0.678766, -2.31427)
+
+[node name="tree23" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 30.6753, 0.678766, 21.0843)
+
+[node name="tree24" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 30.6753, 0.678766, -16.8267)
+
+[node name="tree25" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.59169, 0.678766, -14.6467)
+
+[node name="tree26" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.0186043, 0.678766, -21.9241)
+
+[node name="tree27" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -18.6378, 0.678766, -12.5976)
+
+[node name="tree28" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -22.9056, 0.678766, -25.8997)
+
+[node name="tree29" parent="Plantus" instance=ExtResource("2_1sn2w")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -11.1588, 0.678766, -18.9076)
+
 [node name="tree9" parent="Plantus" instance=ExtResource("2_1sn2w")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.82116, 0.678766, -43.5724)
 
@@ -175,16 +235,17 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -70.0734, 2.86331, 4.09
 [node name="jankassflower" parent="Plantus" instance=ExtResource("4_3fyem")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -65.4377, 2.01479, 4.4602)
 
+[node name="jankassflower2" parent="Plantus" instance=ExtResource("4_3fyem")]
+transform = Transform3D(0.0887373, 0, 0.0461052, 0, 0.1, 0, -0.0461052, 0, 0.0887373, -24.9049, 2.01479, 11.7515)
+
+[node name="jankassflower3" parent="Plantus" instance=ExtResource("4_3fyem")]
+transform = Transform3D(0.0887373, 0, 0.0461052, 0, 0.1, 0, -0.0461052, 0, 0.0887373, -16.9709, 2.01479, 22.9757)
+
+[node name="jankassflower4" parent="Plantus" instance=ExtResource("4_3fyem")]
+transform = Transform3D(-0.0587729, 0, 0.0809058, 0, 0.1, 0, -0.0809058, 0, -0.0587729, 31.2066, 2.01479, 15.2556)
+
 [node name="bigtree" parent="Plantus" instance=ExtResource("5_pwjaj")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -74.7276, 1.76991, -3.86182)
-
-[node name="Rock" type="MeshInstance3D" parent="Plantus"]
-transform = Transform3D(0.1, 0, 0, 0, 0.0919201, -0.0393788, 0, 0.0393788, 0.0919201, -6.17834, 1.51369, 2.4441)
-mesh = SubResource("ArrayMesh_0piqd")
-skeleton = NodePath("")
-
-[node name="campfire" parent="Plantus" instance=ExtResource("9_jo28d")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1.5, 0)
 
 [node name="Walls" type="Node" parent="."]
 
@@ -267,37 +328,64 @@ transform = Transform3D(-0.0235839, -0.0755194, 0.0611605, 0.0971648, -0.0172399
 [node name="knife" parent="Objects" instance=ExtResource("14_mcsol")]
 transform = Transform3D(0.0390731, -0.0920505, -1.70794e-09, -4.37114e-09, 1.91069e-16, -0.1, 0.0920505, 0.0390731, -4.02365e-09, -12.138, 1.44976, 9.62949)
 
-[node name="Node" type="Node" parent="."]
+[node name="Campfire area" type="Node" parent="."]
 
-[node name="stumpid4" parent="Node" instance=ExtResource("20_nkiqi")]
+[node name="stumpid4" parent="Campfire area" instance=ExtResource("20_nkiqi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.32449, 1.46864, 1.02234)
 
-[node name="stumpid3" parent="Node" instance=ExtResource("20_nkiqi")]
+[node name="stumpid3" parent="Campfire area" instance=ExtResource("20_nkiqi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85351, 1.46864, -4.33106)
 
-[node name="stumpid5" parent="Node" instance=ExtResource("20_nkiqi")]
+[node name="stumpid5" parent="Campfire area" instance=ExtResource("20_nkiqi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0552511, 1.62377, 5.97477)
 
-[node name="Log" parent="Node" instance=ExtResource("20_nkiqi")]
+[node name="Log" parent="Campfire area" instance=ExtResource("20_nkiqi")]
 transform = Transform3D(0.145536, 2.86592, 0.410528, -1.26376, 0.396939, 0, -0.0655223, -1.29028, 0.911848, -0.776845, 1.46864, -6.40013)
 
-[node name="stumpid" parent="Node" instance=ExtResource("20_nkiqi")]
+[node name="stumpid" parent="Campfire area" instance=ExtResource("20_nkiqi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00357, 1.52505, 1.28821)
 
-[node name="Rock" type="MeshInstance3D" parent="Node"]
+[node name="Rock" type="MeshInstance3D" parent="Campfire area"]
 transform = Transform3D(0.855328, 0.26702, 0.122283, 0.0138163, -0.23449, 0.64149, 0.465724, -0.483441, -0.24361, -4.67313, 1.66111, -4.36443)
 mesh = SubResource("ArrayMesh_6mbf0")
 skeleton = NodePath("")
 
-[node name="Rock3" type="MeshInstance3D" parent="Node"]
+[node name="Rock3" type="MeshInstance3D" parent="Campfire area"]
 transform = Transform3D(0.0913862, 0.271541, 0.132748, 0.00690814, -0.117245, 0.320285, 0.478299, -0.0501887, -0.0299895, -4.22539, 2.112, -4.86125)
 mesh = SubResource("ArrayMesh_6mbf0")
 skeleton = NodePath("")
 
-[node name="Rock2" type="MeshInstance3D" parent="Node"]
+[node name="Rock2" type="MeshInstance3D" parent="Campfire area"]
 transform = Transform3D(-0.568535, 0.446457, 0.226501, 0.0138163, -0.23449, 0.64149, 0.79073, 0.3251, 0.151646, -4.80184, 1.66111, -5.33317)
 mesh = SubResource("ArrayMesh_6mbf0")
 skeleton = NodePath("")
 
-[node name="campfire" parent="Node" instance=ExtResource("9_jo28d")]
+[node name="campfire" parent="Campfire area" instance=ExtResource("9_jo28d")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1.5259, 0)
+
+[node name="rocks" type="Node" parent="."]
+
+[node name="Rock" type="MeshInstance3D" parent="rocks"]
+transform = Transform3D(0.1, 0, 0, 0, 0.0919201, -0.0393788, 0, 0.0393788, 0.0919201, -7.82079, 1.51369, 5.53594)
+mesh = SubResource("ArrayMesh_0piqd")
+skeleton = NodePath("")
+
+[node name="Rock2" type="MeshInstance3D" parent="rocks"]
+transform = Transform3D(0.1, 0, 0, 0, 0.0919201, -0.0393788, 0, 0.0393788, 0.0919201, 15.736, 1.51369, 9.09462)
+mesh = SubResource("ArrayMesh_0piqd")
+skeleton = NodePath("")
+
+[node name="Rock3" type="MeshInstance3D" parent="rocks"]
+transform = Transform3D(0.1, 0, 0, 0, 0.0919201, -0.0393788, 0, 0.0393788, 0.0919201, 5.10135, 1.51369, 11.2504)
+mesh = SubResource("ArrayMesh_0piqd")
+skeleton = NodePath("")
+
+[node name="Rock4" type="MeshInstance3D" parent="rocks"]
+transform = Transform3D(0.1, 0, 0, 0, 0.0919201, -0.0393788, 0, 0.0393788, 0.0919201, 7.54878, 1.51369, 4.94486)
+mesh = SubResource("ArrayMesh_0piqd")
+skeleton = NodePath("")
+
+[node name="Rock5" type="MeshInstance3D" parent="rocks"]
+transform = Transform3D(0.1, 0, 0, 0, 0.0919201, -0.0393788, 0, 0.0393788, 0.0919201, -2.29275, 1.51369, 5.49109)
+mesh = SubResource("ArrayMesh_0piqd")
+skeleton = NodePath("")
