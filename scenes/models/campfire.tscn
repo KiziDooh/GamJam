@@ -588,7 +588,7 @@ cull_mode = 2
 albedo_color = Color(0.391666, 0.289865, 0.0903571, 1)
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ihc5o"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_2ohhk"]
 _surfaces = [{
 "aabb": AABB(-0.951057, -1, -1, 1.90211, 2, 1.80902),
 "format": 34896613377,
@@ -618,7 +618,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/38AAAAA/z//fwAAAABl5v9/AAAAAGXm/3///wAA/7//f///AABl5v9///8AAGXm//8AAMhh/z///wAAyGFl5v//AADIYTKz/////8hh/7//////yGFl5v/////IYTKzGs8AAP//AIAazwAA////PxrPAAD//zKzGs//////AIAaz///////vxrP/////zKz5DAAAP//AIDkMAAA////P+QwAAD//zKz5DD/////AIDkMP//////v+Qw/////zKzAAAAAMhh/z8AAAAAyGFl5gAAAADIYTKzAAD//8hh/78AAP//yGFl5gAA///IYTKzAAD/f/9/AAD/f///////f/9/AAD/f///AAD/f/9/AAD/fwAA////f/9/AAD/fwAA/3///wAA/3//fwAA/3///////3//fwAA/3///wAA/3//f////3///////3//f///AAD/f/9/////f///////f/9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_ihc5o")
+shadow_mesh = SubResource("ArrayMesh_2ohhk")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_1mtmf"]
 _surfaces = [{

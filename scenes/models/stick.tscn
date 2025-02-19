@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=4 uid="uid://cla2lc84moemg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkdnw"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_color = Color(0.391666, 0.289865, 0.0903571, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ihc5o"]
+_surfaces = [{
+"aabb": AABB(-0.951057, -1, -1, 1.90211, 2, 1.80902),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAFAAMAAgAEAAUABAAHAAUABAAGAAcABQABAAMAAQAHAAkAAQAFAAcABgAJAAcABgAIAAkACAABAAkACAAAAAEACAACAAAAAgAGAAQAAgAIAAYA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("/38AAAAAAAD/f///AAAAAP//AADIYQAA/////8hhAAAazwAA//8AABrP/////wAA5DAAAP//AADkMP////8AAAAAAADIYQAAAAD//8hhAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0f3k7"]
+resource_name = "campfire_Cylinder"
+_surfaces = [{
+"aabb": AABB(-0.951057, -1, -1, 1.90211, 2, 1.80902),
+"attribute_data": PackedByteArray("/7+Ogv///38AAP9//z+Ogv//AAAAAAAAbfoCrczM/3/MzP9/bnoCrczMAADMzAAAmZn/fxzks/GZmf9/mZkAABxks/GZmQAAZmb/f+Kbs/FmZv9/ZmYAAOIbs/FmZgAAkIUCrTMz/38zM/9/kQUCrTMzAAAzMwAA"),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AQAKAAQAAQAHAAoACAARAAsACAAOABEADAAVAA8ADAASABUAEAADAAkAAwAWABsAAwAQABYAFAAdABcAFAAaAB0AGQAFABwAGQACAAUAGAAGAAAABgATAA0ABgAYABMA"),
+"material": SubResource("StandardMaterial3D_xkdnw"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 30,
+"vertex_data": PackedByteArray("/38AAAAA/z//fwAAAABl5v9/AAAAAGXm/3///wAA/7//f///AABl5v9///8AAGXm//8AAMhh/z///wAAyGFl5v//AADIYTKz/////8hh/7//////yGFl5v/////IYTKzGs8AAP//AIAazwAA////PxrPAAD//zKzGs//////AIAaz///////vxrP/////zKz5DAAAP//AIDkMAAA////P+QwAAD//zKz5DD/////AIDkMP//////v+Qw/////zKzAAAAAMhh/z8AAAAAyGFl5gAAAADIYTKzAAD//8hh/78AAP//yGFl5gAA///IYTKzAAD/f/9/AAD/f///////f/9/AAD/f///AAD/f/9/AAD/fwAA////f/9/AAD/fwAA/3///wAA/3//fwAA/3///////3//fwAA/3///wAA/3//f////3///////3//f///AAD/f/9/////f///////f/9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ihc5o")
+
+[node name="Stick" type="Node3D"]
+
+[node name="Cylinder" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.149964, -0.000818314, -0.00328207, 0, 1.90463, -0.00294426, 0.0032827, 0.0373831, 0.149935, 0.27746, 2.35587, 0.311208)
+mesh = SubResource("ArrayMesh_0f3k7")
+skeleton = NodePath("")
+
+[node name="Cylinder2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.128019, -0.000237342, -0.00304982, -0.00175359, 0.424108, -0.0893184, 0.00218587, 0.354137, 0.106964, 0.27746, 3.60197, 0.748942)
+mesh = SubResource("ArrayMesh_0f3k7")
+skeleton = NodePath("")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=31 format=4 uid="uid://bkeycdakvh2p"]
 
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="2_1sn2w"]
 [ext_resource type="Script" path="res://scenes/scripts/Health_Bar.gd" id="2_4fp7o"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/models/knife.tscn" id="14_mcsol"]
 [ext_resource type="PackedScene" uid="uid://dq5jgidsk2le6" path="res://scenes/models/flashlight.tscn" id="15_j6i74"]
 [ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="20_nkiqi"]
+[ext_resource type="PackedScene" uid="uid://cla2lc84moemg" path="res://scenes/models/stick.tscn" id="21_kv2r3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
@@ -396,29 +397,38 @@ skeleton = NodePath("")
 [node name="campfire" parent="Campfire area" instance=ExtResource("9_jo28d")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1.5259, 0)
 
-[node name="rocks" type="Node" parent="."]
+[node name="Folage" type="Node" parent="."]
 
-[node name="Rock" type="MeshInstance3D" parent="rocks"]
+[node name="Rock" type="MeshInstance3D" parent="Folage"]
 transform = Transform3D(0.1, 0, 0, 0, 0.0919201, -0.0393788, 0, 0.0393788, 0.0919201, -7.82079, 1.51369, 5.53594)
 mesh = SubResource("ArrayMesh_0piqd")
 skeleton = NodePath("")
 
-[node name="Rock2" type="MeshInstance3D" parent="rocks"]
+[node name="Rock2" type="MeshInstance3D" parent="Folage"]
 transform = Transform3D(0.1, 0, 0, 0, 0.0919201, -0.0393788, 0, 0.0393788, 0.0919201, 15.736, 1.51369, 9.09462)
 mesh = SubResource("ArrayMesh_0piqd")
 skeleton = NodePath("")
 
-[node name="Rock3" type="MeshInstance3D" parent="rocks"]
+[node name="Rock3" type="MeshInstance3D" parent="Folage"]
 transform = Transform3D(0.1, 0, 0, 0, 0.0919201, -0.0393788, 0, 0.0393788, 0.0919201, 5.10135, 1.51369, 11.2504)
 mesh = SubResource("ArrayMesh_0piqd")
 skeleton = NodePath("")
 
-[node name="Rock4" type="MeshInstance3D" parent="rocks"]
+[node name="Rock4" type="MeshInstance3D" parent="Folage"]
 transform = Transform3D(0.1, 0, 0, 0, 0.0919201, -0.0393788, 0, 0.0393788, 0.0919201, 7.54878, 1.51369, 4.94486)
 mesh = SubResource("ArrayMesh_0piqd")
 skeleton = NodePath("")
 
-[node name="Rock5" type="MeshInstance3D" parent="rocks"]
+[node name="Rock5" type="MeshInstance3D" parent="Folage"]
 transform = Transform3D(0.1, 0, 0, 0, 0.0919201, -0.0393788, 0, 0.0393788, 0.0919201, -2.29275, 1.51369, 5.49109)
 mesh = SubResource("ArrayMesh_0piqd")
 skeleton = NodePath("")
+
+[node name="Stick" parent="Folage" instance=ExtResource("21_kv2r3")]
+transform = Transform3D(-8.74228e-09, -0.2, 0, 0.199239, -8.70901e-09, -0.0174311, 0.0174311, -7.6194e-10, 0.199239, 5.216, 1.43, 5.18)
+
+[node name="Stick2" parent="Folage" instance=ExtResource("21_kv2r3")]
+transform = Transform3D(-0.0163589, -0.0690629, -0.186983, 0.199239, -8.70901e-09, -0.0174311, 0.00601922, -0.187697, 0.0688001, -6.40201, 1.43, 9.36294)
+
+[node name="Stick3" parent="Folage" instance=ExtResource("21_kv2r3")]
+transform = Transform3D(-0.00151376, 0.199244, -0.0173024, 0.199239, -8.19445e-09, -0.0174311, -0.0173653, -0.0173685, -0.198486, -16.8102, 1.43, 4.57565)
