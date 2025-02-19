@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://c7h80mskb4v0b"]
+[gd_scene load_steps=21 format=4 uid="uid://c7h80mskb4v0b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3p70"]
 resource_name = "bunny"
@@ -290,9 +290,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_km5jt")
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_4o30p"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_27tes"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7awbl"]
+radius = 0.840927
+height = 1.68185
 
 [node name="bunny" type="Node3D"]
 
@@ -339,9 +339,9 @@ mesh = SubResource("ArrayMesh_8howx")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(2, 0, 0, 0, 1.5, 0, 0, 0, 2.5, 0, 0, 0)
-shape = SubResource("SphereShape3D_4o30p")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.260865, -0.0874648)
+shape = SubResource("CapsuleShape3D_7awbl")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.589989, -1)
-shape = SubResource("SphereShape3D_27tes")
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0.581671, -1.1405)
+shape = SubResource("CapsuleShape3D_7awbl")
