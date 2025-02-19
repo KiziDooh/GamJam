@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bogp1mhocgx73"
-path="res://.godot/imported/bunny mean dance.blend-1d88bd451a16be490797980efe5d1890.scn"
+uid="uid://cc64aijhwg2we"
+path="res://.godot/imported/bunny mean dance.blend-1731b18658783e8aec4e507842527650.scn"
 
 [deps]
 
-source_file="res://scenes/models/bunny mean dance.blend"
-dest_files=["res://.godot/imported/bunny mean dance.blend-1d88bd451a16be490797980efe5d1890.scn"]
+source_file="res://scenes/scripts/bunny mean dance.blend"
+dest_files=["res://.godot/imported/bunny mean dance.blend-1731b18658783e8aec4e507842527650.scn"]
 
 [params]
 
