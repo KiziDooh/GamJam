@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=16 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/models/knife.tscn" id="2_j8sau"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scenes/scripts/health.gd" id="4_7hyiv"]
 [ext_resource type="Script" path="res://scenes/scripts/hurtbox.gd" id="5_kuwjw"]
 [ext_resource type="Texture2D" uid="uid://bxbtp7qfonqo2" path="res://scenes/ui/Bar_Empty.png" id="6_mvstu"]
+[ext_resource type="PackedScene" uid="uid://cla2lc84moemg" path="res://scenes/models/stick.tscn" id="6_unflv"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://scenes/ui/Bar_Overset.png" id="7_ssvos"]
 [ext_resource type="Texture2D" uid="uid://bwv5xkxrcxr4h" path="res://scenes/ui/StaminaBar_Full.png" id="8_y2lov"]
 
@@ -49,7 +50,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 [node name="Camera3D" type="Camera3D" parent="Head"]
 
 [node name="knife" parent="Head/Camera3D" instance=ExtResource("2_j8sau")]
-transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 0.267227, -0.588391, -0.845978)
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 0.461184, -0.513955, -0.670639)
 visible = false
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D"]
@@ -67,6 +68,10 @@ stream = ExtResource("4_0gog2")
 
 [node name="flashlight" parent="Head/Camera3D" instance=ExtResource("3_ifqqc")]
 transform = Transform3D(-5.71455e-10, -0.0130734, 0.149429, 0.15, -6.55671e-09, 0, 6.53176e-09, 0.149429, 0.0130734, 0.502473, -0.335419, -0.892615)
+
+[node name="Stick" parent="Head" instance=ExtResource("6_unflv")]
+transform = Transform3D(-0.0261502, 0, -0.198283, 0, 0.2, 0, 0.198283, 0, -0.0261502, 0.519923, -0.846619, -0.939263)
+visible = false
 
 [node name="HurtBox" type="Area3D" parent="." node_paths=PackedStringArray("health")]
 collision_layer = 0
