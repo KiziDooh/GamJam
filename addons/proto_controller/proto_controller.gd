@@ -133,18 +133,24 @@ func _physics_process(delta: float) -> void:
 		move_speed = base_speed
 		
 	if ! Input.is_action_pressed(input_sprint):
+		
 		if current_stamina < 200:
 			current_stamina = current_stamina + 1
 			$"Stamina Bar".value = current_stamina
 
 	# Apply desired movement to velocity
 	if can_move:
+		
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
 		var move_dir := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if move_dir:
+			if $WalkingSound.playing == false:
+				$WalkingSound.set_pitch_scale(randf_range(1, 1.5))
+				$WalkingSound.play()
 			velocity.x = move_dir.x * move_speed
 			velocity.z = move_dir.z * move_speed
 		else:
+			$WalkingSound.playing = false
 			velocity.x = move_toward(velocity.x, 0, move_speed)
 			velocity.z = move_toward(velocity.z, 0, move_speed)
 	else:
