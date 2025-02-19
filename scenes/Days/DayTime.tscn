@@ -35,12 +35,12 @@ sky_horizon_color = Color(0.727244, 0.78083, 0.795179, 1)
 ground_bottom_color = Color(0.45626, 0.422028, 0.180717, 1)
 ground_horizon_color = Color(0.727244, 0.78083, 0.795179, 1)
 
-[sub_resource type="Sky" id="Sky_4kjgu"]
+[sub_resource type="Sky" id="Sky_lmwoj"]
 sky_material = SubResource("ProceduralSkyMaterial_u7qnw")
 
 [sub_resource type="Environment" id="Environment_2mftn"]
 background_mode = 2
-sky = SubResource("Sky_4kjgu")
+sky = SubResource("Sky_lmwoj")
 tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
@@ -49,7 +49,7 @@ cull_mode = 2
 albedo_color = Color(0.420832, 0.420832, 0.420832, 1)
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_2xqpn"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_h611p"]
 _surfaces = [{
 "aabb": AABB(-1.06675, -1.33079, -1.51739, 2.82093, 2.33079, 2.79055),
 "format": 34896613377,
@@ -79,7 +79,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("nCI7N/ayJ7ecIjs39rIlopwiOzf2skG0nCI7N/ayxrz0Inldx9VWu/QieV3H1SWi9CJ5XcfVQbT0Inldx9UYvQAAKWb7q0G0AAApZvurcr0AAClm+6tevQAAKWb7q0/Nxyz4u///9cbHLPi7//+zu8cs+Lv//5Kuxyz4u///kb1aK/Dqddifxlor8Op12OH+Wivw6nXYkq5aK/DqddjnwHcJBceI1JKudwkFx4jUncB3CQXHiNTUvXcJBceI1BnLBCcAAD8ra7cEJwAAPyt/2gQnAAA/KxfTBCcAAD8rWb8OBuMneC8X0w4G4yd4L2fADgbjJ3gvWeEOBuMneC+8zwQnjxkAAJb/BCePGQAAhtoEJ48ZAAAX0wQnjxkAAD3hBCf//8hQuPwEJ///yFDw7gQn///IUDDdBCf//8hQ/sEEJ8HVdi/t7gQnwdV2L3j+BCfB1XYvMN0EJ8HVdi/i4A4Gi9fIUDDdDgaL18hQtMEOBovXyFD84A4Gi9fIUL3NlZEAQXzUYLeVkQBBfNRSuZWRAEF81CfClZEAQXzUJaL8rjN0WdpSufyuM3RZ2vG+/K4zdFnaq8H8rjN0WdorvpWR5GjN9VK5lZHkaM31+7+VkeRozfXbu5WR5GjN9SWiY5sm/xnGi8Vjmyb/Gcbi/GObJv8ZxvK/Y5sm/xnGA+m1mkbXbujpxbWaRtdu6PK/tZpG127oLr21mkbXbug2vNG96ddUx/K/0b3p11THdunRvenXVMczvNG96ddUx8S8fpoYJMpPp7d+mhgkyk9f2n6aGCTKT7zbfpoYJMpPnsAIm49JuC4y/gibj0m4LmjaCJuPSbguvNsIm49JuC6K6LO+ZEu4Urzbs75kS7hSB+mzvmRLuFItwLO+ZEu4UjXArcuv3K1dRv+ty6/crV3i7q3Lr9ytXVz6rcuv3K1dP+j//96mw2Jc+v//3qbDYizq///epsNijOj//96mw2ICv63Ly7RbPN/urcvLtFs8+/yty8u0Wzxc+q3Ly7RbPLfpPQnln2EZ/Kw2SXCgwT/foNgJjPZhGfysNklwoDHOe+42SXCgoj9Ln3rOVe4Wy9nYcuJ4HNkJofZH5MXFrc467oLirxxuQJUBR+TFxYfh5LpH5MXFueD7uvHOFu4Gx83aUwojolAFq2JTNSqcUj9Bm1M1KpwrPzqZeMZny//O99ZRuwu5KQW8YlM1KpwPxqfLJr/jABa1mLEe32axXOSUuhy1lLEQwU2zHt9msafEhcwe32axouOoug7FRczQy3/YKgrOobgVXjZuF89AYBn2rLgVXjYNIuIYSRi8QNkfbjG4FV42UiEfGdkJq/ZhGfmstuJgHS6G972yyq8JKDRGEqTiJB2yyq8JVCN3GNgJv/ayyq8J1zObEhIkORiwITExNQv1o+4FbWI2HSFQNxqRQH/C4LHCBX5iNh0hUMEmLUc2HSFQ4iRYSA8bfkBYHcAxO0AGAjS1gbEEtSupszSyEQS1K6mzIPhKfTTsEcwekDE7tXuxGslKqwS1K6laIu5J")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_2xqpn")
+shadow_mesh = SubResource("ArrayMesh_h611p")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_iwah7"]
 _surfaces = [{
