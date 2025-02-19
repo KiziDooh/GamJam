@@ -187,22 +187,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0997703, 2.06571, 4.18223)
 collision_mask = 5
 can_sprint = true
 
-[node name="RayCast3D" type="RayCast3D" parent="Character/ProtoController"]
+[node name="RayCast3D2" type="RayCast3D" parent="Character/ProtoController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0997703, 0.859577, -0.276973)
 target_position = Vector3(0, 0, 10)
 script = ExtResource("8_77ucr")
 
-[node name="RayCast3D2" type="RayCast3D" parent="Character/ProtoController"]
+[node name="RayCast3D3" type="RayCast3D" parent="Character/ProtoController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0997703, 5.86387, -0.276973)
 target_position = Vector3(0, 0, 10)
 collision_mask = 4
 
-[node name="RayCast3D3" type="RayCast3D" parent="Character/ProtoController"]
+[node name="RayCast3D4" type="RayCast3D" parent="Character/ProtoController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0997703, 5.86387, -0.276973)
 target_position = Vector3(-10, 0, 0)
 collision_mask = 4
 
-[node name="RayCast3D4" type="RayCast3D" parent="Character/ProtoController"]
+[node name="RayCast3D5" type="RayCast3D" parent="Character/ProtoController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0997703, 5.86387, -0.276973)
 target_position = Vector3(0, 0, -10)
 collision_mask = 4

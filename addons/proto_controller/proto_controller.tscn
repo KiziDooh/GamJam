@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=17 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/models/knife.tscn" id="2_j8sau"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cla2lc84moemg" path="res://scenes/models/stick.tscn" id="6_unflv"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://scenes/ui/Bar_Overset.png" id="7_ssvos"]
 [ext_resource type="Texture2D" uid="uid://bwv5xkxrcxr4h" path="res://scenes/ui/StaminaBar_Full.png" id="8_y2lov"]
+[ext_resource type="Script" path="res://scenes/scripts/ray_cast_3d.gd" id="12_gdqeh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -102,5 +103,12 @@ texture_under = ExtResource("6_mvstu")
 texture_over = ExtResource("7_ssvos")
 texture_progress = ExtResource("8_y2lov")
 texture_progress_offset = Vector2(820, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(-0.0261502, 0, -0.198283, 0, 0.2, 0, 0.198283, 0, -0.0261502, 0.065841, 1.60217, -0.768413)
+target_position = Vector3(-20, 0, 0)
+collide_with_areas = true
+collide_with_bodies = false
+script = ExtResource("12_gdqeh")
 
 [connection signal="health_depleated" from="Health" to="." method="_on_health_health_depleated"]

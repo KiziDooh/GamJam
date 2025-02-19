@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=4 uid="uid://cla2lc84moemg"]
+[gd_scene load_steps=5 format=4 uid="uid://cla2lc84moemg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkdnw"]
 resource_name = "Material.002"
@@ -38,6 +38,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ihc5o")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_p1yhb"]
+
 [node name="Stick" type="Node3D"]
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
@@ -49,3 +51,10 @@ skeleton = NodePath("")
 transform = Transform3D(0.128019, -0.000237342, -0.00304982, -0.00175359, 0.424108, -0.0893184, 0.00218587, 0.354137, 0.106964, 0.27746, 3.60197, 0.748942)
 mesh = SubResource("ArrayMesh_0f3k7")
 skeleton = NodePath("")
+
+[node name="sTICK eM uP" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0622, 0.438574)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sTICK eM uP"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, -0.614942, 0.258288)
+shape = SubResource("SphereShape3D_p1yhb")

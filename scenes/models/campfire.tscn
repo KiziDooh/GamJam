@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://we54u8qnqh5x"]
+[gd_scene load_steps=55 format=4 uid="uid://we54u8qnqh5x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
 resource_name = "Material.001"
@@ -773,6 +773,8 @@ albedo_color = Color(0.87451, 0.345098, 0.0627451, 0.831373)
 [sub_resource type="SphereMesh" id="SphereMesh_4pkj5"]
 material = SubResource("ORMMaterial3D_b23cf")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_7qes2"]
+
 [node name="campfire" type="Node3D"]
 
 [node name="Cube" type="MeshInstance3D" parent="."]
@@ -901,3 +903,9 @@ draw_pass_1 = SubResource("SphereMesh_4pkj5")
 [node name="OmniLight3D" type="OmniLight3D" parent="GPUParticles3D"]
 light_color = Color(0.807337, 0.382361, 0.0726899, 1)
 light_energy = 3.101
+
+[node name="CAMPFIRE" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CAMPFIRE"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+shape = SubResource("SphereShape3D_7qes2")

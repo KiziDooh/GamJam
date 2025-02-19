@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=34 format=4 uid="uid://bkeycdakvh2p"]
 
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="2_1sn2w"]
 [ext_resource type="Script" path="res://scenes/scripts/Health_Bar.gd" id="2_4fp7o"]
@@ -29,6 +29,9 @@ metallic = 0.06
 metallic_texture_channel = 1
 roughness = 0.81
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_athfl"]
+radius = 1.0
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_u7qnw"]
 sky_top_color = Color(0.452717, 0.701292, 1, 1)
 sky_horizon_color = Color(0.727244, 0.78083, 0.795179, 1)
@@ -42,6 +45,8 @@ sky_material = SubResource("ProceduralSkyMaterial_u7qnw")
 background_mode = 2
 sky = SubResource("Sky_lmwoj")
 tonemap_mode = 2
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vdhnm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
 resource_name = "Material.001"
@@ -320,6 +325,13 @@ size = Vector3(1, 10.8486, 30.7002)
 [node name="bunny" parent="Bunnies" instance=ExtResource("6_ao6hn")]
 transform = Transform3D(0.299471, 0.0178025, 0, -0.0178025, 0.299471, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
 
+[node name="Bunny" type="Area3D" parent="Bunnies/bunny"]
+transform = Transform3D(3.32746, -0.197806, 0, 0.197806, 3.32746, 0, 0, 0, 3.33333, -0.370235, 3.23333, -0.0788994)
+
+[node name="bunny" type="CollisionShape3D" parent="Bunnies/bunny/Bunny"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shape = SubResource("SphereShape3D_athfl")
+
 [node name="mean bunny" parent="Bunnies" instance=ExtResource("7_ya2mk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 26.4596)
 
@@ -361,8 +373,20 @@ transform = Transform3D(0.815087, 0, -0.579338, 0, 1, 0, 0.579338, 0, 0.815087, 
 [node name="flashlight" parent="Objects" instance=ExtResource("15_j6i74")]
 transform = Transform3D(-0.0235839, -0.0755194, 0.0611605, 0.0971648, -0.0172399, 0.01618, -0.00167503, 0.0632424, 0.0774441, -10.2492, 3.49869, -1.5711)
 
+[node name="FlashLight" type="Area3D" parent="Objects/flashlight"]
+
+[node name="flashlight" type="CollisionShape3D" parent="Objects/flashlight/FlashLight"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
+shape = SubResource("SphereShape3D_vdhnm")
+
 [node name="knife" parent="Objects" instance=ExtResource("14_mcsol")]
 transform = Transform3D(0.0390731, -0.0920505, -1.70794e-09, -4.37114e-09, 1.91069e-16, -0.1, 0.0920505, 0.0390731, -4.02365e-09, -12.138, 1.44976, 9.62949)
+
+[node name="knife" type="Area3D" parent="Objects/knife"]
+
+[node name="knife" type="CollisionShape3D" parent="Objects/knife/knife"]
+transform = Transform3D(30, 0, -1.13687e-13, 0, 30, 1.42109e-13, 3.41061e-13, -1.7053e-13, 30, -1.75064, 4.12425, -8.10097)
+shape = SubResource("SphereShape3D_vdhnm")
 
 [node name="Campfire area" type="Node" parent="."]
 
