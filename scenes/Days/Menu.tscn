@@ -180,9 +180,6 @@ shadow_enabled = true
 
 [node name="Campfire area" type="Node" parent="."]
 
-[node name="stumpid4" parent="Campfire area" instance=ExtResource("1_ta740")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4853, 16.5568, 2.90431)
-
 [node name="stumpid3" parent="Campfire area" instance=ExtResource("1_ta740")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.08965, 16.5568, 2.8141)
 
@@ -231,7 +228,7 @@ mesh = SubResource("ArrayMesh_ruxsr")
 skeleton = NodePath("")
 
 [node name="Text2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.39177, -0.720095, 0.00680709, 0.0198849, 0.0241621, -2.43345, -0.782284, -1.28052, -0.0497448, -4.45377, 21.4583, -0.130789)
+transform = Transform3D(1.29617, -0.852515, -0.160425, 0.0973378, 0.288661, -2.38191, -0.927287, -1.16135, -0.474275, -4.75706, 21.4583, -0.130789)
 mesh = SubResource("ArrayMesh_wdim5")
 skeleton = NodePath("")
 
