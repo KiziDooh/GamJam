@@ -7,9 +7,7 @@ extends CharacterBody3D
 
 class_name Player
 
-
-
-## Can we move around?
+## Can we move around?w
 @export var can_move : bool = true
 ## Are we affected by gravity?
 @export var has_gravity : bool = true
@@ -47,6 +45,9 @@ class_name Player
 @export var input_sprint : String = "sprint"
 ## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "freefly"
+
+var max_stamina: int = 200
+var current_stamina = max_stamina
 
 var mouse_captured : bool = false
 var look_rotation : Vector2
@@ -100,10 +101,26 @@ func _physics_process(delta: float) -> void:
 			velocity.y = jump_velocity
 
 	# Modify speed based on sprinting
+	if current_stamina >= 200:
+		can_sprint = true
+		
 	if can_sprint and Input.is_action_pressed(input_sprint):
+		if current_stamina > 0:
 			move_speed = sprint_speed
+			current_stamina = current_stamina - 1.5
+			$"Stamina Bar".value = current_stamina
+			print(current_stamina)
+		else:
+			move_speed = base_speed	
+			can_sprint = false
 	else:
 		move_speed = base_speed
+		
+	if ! Input.is_action_pressed(input_sprint):
+		if current_stamina < 200:
+			current_stamina = current_stamina + 1
+			$"Stamina Bar".value = current_stamina
+			print(current_stamina)
 
 	# Apply desired movement to velocity
 	if can_move:

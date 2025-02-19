@@ -1,6 +1,5 @@
-[gd_scene load_steps=24 format=3 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=23 format=3 uid="uid://bkeycdakvh2p"]
 
-[ext_resource type="Texture2D" uid="uid://bxbtp7qfonqo2" path="res://scenes/ui/Bar_Empty.png" id="1_eo5kg"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="2_1sn2w"]
 [ext_resource type="Script" path="res://scenes/scripts/Health_Bar.gd" id="2_4fp7o"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://scenes/ui/Bar_Overset.png" id="2_vrgbp"]
@@ -57,11 +56,16 @@ grow_vertical = 0
 scale = Vector2(0.15, 0.15)
 pivot_offset = Vector2(100, 0)
 mouse_filter = 2
-texture_under = ExtResource("1_eo5kg")
 texture_over = ExtResource("2_vrgbp")
 texture_progress = ExtResource("3_vx2l0")
 script = ExtResource("2_4fp7o")
 character = NodePath("../../../Character/ProtoController")
+
+[node name="Character" type="Node" parent="."]
+
+[node name="ProtoController" parent="Character" instance=ExtResource("8_36n8i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.184, 0.277)
+can_sprint = true
 
 [node name="Plantus" type="Node" parent="."]
 
@@ -152,12 +156,6 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Sky"]
 environment = SubResource("Environment_2mftn")
-
-[node name="Character" type="Node" parent="."]
-
-[node name="ProtoController" parent="Character" instance=ExtResource("8_36n8i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.184, 0.277)
-can_sprint = true
 
 [node name="Sound" type="Node" parent="."]
 

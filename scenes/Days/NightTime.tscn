@@ -1,7 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://cbps161a76m82"]
+[gd_scene load_steps=18 format=3 uid="uid://cbps161a76m82"]
 
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="1_av0r8"]
-[ext_resource type="Texture2D" uid="uid://bxbtp7qfonqo2" path="res://scenes/ui/Bar_Empty.png" id="1_jrfhk"]
 [ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://scenes/models/bench.tscn" id="2_6oju8"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://scenes/ui/Bar_Overset.png" id="2_og0bt"]
 [ext_resource type="PackedScene" uid="uid://c7h80mskb4v0b" path="res://scenes/models/bunny.tscn" id="3_cf4ng"]
@@ -41,7 +40,7 @@ grow_vertical = 0
 scale = Vector2(0.15, 0.15)
 pivot_offset = Vector2(100, 0)
 mouse_filter = 2
-texture_under = ExtResource("1_jrfhk")
+value = 100.0
 texture_over = ExtResource("2_og0bt")
 texture_progress = ExtResource("3_ptwy1")
 script = ExtResource("4_xrtoj")
@@ -178,4 +177,3 @@ stream = ExtResource("12_rb1rn")
 
 [node name="campfire" parent="." instance=ExtResource("14_vdhmv")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1.5259, 0)
-visible = false
