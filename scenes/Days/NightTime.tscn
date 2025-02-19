@@ -9,8 +9,10 @@
 [ext_resource type="Script" path="res://scenes/scripts/Health_Bar.gd" id="4_xrtoj"]
 [ext_resource type="PackedScene" uid="uid://b4rhlybavji58" path="res://scenes/models/bunny mean dance.tscn" id="5_2no0b"]
 [ext_resource type="Script" path="res://scenes/scripts/bunny_mean_dance.gd" id="6_p5j5x"]
+[ext_resource type="PackedScene" uid="uid://8e8d4gjveujy" path="res://scenes/models/EVIL GILBERT.tscn" id="7_vnmpn"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="7_x8udb"]
 [ext_resource type="Script" path="res://scenes/scripts/ray_cast_3d.gd" id="8_77ucr"]
+[ext_resource type="Script" path="res://scenes/models/evil_gilbert.gd" id="8_v1lyj"]
 [ext_resource type="AudioStream" uid="uid://ddaugu21t7pd6" path="res://scenes/audio/the stain.wav" id="9_7vx3d"]
 [ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/audio/glitch-01-231255.mp3" id="10_w3xop"]
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="11_gynyu"]
@@ -122,6 +124,10 @@ visible = false
 [node name="bunny mean dance2" parent="Bunnies" instance=ExtResource("5_2no0b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04206, 1.46864, 25.8198)
 script = ExtResource("6_p5j5x")
+
+[node name="walk cycle" parent="Bunnies" instance=ExtResource("7_vnmpn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.45606, 5.23064, 74.3678)
+script = ExtResource("8_v1lyj")
 
 [node name="Enviroment" type="Node" parent="."]
 

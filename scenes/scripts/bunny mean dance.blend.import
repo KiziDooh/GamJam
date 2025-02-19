@@ -3,12 +3,12 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bogp1mhocgx73"
+uid="uid://cfi67b6xq3e88"
 valid=false
 
 [deps]
 
-source_file="res://scenes/models/bunny mean dance.blend"
+source_file="res://scenes/scripts/bunny mean dance.blend"
 
 [params]
 
