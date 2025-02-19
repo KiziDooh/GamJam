@@ -18,7 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="11_gynyu"]
 [ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/audio/tv-glitch-6245.mp3" id="12_rb1rn"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://scenes/models/campfire.tscn" id="14_vdhmv"]
-[ext_resource type="PackedScene" path="res://scenes/models/stumpid.tscn" id="20_sqg77"]
+[ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="20_sqg77"]
 [ext_resource type="Script" path="res://scenes/Days/button.gd" id="20_tdr8o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
