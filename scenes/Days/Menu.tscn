@@ -1,25 +1,25 @@
-[gd_scene load_steps=22 format=4 uid="uid://n5wj5kuegkmp"]
+[gd_scene load_steps=25 format=4 uid="uid://n5wj5kuegkmp"]
 
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://scenes/models/bigtree.tscn" id="1_37o28"]
-[ext_resource type="PackedScene" path="res://scenes/models/stumpid.tscn" id="1_ta740"]
+[ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="1_ta740"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://scenes/models/campfire.tscn" id="2_atvcm"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="2_n5bxp"]
 [ext_resource type="Script" path="res://scenes/Days/button.gd" id="5_oqi6w"]
 [ext_resource type="Script" path="res://scenes/scripts/audio_stream_player.gd" id="6_6p0na"]
 [ext_resource type="AudioStream" uid="uid://cxhyvfub26kmd" path="res://scenes/audio/music box loop _5.mp3" id="6_uawhc"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yupmk"]
-sky_top_color = Color(0.603357, 0.658461, 0.997595, 1)
-sky_horizon_color = Color(0.763584, 0.840106, 0.999399, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4vi84"]
+sky_top_color = Color(0.45098, 0.701961, 1, 1)
+sky_horizon_color = Color(0.72549, 0.85098, 1, 1)
 ground_bottom_color = Color(0.45098, 0.701961, 1, 1)
-ground_horizon_color = Color(0.763584, 0.840106, 0.999399, 1)
+ground_horizon_color = Color(0.72549, 0.85098, 1, 1)
 
-[sub_resource type="Sky" id="Sky_ygm3h"]
-sky_material = SubResource("ProceduralSkyMaterial_yupmk")
+[sub_resource type="Sky" id="Sky_j1ggf"]
+sky_material = SubResource("ProceduralSkyMaterial_4vi84")
 
-[sub_resource type="Environment" id="Environment_jpkpg"]
+[sub_resource type="Environment" id="Environment_t2n6v"]
 background_mode = 2
-sky = SubResource("Sky_ygm3h")
+sky = SubResource("Sky_j1ggf")
 tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_npuwb"]
@@ -149,20 +149,34 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hsk26")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uh0ix"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_clgyw"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ysyr1"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
 [node name="Menu" type="Node3D"]
 transform = Transform3D(1.52512, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_jpkpg")
+environment = SubResource("Environment_t2n6v")
 
 [node name="Grass" type="CSGBox3D" parent="."]
 transform = Transform3D(0.726864, 0, 0, 0, 1, 0, 0, 0, 0.694215, -2.00693, 16.0379, -8.59012)
+visible = false
 material_override = SubResource("StandardMaterial3D_npuwb")
 use_collision = true
 size = Vector3(35.4653, 0.797852, 57.175)
 
 [node name="Grass2" type="CSGBox3D" parent="."]
 transform = Transform3D(0.40217, 0, 0.351614, 0, 0.75, 0, -0.367811, 0, 0.384459, -2.63848, 17.9973, 1.27514)
+visible = false
 material_override = SubResource("StandardMaterial3D_mit6i")
 use_collision = true
 size = Vector3(3.28373, 1.05678, 2)
@@ -172,6 +186,7 @@ transform = Transform3D(0.599545, 0.0219011, 0.264552, 0, 0.996591, -0.0825035, 
 
 [node name="stumpid5" parent="." instance=ExtResource("1_ta740")]
 transform = Transform3D(0.655684, 0, 0, 0, 1, 0, 0, 0, 1, 3.41129, 16.4785, 5.74928)
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 1.98784, 10.9215, 9.26941)
@@ -184,45 +199,57 @@ shadow_enabled = true
 
 [node name="stumpid3" parent="Campfire area" instance=ExtResource("1_ta740")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.08965, 16.5568, 2.8141)
+visible = false
 
 [node name="Log" parent="Campfire area" instance=ExtResource("1_ta740")]
 transform = Transform3D(0.155465, 3.06144, 0.226311, -1.26376, 0.396939, -6.11734e-09, -0.0361203, -0.711291, 0.974055, 5.10624, 16.5568, -3.50389)
+visible = false
 
 [node name="stumpid" parent="Campfire area" instance=ExtResource("1_ta740")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00357, 16.6132, 1.28821)
+visible = false
 
 [node name="Rock" type="MeshInstance3D" parent="Campfire area"]
 transform = Transform3D(0.749035, 0.355526, 0.167114, 0.0138163, -0.23449, 0.64149, 0.62244, -0.42263, -0.215341, 1.26055, 16.7493, -2.26066)
+visible = false
 mesh = SubResource("ArrayMesh_6p6im")
 skeleton = NodePath("")
 
 [node name="Rock3" type="MeshInstance3D" parent="Campfire area"]
 transform = Transform3D(-0.00289938, 0.27612, 0.136042, 0.00690814, -0.117245, 0.320285, 0.486942, 0.00330732, -0.00373386, 1.42508, 17.2001, -2.66145)
+visible = false
 mesh = SubResource("ArrayMesh_6p6im")
 skeleton = NodePath("")
 
 [node name="Rock2" type="MeshInstance3D" parent="Campfire area"]
 transform = Transform3D(-0.710806, 0.375106, 0.192874, 0.0138163, -0.23449, 0.64149, 0.665763, 0.405351, 0.192611, 0.950853, 16.7493, -3.236)
+visible = false
 mesh = SubResource("ArrayMesh_6p6im")
 skeleton = NodePath("")
 
 [node name="campfire" parent="Campfire area" instance=ExtResource("2_atvcm")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.21905, 16.614, 0)
+visible = false
 
 [node name="tree25" parent="." instance=ExtResource("2_n5bxp")]
 transform = Transform3D(1.10033, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -12.2932, 15.3393, -15.1078)
+visible = false
 
 [node name="tree26" parent="." instance=ExtResource("2_n5bxp")]
 transform = Transform3D(1.10033, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -0.666786, 15.4559, -17.5895)
+visible = false
 
 [node name="tree27" parent="." instance=ExtResource("2_n5bxp")]
 transform = Transform3D(-0.377924, 0, 1.08206, 0, 1.99644, 0, -1.0334, 0, -0.395722, -10.4226, 15.4559, -0.578518)
+visible = false
 
 [node name="tree28" parent="." instance=ExtResource("2_n5bxp")]
 transform = Transform3D(1.10033, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -0.666786, 15.4559, -17.5895)
+visible = false
 
 [node name="bigtree10" parent="." instance=ExtResource("1_37o28")]
 transform = Transform3D(1.10033, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -6.87393, 15.334, -15.4658)
+visible = false
 
 [node name="Text_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.34359, 0.177689, 0.348494, 0.235931, -0.00259095, -2.10347, -0.314817, 0.756405, -0.0890705, -0.0709476, 17.2027, -2.87505)
@@ -248,5 +275,35 @@ volume_db = -6.701
 pitch_scale = 0.65
 autoplay = true
 script = ExtResource("6_6p0na")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Node"]
+transform = Transform3D(-1.43637e-06, -52.9812, 0, 32.8603, -2.31588e-06, 0, 0, 0, 41.6373, -44.8802, 30.877, 0)
+size = Vector3(3.12671, 0.0908203, 2.1084)
+material = SubResource("StandardMaterial3D_uh0ix")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Node"]
+transform = Transform3D(-1.43637e-06, -52.9812, 0, 32.8603, -2.31588e-06, 0, 0, 0, 41.6373, 48.3918, 30.877, 0)
+size = Vector3(3.12671, 0.0908203, 2.1084)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Node"]
+transform = Transform3D(32.8603, 0, 0, 0, 52.9812, 0, 0, 0, 41.6373, 0, -16.5947, 0)
+size = Vector3(3.12671, 0.0908203, 2.1084)
+material = SubResource("StandardMaterial3D_clgyw")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Node"]
+transform = Transform3D(32.8603, 0, 0, 0, -2.31588e-06, -41.6373, 0, 52.9812, -1.82003e-06, 0, 16.6527, -38.4912)
+size = Vector3(3.12671, 0.0908203, 2.1084)
+material = SubResource("StandardMaterial3D_uh0ix")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Node"]
+transform = Transform3D(32.8603, 0, 0, 0, -2.31588e-06, -41.6373, 0, 52.9812, -1.82003e-06, 0, 16.6527, 41.5838)
+size = Vector3(3.12671, 0.0908203, 2.1084)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Node"]
+transform = Transform3D(32.8603, 0, 0, 0, 52.9812, 0, 0, 0, 41.6373, 0, 45.4896, 0)
+size = Vector3(3.12671, 0.0908203, 2.1084)
+material = SubResource("StandardMaterial3D_ysyr1")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
