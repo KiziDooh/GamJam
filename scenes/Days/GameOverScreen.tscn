@@ -292,11 +292,11 @@ mesh = SubResource("ArrayMesh_wdim5")
 skeleton = NodePath("")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 358.0
-offset_top = 84.0
-offset_right = 546.295
-offset_bottom = 151.365
-rotation = 0.383972
+offset_left = 360.0
+offset_top = 82.0
+offset_right = 548.295
+offset_bottom = 149.365
+rotation = 0.401426
 text = "Restart"
 script = ExtResource("5_ls87q")
 
