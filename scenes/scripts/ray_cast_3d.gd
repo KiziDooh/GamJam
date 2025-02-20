@@ -10,6 +10,6 @@ func _ready():
 func _process(delta):
 	if is_colliding():
 		print(get_collider())
-		if get_collider() == (sTICK eM uP:<Area3D#49425680586>):
-			print("yup")
+#		if get_collider() == (sTICK eM uP:<Area3D#49425680586>):
+#			print("yup")
 #$Bunnies/bunny/Bunny$StaticBody3D/CollisionShape3D2$"sTICK eM uP"
