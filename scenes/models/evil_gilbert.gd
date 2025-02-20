@@ -15,6 +15,7 @@ func _process(delta):
 	if (round(position.z) == posZ) and (round(position.x) == posX):
 		posZ = zlist[which1]
 		posX = xlist[which1]
+		which1 = randi_range(0,2)
 	else:
 #changes z
 		if position.z < posZ:
