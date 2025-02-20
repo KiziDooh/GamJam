@@ -7,13 +7,22 @@ var zlist = [75,55,10]
 var which1 = 1
 var dirX = 1
 var dirZ = 1
+var dis = 10
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#print(Global.px)
+	print(Global.pz)
 	#print(round(position.x))
 	#print(round(position.z))
+	#print(rotation.y)
 	
 #supposed to change the rotation idk why its funky like it is
+
+	if ((Global.px <= (position.x-dis)) and (Global.px >= (position.x+dis))) and ((Global.pz <= (position.z-dis)) and (Global.pz >= (position.z+dis))):
+		print("rawr")
+
+
 	if (dirX == 2) and (dirZ == 0):
 		rotation.y = 180
 	if (dirX == 0) and (dirZ == 1):
@@ -31,7 +40,6 @@ func _process(delta):
 	if (dirX == 1) and (dirZ == 1):
 		rotation.y = 225
 
-	print(rotation.y)
 #checks if reached x and z
 	if (round(position.z) == posZ) and (round(position.x) == posX):
 		posZ = zlist[which1]

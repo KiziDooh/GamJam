@@ -162,6 +162,9 @@ size = Vector3(1, 10.8486, 30.7002)
 [node name="bench2" parent="Enviromental Objects" instance=ExtResource("2_6oju8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5779, 1.48759, -3.27572)
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Enviromental Objects"]
+environment = ExtResource("1_2fc5u")
+
 [node name="Bunnies" type="Node" parent="."]
 
 [node name="bunny" parent="Bunnies" instance=ExtResource("3_cf4ng")]
@@ -266,8 +269,5 @@ skeleton = NodePath("")
 
 [node name="campfire" parent="Node" instance=ExtResource("14_vdhmv")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1.5259, 0)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("1_2fc5u")
 
 [connection signal="pressed" from="UI/Button" to="UI/Button" method="_on_pressed"]
