@@ -26,7 +26,7 @@ class_name Player
 ## Speed of jump.
 @export var jump_velocity : float = 4.5
 ## How fast do we run?
-@export var sprint_speed : float = 10.0
+@export var sprint_speed : float = 12.0
 ## How fast do we freefly?
 @export var freefly_speed : float = 25.0
 
@@ -46,7 +46,7 @@ class_name Player
 ## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "freefly"
 
-var max_stamina: int = 200
+var max_stamina: int = 300
 var current_stamina = max_stamina
 
 var cooldown: float = 0.3
@@ -121,7 +121,7 @@ func _physics_process(delta: float) -> void:
 			
 
 	# Modify speed based on sprinting
-	if current_stamina >= 200:
+	if current_stamina >= 300:
 		can_sprint = true
 		
 	if can_sprint and Input.is_action_pressed(input_sprint):
@@ -136,7 +136,7 @@ func _physics_process(delta: float) -> void:
 		move_speed = base_speed
 		
 	if ! Input.is_action_pressed(input_sprint):
-		if current_stamina < 200:
+		if current_stamina < 300:
 			current_stamina = current_stamina + 1
 			$"Stamina Bar".value = current_stamina
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cxhyvfub26kmd"
+path="res://.godot/imported/music box loop _5.mp3-d0d8d28017f9f32dd09ac391bb96ff73.mp3str"
+
+[deps]
+
+source_file="res://Game/Audio/music box loop _5.mp3"
+dest_files=["res://.godot/imported/music box loop _5.mp3-d0d8d28017f9f32dd09ac391bb96ff73.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

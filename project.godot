@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="New Game Project"
-run/main_scene="res://scenes/Days/Menu.tscn"
+run/main_scene="res://Game/Places/Menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://scenes/scripts/Global.gd"
+Global="*res://Game/Scripts/Global.gd"
 SimpleGrass="*res://addons/simplegrasstextured/singleton.tscn"
 
 [editor_plugins]
