@@ -1,25 +1,25 @@
-[gd_scene load_steps=25 format=4 uid="uid://n5wj5kuegkmp"]
+[gd_scene load_steps=22 format=4 uid="uid://n5wj5kuegkmp"]
 
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://scenes/models/bigtree.tscn" id="1_37o28"]
-[ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="1_ta740"]
+[ext_resource type="PackedScene" path="res://scenes/models/stumpid.tscn" id="1_ta740"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://scenes/models/campfire.tscn" id="2_atvcm"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="2_n5bxp"]
 [ext_resource type="Script" path="res://scenes/Days/button.gd" id="5_oqi6w"]
 [ext_resource type="Script" path="res://scenes/scripts/audio_stream_player.gd" id="6_6p0na"]
 [ext_resource type="AudioStream" uid="uid://cxhyvfub26kmd" path="res://scenes/audio/music box loop _5.mp3" id="6_uawhc"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4vi84"]
-sky_top_color = Color(0.45098, 0.701961, 1, 1)
-sky_horizon_color = Color(0.72549, 0.85098, 1, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yupmk"]
+sky_top_color = Color(0.603357, 0.658461, 0.997595, 1)
+sky_horizon_color = Color(0.763584, 0.840106, 0.999399, 1)
 ground_bottom_color = Color(0.45098, 0.701961, 1, 1)
-ground_horizon_color = Color(0.72549, 0.85098, 1, 1)
+ground_horizon_color = Color(0.763584, 0.840106, 0.999399, 1)
 
-[sub_resource type="Sky" id="Sky_j1ggf"]
-sky_material = SubResource("ProceduralSkyMaterial_4vi84")
+[sub_resource type="Sky" id="Sky_ygm3h"]
+sky_material = SubResource("ProceduralSkyMaterial_yupmk")
 
-[sub_resource type="Environment" id="Environment_t2n6v"]
+[sub_resource type="Environment" id="Environment_jpkpg"]
 background_mode = 2
-sky = SubResource("Sky_j1ggf")
+sky = SubResource("Sky_ygm3h")
 tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_npuwb"]
@@ -149,23 +149,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hsk26")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uh0ix"]
-shading_mode = 0
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_clgyw"]
-shading_mode = 0
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ysyr1"]
-shading_mode = 0
-albedo_color = Color(0, 0, 0, 1)
-
 [node name="Menu" type="Node3D"]
 transform = Transform3D(1.52512, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_t2n6v")
+environment = SubResource("Environment_jpkpg")
 
 [node name="Grass" type="CSGBox3D" parent="."]
 transform = Transform3D(0.726864, 0, 0, 0, 1, 0, 0, 0, 0.694215, -2.00693, 16.0379, -8.59012)
@@ -260,41 +248,5 @@ volume_db = -6.701
 pitch_scale = 0.65
 autoplay = true
 script = ExtResource("6_6p0na")
-
-[node name="Node" type="Node" parent="."]
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="Node"]
-transform = Transform3D(-1.43637e-06, -52.9812, 0, 32.8603, -2.31588e-06, 0, 0, 0, 41.6373, -44.8802, 30.877, 0)
-visible = false
-size = Vector3(3.12671, 0.0908203, 2.1084)
-material = SubResource("StandardMaterial3D_uh0ix")
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="Node"]
-transform = Transform3D(-1.43637e-06, -52.9812, 0, 32.8603, -2.31588e-06, 0, 0, 0, 41.6373, 48.3918, 30.877, 0)
-visible = false
-size = Vector3(3.12671, 0.0908203, 2.1084)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Node"]
-transform = Transform3D(32.8603, 0, 0, 0, 52.9812, 0, 0, 0, 41.6373, 0, -16.5947, 0)
-visible = false
-size = Vector3(3.12671, 0.0908203, 2.1084)
-material = SubResource("StandardMaterial3D_clgyw")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Node"]
-transform = Transform3D(32.8603, 0, 0, 0, -2.31588e-06, -41.6373, 0, 52.9812, -1.82003e-06, 0, 16.6527, -38.4912)
-visible = false
-size = Vector3(3.12671, 0.0908203, 2.1084)
-material = SubResource("StandardMaterial3D_uh0ix")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Node"]
-transform = Transform3D(32.8603, 0, 0, 0, -2.31588e-06, -41.6373, 0, 52.9812, -1.82003e-06, 0, 16.6527, 41.5838)
-visible = false
-size = Vector3(3.12671, 0.0908203, 2.1084)
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="Node"]
-transform = Transform3D(32.8603, 0, 0, 0, 52.9812, 0, 0, 0, 41.6373, 0, 45.4896, 0)
-visible = false
-size = Vector3(3.12671, 0.0908203, 2.1084)
-material = SubResource("StandardMaterial3D_ysyr1")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
