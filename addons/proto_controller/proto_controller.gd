@@ -232,7 +232,7 @@ func check_input_mappings():
 func _on_health_health_depleated():
 	queue_free()
 	print("You Died") # Replace with function body.
-	get_tree().change_scene_to_file("res://scenes/Days/GameOverScreen.tscn")
+	get_tree().change_scene_to_file("res://Game/Places/GameOverScreen.tscn")
 
 	
 func _process(delta):
