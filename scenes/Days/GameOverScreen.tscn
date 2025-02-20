@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://b5ejocpj6ewpf"]
+[gd_scene load_steps=25 format=4 uid="uid://b5ejocpj6ewpf"]
 
 [ext_resource type="Environment" uid="uid://dd47xvqg04in4" path="res://scenes/Days/NightTime.tres" id="1_6us30"]
 [ext_resource type="PackedScene" path="res://scenes/models/stumpid.tscn" id="1_e4sp2"]
@@ -55,6 +55,31 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_2xqpn")
+
+[sub_resource type="Gradient" id="Gradient_pu1se"]
+colors = PackedColorArray(0.968627, 0, 0, 1, 0.738191, 0.910523, 0.0808816, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5i8nm"]
+gradient = SubResource("Gradient_pu1se")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_oo2lj"]
+lifetime_randomness = 0.86
+emission_shape_scale = Vector3(2.5, 3, 2.5)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, 1, 0)
+gravity = Vector3(0, 5, 0)
+scale_min = 0.01
+scale_max = 0.8
+color_ramp = SubResource("GradientTexture1D_5i8nm")
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_b23cf"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.87451, 0.345098, 0.0627451, 0.831373)
+
+[sub_resource type="SphereMesh" id="SphereMesh_mm83c"]
+material = SubResource("ORMMaterial3D_b23cf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5bt5"]
 resource_name = "Material.002"
@@ -150,15 +175,17 @@ size = Vector3(156.062, 0.797852, 316.383)
 
 [node name="Grass2" type="CSGBox3D" parent="."]
 transform = Transform3D(0.40217, 0, 0.351614, 0, 0.75, 0, -0.367811, 0, 0.384459, -2.63848, 17.9973, 1.27514)
+visible = false
 material_override = SubResource("StandardMaterial3D_mit6i")
 use_collision = true
 size = Vector3(3.28373, 1.05678, 2)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.599545, 0.0219011, 0.264552, 0, 0.996591, -0.0825035, -0.404855, 0.0754396, 0.911264, 3.35559, 17.7893, 5.78907)
+transform = Transform3D(0.439829, -0.147817, 0.463276, 0.346834, 0.937441, -0.0301708, -0.655549, 0.265294, 0.707018, -0.519019, 17.1856, 2.59757)
 
 [node name="stumpid5" parent="." instance=ExtResource("1_e4sp2")]
 transform = Transform3D(0.655684, 0, 0, 0, 1, 0, 0, 0, 1, 3.41129, 16.4785, 5.74928)
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 1.98784, 10.9215, 9.26941)
@@ -172,53 +199,98 @@ shadow_enabled = true
 
 [node name="stumpid3" parent="Campfire area" instance=ExtResource("1_e4sp2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.08965, 16.5568, 2.8141)
+visible = false
 
 [node name="Log" parent="Campfire area" instance=ExtResource("1_e4sp2")]
 transform = Transform3D(0.155465, 3.06144, 0.226311, -1.26376, 0.396939, -6.11734e-09, -0.0361203, -0.711291, 0.974055, 5.10624, 16.5568, -3.50389)
+visible = false
 
 [node name="stumpid" parent="Campfire area" instance=ExtResource("1_e4sp2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00357, 16.6132, 1.28821)
 
 [node name="Rock" type="MeshInstance3D" parent="Campfire area"]
-transform = Transform3D(0.749035, 0.355526, 0.167114, 0.0138163, -0.23449, 0.64149, 0.62244, -0.42263, -0.215341, 1.26055, 16.7493, -2.26066)
+transform = Transform3D(0.749035, 0.355526, 0.167114, 0.0138163, -0.23449, 0.64149, 0.62244, -0.42263, -0.215341, -5.46798, 16.2349, -1.68108)
 mesh = SubResource("ArrayMesh_6p6im")
 skeleton = NodePath("")
 
 [node name="Rock3" type="MeshInstance3D" parent="Campfire area"]
-transform = Transform3D(-0.00289938, 0.27612, 0.136042, 0.00690814, -0.117245, 0.320285, 0.486942, 0.00330732, -0.00373386, 1.42508, 17.2001, -2.66145)
+transform = Transform3D(-0.00289938, 0.27612, 0.136042, 0.00690814, -0.117245, 0.320285, 0.486942, 0.00330732, -0.00373386, -4.17798, 16.1652, 2.72494)
 mesh = SubResource("ArrayMesh_6p6im")
 skeleton = NodePath("")
 
 [node name="Rock2" type="MeshInstance3D" parent="Campfire area"]
-transform = Transform3D(-0.710806, 0.375106, 0.192874, 0.0138163, -0.23449, 0.64149, 0.665763, 0.405351, 0.192611, 0.950853, 16.7493, -3.236)
+transform = Transform3D(-0.710806, 0.375106, 0.192874, 0.0138163, -0.23449, 0.64149, 0.665763, 0.405351, 0.192611, -4.64337, 16.1456, -3.70597)
 mesh = SubResource("ArrayMesh_6p6im")
 skeleton = NodePath("")
 
 [node name="campfire" parent="Campfire area" instance=ExtResource("2_ee5yr")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.21905, 16.614, 0)
 
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="Campfire area/campfire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.964088, 3.23046)
+gi_mode = 2
+gi_lightmap_scale = 2
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_oo2lj")
+draw_pass_1 = SubResource("SphereMesh_mm83c")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Campfire area/campfire/GPUParticles3D2"]
+light_color = Color(0.807337, 0.382361, 0.0726899, 1)
+light_energy = 9.404
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Campfire area/campfire/GPUParticles3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.964088, -6.18925)
+gi_mode = 2
+gi_lightmap_scale = 2
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_oo2lj")
+draw_pass_1 = SubResource("SphereMesh_mm83c")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Campfire area/campfire/GPUParticles3D2/GPUParticles3D"]
+light_color = Color(0.807337, 0.382361, 0.0726899, 1)
+light_energy = 3.101
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Campfire area/campfire/GPUParticles3D2/GPUParticles3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75113, 0.964088, 0.518403)
+gi_mode = 2
+gi_lightmap_scale = 2
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_oo2lj")
+draw_pass_1 = SubResource("SphereMesh_mm83c")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Campfire area/campfire/GPUParticles3D2/GPUParticles3D/GPUParticles3D"]
+light_color = Color(0.807337, 0.382361, 0.0726899, 1)
+light_energy = 3.101
+
 [node name="tree25" parent="." instance=ExtResource("3_ihefh")]
 transform = Transform3D(1.10033, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -12.2932, 15.3393, -15.1078)
+visible = false
 
 [node name="tree26" parent="." instance=ExtResource("3_ihefh")]
 transform = Transform3D(1.10033, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -0.666786, 15.4559, -17.5895)
+visible = false
 
 [node name="tree27" parent="." instance=ExtResource("3_ihefh")]
 transform = Transform3D(-0.377924, 0, 1.08206, 0, 1.99644, 0, -1.0334, 0, -0.395722, -10.4226, 15.4559, -0.578518)
+visible = false
 
 [node name="tree28" parent="." instance=ExtResource("3_ihefh")]
 transform = Transform3D(1.10033, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -0.666786, 15.4559, -17.5895)
+visible = false
 
 [node name="bigtree10" parent="." instance=ExtResource("4_ke72t")]
 transform = Transform3D(1.10033, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -6.87393, 15.334, -15.4658)
+visible = false
 
 [node name="Text_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.34359, 0.177689, 0.348494, 0.235931, -0.00259095, -2.10347, -0.314817, 0.756405, -0.0890705, -0.0709476, 17.2027, -2.87505)
+visible = false
 mesh = SubResource("ArrayMesh_ruxsr")
 skeleton = NodePath("")
 
 [node name="Text2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.3189, -0.785462, -0.434721, 0.117176, 0.61152, -2.20592, -0.892276, -1.08071, -0.932263, -4.75706, 21.4583, -0.130789)
+visible = false
 mesh = SubResource("ArrayMesh_wdim5")
 skeleton = NodePath("")
 
