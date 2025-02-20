@@ -1,7 +1,7 @@
 [gd_scene load_steps=33 format=4 uid="uid://n5wj5kuegkmp"]
 
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://scenes/models/bigtree.tscn" id="1_37o28"]
-[ext_resource type="Script" path="res://scenes/Days/menu.gd" id="1_jgurr"]
+[ext_resource type="Script" path="res://scenes/scripts/menu.gd" id="1_jgurr"]
 [ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="1_ta740"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://scenes/models/campfire.tscn" id="2_atvcm"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="2_n5bxp"]
@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://scenes/scripts/audio_stream_player.gd" id="6_6p0na"]
 [ext_resource type="AudioStream" uid="uid://cxhyvfub26kmd" path="res://scenes/audio/music box loop _5.mp3" id="6_uawhc"]
 [ext_resource type="AudioStream" uid="uid://d8uh3ynagmy" path="res://scenes/audio/mixkit-hard-typewriter-click-1119.mp3" id="9_3vkto"]
-[ext_resource type="Script" path="res://scenes/Days/timer.gd" id="9_wih1m"]
+[ext_resource type="Script" path="res://scenes/scripts/timer.gd" id="9_wih1m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yupmk"]
 sky_top_color = Color(0.603357, 0.658461, 0.997595, 1)

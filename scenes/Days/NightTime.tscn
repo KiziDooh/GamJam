@@ -166,6 +166,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5779, 1.48759, -3.27572)
 
 [node name="bunny" parent="Bunnies" instance=ExtResource("3_cf4ng")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
+visible = false
 
 [node name="mean bunny" parent="Bunnies" instance=ExtResource("4_3jn4p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 28.0874)

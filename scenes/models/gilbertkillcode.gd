@@ -12,3 +12,4 @@ func _process(delta):
 		if ((Global.get.name == "Bunny") and Input.is_key_pressed(KEY_E)) and Global.knhold == true:
 			print("dead")
 			Global.gilbertded = true
+			$"gilbert head/Timer".start()

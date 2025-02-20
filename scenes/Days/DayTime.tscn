@@ -19,7 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="12_bmyrr"]
 [ext_resource type="Script" path="res://scenes/scripts/gilbert_head.gd" id="12_oo515"]
 [ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/audio/tv-glitch-6245.mp3" id="13_kiirs"]
-[ext_resource type="Script" path="res://scenes/Days/LilGilsBlood.gd" id="13_nef5c"]
+[ext_resource type="Script" path="res://scenes/models/LilGilsBlood.gd" id="13_nef5c"]
 [ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://scenes/models/bench.tscn" id="14_a50s4"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/models/knife.tscn" id="14_mcsol"]
 [ext_resource type="PackedScene" uid="uid://dq5jgidsk2le6" path="res://scenes/models/flashlight.tscn" id="15_j6i74"]
@@ -380,6 +380,11 @@ script = ExtResource("13_nef5c")
 transform = Transform3D(0.998239, -0.0593418, 0, 0.0593418, 0.998239, 0, 0, 0, 1, 0.0952837, 0.0241156, -0.0312023)
 script = ExtResource("12_oo515")
 
+[node name="Timer" type="Timer" parent="Bunnies/bunny/gilbert head"]
+process_callback = 0
+wait_time = 1.5
+one_shot = true
+
 [node name="Bunny" type="Area3D" parent="Bunnies/bunny"]
 transform = Transform3D(3.32746, -0.197806, 0, 0.197806, 3.32746, 0, 0, 0, 3.33333, -0.16359, -0.242825, -0.0788994)
 
@@ -422,6 +427,7 @@ editable = false
 
 [node name="mean bunny" parent="Bunnies" instance=ExtResource("7_ya2mk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 26.4596)
+visible = false
 
 [node name="Sky" type="Node" parent="."]
 
@@ -556,4 +562,5 @@ offset_bottom = 46.0
 text = "Night time Button"
 script = ExtResource("22_7cqnt")
 
+[connection signal="timeout" from="Bunnies/bunny/gilbert head/Timer" to="Bunnies/bunny/gilbert head" method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
