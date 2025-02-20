@@ -1,7 +1,7 @@
-[gd_scene load_steps=25 format=4 uid="uid://b5ejocpj6ewpf"]
+[gd_scene load_steps=25 format=4 uid="uid://112fifut6h6"]
 
-[ext_resource type="Environment" uid="uid://dd47xvqg04in4" path="res://scenes/Days/NightTime.tres" id="1_6us30"]
-[ext_resource type="PackedScene" path="res://scenes/models/stumpid.tscn" id="1_e4sp2"]
+[ext_resource type="Environment" uid="uid://64wnjmuegm6j" path="res://scenes/Days/NightTime.tres" id="1_6us30"]
+[ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="1_e4sp2"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://scenes/models/campfire.tscn" id="2_ee5yr"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="3_ihefh"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://scenes/models/bigtree.tscn" id="4_ke72t"]
