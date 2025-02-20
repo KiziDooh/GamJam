@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://scenes/models/bench.tscn" id="14_a50s4"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/models/knife.tscn" id="14_mcsol"]
 [ext_resource type="PackedScene" uid="uid://dq5jgidsk2le6" path="res://scenes/models/flashlight.tscn" id="15_j6i74"]
-[ext_resource type="PackedScene" path="res://scenes/models/stumpid.tscn" id="20_nkiqi"]
+[ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="20_nkiqi"]
 [ext_resource type="PackedScene" uid="uid://cla2lc84moemg" path="res://scenes/models/stick.tscn" id="21_kv2r3"]
 [ext_resource type="Script" path="res://scenes/Days/button1.gd" id="22_7cqnt"]
 

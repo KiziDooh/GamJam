@@ -1,14 +1,14 @@
-[gd_scene load_steps=26 format=4 uid="uid://b5ejocpj6ewpf"]
+[gd_scene load_steps=26 format=4 uid="uid://112fifut6h6"]
 
-[ext_resource type="Environment" uid="uid://dd47xvqg04in4" path="res://scenes/Days/NightTime.tres" id="1_6us30"]
-[ext_resource type="PackedScene" path="res://scenes/models/stumpid.tscn" id="1_e4sp2"]
+[ext_resource type="Environment" uid="uid://64wnjmuegm6j" path="res://scenes/Days/NightTime.tres" id="1_6us30"]
+[ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="1_e4sp2"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://scenes/models/campfire.tscn" id="2_ee5yr"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="3_ihefh"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://scenes/models/bigtree.tscn" id="4_ke72t"]
 [ext_resource type="Script" path="res://scenes/Days/button.gd" id="5_ls87q"]
 [ext_resource type="AudioStream" uid="uid://cxhyvfub26kmd" path="res://scenes/audio/music box loop _5.mp3" id="6_8tj34"]
 [ext_resource type="Script" path="res://scenes/scripts/audio_stream_player.gd" id="7_e5yff"]
-[ext_resource type="PackedScene" uid="uid://cfqiun1xq1wgv" path="res://scenes/models/game over.tscn" id="9_g2u0u"]
+[ext_resource type="PackedScene" uid="uid://bs3k72tyapafh" path="res://scenes/models/game over.tscn" id="9_g2u0u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_npuwb"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)

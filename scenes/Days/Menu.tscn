@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=4 uid="uid://n5wj5kuegkmp"]
 
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://scenes/models/bigtree.tscn" id="1_37o28"]
-[ext_resource type="PackedScene" path="res://scenes/models/stumpid.tscn" id="1_ta740"]
+[ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="1_ta740"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://scenes/models/campfire.tscn" id="2_atvcm"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="2_n5bxp"]
 [ext_resource type="Script" path="res://scenes/Days/button.gd" id="5_oqi6w"]
@@ -149,7 +149,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hsk26")
 
-[node name="Menu" type="Node3D"]
+[node name="Menu2" type="Node3D"]
 transform = Transform3D(1.52512, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
