@@ -14,10 +14,10 @@
 [ext_resource type="AudioStream" uid="uid://d24nbxymy0dkn" path="res://scenes/audio/pixelated.wav" id="9_r33lo"]
 [ext_resource type="Script" path="res://scenes/models/gilbertkillcode.gd" id="10_gygf5"]
 [ext_resource type="Script" path="res://scenes/scripts/audio_stream_player.gd" id="10_yn6h1"]
-[ext_resource type="PackedScene" uid="uid://dxmq2vnehj76u" path="res://gilbert head.tscn" id="11_jcjcy"]
+[ext_resource type="PackedScene" uid="uid://dxmq2vnehj76u" path="res://scenes/models/gilbert head.tscn" id="11_jcjcy"]
 [ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/audio/glitch-01-231255.mp3" id="11_qldp5"]
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="12_bmyrr"]
-[ext_resource type="Script" path="res://gilbert_head.gd" id="12_oo515"]
+[ext_resource type="Script" path="res://scenes/scripts/gilbert_head.gd" id="12_oo515"]
 [ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/audio/tv-glitch-6245.mp3" id="13_kiirs"]
 [ext_resource type="Script" path="res://scenes/Days/LilGilsBlood.gd" id="13_nef5c"]
 [ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://scenes/models/bench.tscn" id="14_a50s4"]
@@ -386,6 +386,39 @@ transform = Transform3D(3.32746, -0.197806, 0, 0.197806, 3.32746, 0, 0, 0, 3.333
 [node name="bunny" type="CollisionShape3D" parent="Bunnies/bunny/Bunny"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33299e-08, 0.159729, 0)
 shape = SubResource("SphereShape3D_athfl")
+
+[node name="Nothing Wrong can Happen" type="TextEdit" parent="Bunnies/bunny"]
+visible = false
+clip_children = 2
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 1154.0
+offset_bottom = 710.0
+text = "Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
+Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen"
+editable = false
 
 [node name="mean bunny" parent="Bunnies" instance=ExtResource("7_ya2mk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 26.4596)

@@ -2,5 +2,6 @@ extends Button
 
 
 func _on_pressed():
-	get_tree().change_scene_to_file("res://scenes/Days/DayTime.tscn")
-	Global.yup = false
+	$Timer.start()
+	Global.blackout = true
+	$"Lights out".play()

@@ -9,5 +9,5 @@ func _ready():
 func _process(delta):
 	if Global.gilbertded == true:
 		pitch_scale = 0.3
-	if Global.knhold == true and Global.gilbertded == false:
-		pitch_scale = 0.65
+#	if Global.knhold == true and Global.gilbertded == true:
+#		pitch_scale = 0.65

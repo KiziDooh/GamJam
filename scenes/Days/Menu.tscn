@@ -1,12 +1,15 @@
-[gd_scene load_steps=30 format=4 uid="uid://n5wj5kuegkmp"]
+[gd_scene load_steps=33 format=4 uid="uid://n5wj5kuegkmp"]
 
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://scenes/models/bigtree.tscn" id="1_37o28"]
+[ext_resource type="Script" path="res://scenes/Days/menu.gd" id="1_jgurr"]
 [ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="1_ta740"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://scenes/models/campfire.tscn" id="2_atvcm"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="2_n5bxp"]
 [ext_resource type="Script" path="res://scenes/Days/button.gd" id="5_oqi6w"]
 [ext_resource type="Script" path="res://scenes/scripts/audio_stream_player.gd" id="6_6p0na"]
 [ext_resource type="AudioStream" uid="uid://cxhyvfub26kmd" path="res://scenes/audio/music box loop _5.mp3" id="6_uawhc"]
+[ext_resource type="AudioStream" uid="uid://d8uh3ynagmy" path="res://scenes/audio/mixkit-hard-typewriter-click-1119.mp3" id="9_3vkto"]
+[ext_resource type="Script" path="res://scenes/Days/timer.gd" id="9_wih1m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yupmk"]
 sky_top_color = Color(0.603357, 0.658461, 0.997595, 1)
@@ -236,6 +239,15 @@ shadow_mesh = SubResource("ArrayMesh_m8dnl")
 
 [node name="Menu2" type="Node3D"]
 transform = Transform3D(1.52512, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_jgurr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_uawhc")
+volume_db = -6.701
+pitch_scale = 0.65
+autoplay = true
+parameters/looping = true
+script = ExtResource("6_6p0na")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jpkpg")
@@ -291,9 +303,6 @@ transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 1, 5.20263, 16.4785, 5.74
 [node name="tree27" parent="Campfire area" instance=ExtResource("2_n5bxp")]
 transform = Transform3D(-0.576379, 0, 1.65027, 0, 1.99644, 0, -1.0334, 0, -0.395722, -15.8957, 15.4559, -0.578518)
 
-[node name="tree28" parent="Campfire area" instance=ExtResource("2_n5bxp")]
-transform = Transform3D(1.67814, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -1.01693, 15.4559, -17.5895)
-
 [node name="bigtree10" parent="Campfire area" instance=ExtResource("1_37o28")]
 transform = Transform3D(1.67814, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -10.4836, 15.334, -15.4658)
 
@@ -319,7 +328,7 @@ transform = Transform3D(1.3189, -0.785462, -0.434721, 0.117176, 0.61152, -2.2059
 mesh = SubResource("ArrayMesh_wdim5")
 skeleton = NodePath("")
 
-[node name="Button" type="Button" parent="."]
+[node name="MenuPlay" type="Button" parent="."]
 offset_left = 147.0
 offset_top = 332.0
 offset_right = 282.0
@@ -327,12 +336,17 @@ offset_bottom = 363.0
 text = "Play"
 script = ExtResource("5_oqi6w")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_uawhc")
-volume_db = -6.701
-pitch_scale = 0.65
-autoplay = true
-script = ExtResource("6_6p0na")
+[node name="Timer" type="Timer" parent="MenuPlay"]
+process_callback = 0
+wait_time = 2.5
+one_shot = true
+script = ExtResource("9_wih1m")
+
+[node name="Lights out" type="AudioStreamPlayer3D" parent="MenuPlay"]
+stream = ExtResource("9_3vkto")
+volume_db = 76.19
+unit_size = 17.61
+pitch_scale = 0.66
 
 [node name="Dark mode" type="Node" parent="."]
 
@@ -382,4 +396,5 @@ visible = false
 mesh = SubResource("ArrayMesh_wg6qo")
 skeleton = NodePath("")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="MenuPlay" to="MenuPlay" method="_on_pressed"]
+[connection signal="timeout" from="MenuPlay/Timer" to="." method="_on_timer_timeout"]
