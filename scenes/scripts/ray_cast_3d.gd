@@ -9,7 +9,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if is_colliding():
-		print(get_collider())
-#		if get_collider() == (sTICK eM uP:<Area3D#49425680586>):
-#			print("yup")
-#$Bunnies/bunny/Bunny$StaticBody3D/CollisionShape3D2$"sTICK eM uP"
+		Global.get = get_collider()
+		Global.yup = true
+		print(Global.get.name)

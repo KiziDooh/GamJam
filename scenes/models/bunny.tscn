@@ -360,29 +360,27 @@ trail_lifetime = 0.01
 process_material = SubResource("ParticleProcessMaterial_xdl67")
 draw_pass_1 = SubResource("SphereMesh_v1tna")
 
-[node name="head" type="Node" parent="StaticBody3D"]
-
-[node name="Sphere_001" type="MeshInstance3D" parent="StaticBody3D/head"]
+[node name="Sphere_001" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.83544, 0, 0, 0, 0.83544, 0, 0, 0, 0.83544, 0, 0.613728, -1.04981)
 mesh = SubResource("ArrayMesh_oexbi")
 skeleton = NodePath("")
 
-[node name="Sphere_002" type="MeshInstance3D" parent="StaticBody3D/head"]
+[node name="Sphere_002" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.27315, -0.389736, 0.0125441, 0.0835643, 0.977437, 0.0218831, 0.0888318, 0.278924, -0.0591575, -0.562401, 1.66499, -1.00285)
 mesh = SubResource("ArrayMesh_36cip")
 skeleton = NodePath("")
 
-[node name="Sphere_003" type="MeshInstance3D" parent="StaticBody3D/head"]
+[node name="Sphere_003" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.124871, 0, 0, 0, 0.124871, 0, 0, 0, 0.124871, -0.32837, 0.804354, -1.77789)
 mesh = SubResource("ArrayMesh_g51f3")
 skeleton = NodePath("")
 
-[node name="Cone" type="MeshInstance3D" parent="StaticBody3D/head"]
+[node name="Cone" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(-0.132467, 1.80554e-08, -1.31707e-09, -1.80554e-08, -0.131064, 0.0192235, 1.31707e-09, 0.0192235, 0.131064, 0, 0.471044, -1.75768)
 mesh = SubResource("ArrayMesh_23rug")
 skeleton = NodePath("")
 
-[node name="Sphere_006" type="MeshInstance3D" parent="StaticBody3D/head"]
+[node name="Sphere_006" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.196463, -0.280317, 0.00902234, 0.0601035, 0.70302, 0.0157394, 0.0638921, 0.200615, -0.0425489, -0.544548, 1.69613, -1.02643)
 mesh = SubResource("ArrayMesh_8howx")
 skeleton = NodePath("")

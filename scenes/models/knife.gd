@@ -8,5 +8,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-		if Knife == true:
+	if Global.yup == true:
+		if (Global.get.name == "knife") and Input.is_key_pressed(KEY_E):
 			visible = true
