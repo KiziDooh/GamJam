@@ -66,7 +66,7 @@ transform = Transform3D(0.999962, 0, 0.00872654, 0, 1, 0, -0.00872654, 0, 0.9999
 light_color = Color(0.753837, 0.442879, 0.342313, 1)
 light_energy = 1.5
 light_specular = 16.0
-spot_range = 11.7171
+spot_range = 57.1892
 spot_angle = 36.3079
 
 [node name="FlashOnSound" type="AudioStreamPlayer3D" parent="Head/Camera3D/SpotLight3D"]
