@@ -13,7 +13,7 @@ func _process(delta):
 	#print(round(position.x))
 	#print(round(position.z))
 	
-	
+#supposed to change the rotation idk why its funky like it is
 	if (dirX == 2) and (dirZ == 0):
 		rotation.y = 180
 	if (dirX == 0) and (dirZ == 1):

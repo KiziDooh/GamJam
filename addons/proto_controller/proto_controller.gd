@@ -232,3 +232,7 @@ func check_input_mappings():
 func _on_health_health_depleated():
 	queue_free()
 	print("You Died") # Replace with function body.
+	
+func _process(delta):
+	Global.pz = position.z
+	Global.px = position.x

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=43 format=4 uid="uid://bkeycdakvh2p"]
 
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="2_1sn2w"]
 [ext_resource type="Script" path="res://scenes/scripts/Health_Bar.gd" id="2_4fp7o"]
@@ -12,10 +12,14 @@
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="8_36n8i"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://scenes/models/campfire.tscn" id="9_jo28d"]
 [ext_resource type="AudioStream" uid="uid://d24nbxymy0dkn" path="res://scenes/audio/pixelated.wav" id="9_r33lo"]
+[ext_resource type="Script" path="res://scenes/models/gilbertkillcode.gd" id="10_gygf5"]
 [ext_resource type="Script" path="res://scenes/scripts/audio_stream_player.gd" id="10_yn6h1"]
+[ext_resource type="PackedScene" uid="uid://dxmq2vnehj76u" path="res://gilbert head.tscn" id="11_jcjcy"]
 [ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://scenes/audio/glitch-01-231255.mp3" id="11_qldp5"]
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="12_bmyrr"]
+[ext_resource type="Script" path="res://gilbert_head.gd" id="12_oo515"]
 [ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/audio/tv-glitch-6245.mp3" id="13_kiirs"]
+[ext_resource type="Script" path="res://scenes/Days/LilGilsBlood.gd" id="13_nef5c"]
 [ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://scenes/models/bench.tscn" id="14_a50s4"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://scenes/models/knife.tscn" id="14_mcsol"]
 [ext_resource type="PackedScene" uid="uid://dq5jgidsk2le6" path="res://scenes/models/flashlight.tscn" id="15_j6i74"]
@@ -28,6 +32,34 @@ albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
 metallic = 0.06
 metallic_texture_channel = 1
 roughness = 0.81
+
+[sub_resource type="Gradient" id="Gradient_tm7rx"]
+colors = PackedColorArray(0.968627, 0, 0, 1, 0.436058, 8.66354e-07, 1.68458e-07, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4afc6"]
+gradient = SubResource("Gradient_tm7rx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_q0lgh"]
+lifetime_randomness = 0.86
+emission_shape_offset = Vector3(0, -0.5, 0)
+direction = Vector3(1, 10, 0)
+spread = 16.907
+gravity = Vector3(0, -9.8, -1)
+scale_min = 0.01
+scale_max = 0.8
+color_ramp = SubResource("GradientTexture1D_4afc6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yqaux"]
+blend_mode = 3
+depth_draw_mode = 1
+albedo_color = Color(0.627451, 0, 0, 0.435294)
+metallic_specular = 0.4
+roughness = 0.28
+
+[sub_resource type="SphereMesh" id="SphereMesh_l3r35"]
+material = SubResource("StandardMaterial3D_yqaux")
+radius = 0.1
+height = 0.2
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_athfl"]
 radius = 1.0
@@ -324,6 +356,28 @@ size = Vector3(1, 10.8486, 30.7002)
 
 [node name="bunny" parent="Bunnies" instance=ExtResource("6_ao6hn")]
 transform = Transform3D(0.299471, 0.0178025, 0, -0.0178025, 0.299471, 0, 0, 0, 0.3, -0.00193787, 2.64889, 5.99844)
+script = ExtResource("10_gygf5")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Bunnies/bunny"]
+transform = Transform3D(0.998239, 0.0593418, 5.18782e-09, 0.0593418, -0.998239, -8.72688e-08, 0, 8.74228e-08, -1, 0.117977, -0.357627, -1.1717)
+visible = false
+gi_mode = 2
+gi_lightmap_scale = 2
+amount = 50
+amount_ratio = 0.8075
+lifetime = 0.76
+preprocess = 1.0
+speed_scale = 1.38
+explosiveness = 0.65
+randomness = 0.34
+trail_lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_q0lgh")
+draw_pass_1 = SubResource("SphereMesh_l3r35")
+script = ExtResource("13_nef5c")
+
+[node name="gilbert head" parent="Bunnies/bunny" instance=ExtResource("11_jcjcy")]
+transform = Transform3D(0.998239, -0.0593418, 0, 0.0593418, 0.998239, 0, 0, 0, 1, 0.0952837, 0.0241156, -0.0312023)
+script = ExtResource("12_oo515")
 
 [node name="Bunny" type="Area3D" parent="Bunnies/bunny"]
 transform = Transform3D(3.32746, -0.197806, 0, 0.197806, 3.32746, 0, 0, 0, 3.33333, -0.16359, -0.242825, -0.0788994)
