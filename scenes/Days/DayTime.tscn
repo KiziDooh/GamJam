@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=44 format=4 uid="uid://bkeycdakvh2p"]
 
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="2_1sn2w"]
 [ext_resource type="Script" path="res://scenes/scripts/Health_Bar.gd" id="2_4fp7o"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="20_nkiqi"]
 [ext_resource type="PackedScene" uid="uid://cla2lc84moemg" path="res://scenes/models/stick.tscn" id="21_kv2r3"]
 [ext_resource type="Script" path="res://scenes/Days/button1.gd" id="22_7cqnt"]
+[ext_resource type="Script" path="res://scenes/models/groundknife.gd" id="23_4xasp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
@@ -435,6 +436,7 @@ shape = SubResource("SphereShape3D_vdhnm")
 
 [node name="knife" parent="Objects" instance=ExtResource("14_mcsol")]
 transform = Transform3D(0.0390731, -0.0920505, -1.70794e-09, -4.37114e-09, 1.91069e-16, -0.1, 0.0920505, 0.0390731, -4.02365e-09, -12.138, 1.44976, 9.62949)
+script = ExtResource("23_4xasp")
 
 [node name="knife" type="Area3D" parent="Objects/knife"]
 
