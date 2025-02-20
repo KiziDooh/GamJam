@@ -1,0 +1,40 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://dd47xvqg04in4"]
+
+[ext_resource type="Texture2D" uid="uid://dhlr6v1rbi61h" path="res://scenes/ui/stars.jpg" id="1_2nd78"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8i1qg"]
+sky_top_color = Color(0.0777468, 9.02271e-05, 0.154952, 1)
+sky_horizon_color = Color(0.141176, 0.0901961, 0.180392, 1)
+sky_curve = 0.363584
+sky_energy_multiplier = 1.64
+sky_cover = ExtResource("1_2nd78")
+sky_cover_modulate = Color(0.0338533, 0.0338533, 0.0338533, 1)
+ground_bottom_color = Color(0.0769805, 0.069424, 0.0349924, 1)
+ground_horizon_color = Color(0.266667, 0.266667, 0.411765, 1)
+energy_multiplier = 0.75
+
+[sub_resource type="Sky" id="Sky_gug60"]
+sky_material = SubResource("ProceduralSkyMaterial_8i1qg")
+
+[resource]
+background_mode = 2
+background_color = Color(0.918413, 0.879098, 0.979966, 1)
+background_energy_multiplier = 0.33
+sky = SubResource("Sky_gug60")
+ambient_light_source = 3
+ambient_light_color = Color(0.139515, 0.0911726, 0.181919, 1)
+ambient_light_sky_contribution = 0.32
+ambient_light_energy = 0.83
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_exposure = 2.52
+tonemap_white = 0.66
+ssr_fade_in = 10.289
+ssr_fade_out = 50.2133
+ssr_depth_tolerance = 43.21
+fog_enabled = true
+fog_light_color = Color(0.141176, 0.0901961, 0.180392, 1)
+fog_light_energy = 0.17
+fog_density = 0.1679
+fog_height = 21.56
+volumetric_fog_density = 0.3535
