@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=4 uid="uid://cla2lc84moemg"]
+[gd_scene load_steps=6 format=4 uid="uid://cla2lc84moemg"]
+
+[ext_resource type="Material" uid="uid://sn11sbkwad3n" path="res://scenes/models/stumpidtext.tres" id="1_womvd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkdnw"]
 resource_name = "Material.002"
@@ -44,11 +46,13 @@ shadow_mesh = SubResource("ArrayMesh_ihc5o")
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.149964, -0.000818314, -0.00328207, 0, 1.90463, -0.00294426, 0.0032827, 0.0373831, 0.149935, 0.27746, 2.35587, 0.311208)
+material_override = ExtResource("1_womvd")
 mesh = SubResource("ArrayMesh_0f3k7")
 skeleton = NodePath("")
 
 [node name="Cylinder2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.128019, -0.000237342, -0.00304982, -0.00175359, 0.424108, -0.0893184, 0.00218587, 0.354137, 0.106964, 0.27746, 3.60197, 0.748942)
+material_override = ExtResource("1_womvd")
 mesh = SubResource("ArrayMesh_0f3k7")
 skeleton = NodePath("")
 

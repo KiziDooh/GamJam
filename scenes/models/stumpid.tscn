@@ -1,4 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://1g514l2w8mbo"]
+[gd_scene load_steps=10 format=4 uid="uid://by8y8guhping7"]
+
+[ext_resource type="Material" uid="uid://sn11sbkwad3n" path="res://scenes/models/stumpidtext.tres" id="1_bbho1"]
+[ext_resource type="Texture2D" uid="uid://kd2pxwrfjgmf" path="res://bark_willow_02_disp_1k.png" id="2_oxsw1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c66po"]
 size = Vector3(1.57422, 2.3291, 1.5918)
@@ -101,6 +104,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_t8hob")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_45tjh"]
+shading_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.72, 0.55152, 0.4392, 1)
+albedo_texture = ExtResource("2_oxsw1")
+rim_enabled = true
+rim = 0.1
+rim_tint = 1.0
+uv1_scale = Vector3(40, 40, 40)
+
 [node name="stumpid" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
@@ -110,5 +123,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225955, 0)
 shape = SubResource("BoxShape3D_c66po")
 
 [node name="Cylinder" type="MeshInstance3D" parent="StaticBody3D"]
+material_overlay = ExtResource("1_bbho1")
+mesh = SubResource("ArrayMesh_rjit1")
+skeleton = NodePath("")
+
+[node name="Cylinder" type="MeshInstance3D" parent="StaticBody3D/Cylinder"]
+transform = Transform3D(0.994577, 0, 0, 0, 1.03353, 0, 0, 0, 0.995864, 0, 0.0115432, 0)
+material_override = SubResource("StandardMaterial3D_45tjh")
 mesh = SubResource("ArrayMesh_rjit1")
 skeleton = NodePath("")
