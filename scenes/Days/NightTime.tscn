@@ -1,5 +1,6 @@
-[gd_scene load_steps=25 format=4 uid="uid://cbps161a76m82"]
+[gd_scene load_steps=26 format=4 uid="uid://cbps161a76m82"]
 
+[ext_resource type="Environment" uid="uid://dd47xvqg04in4" path="res://scenes/Days/NightTime.tres" id="1_2fc5u"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="1_av0r8"]
 [ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://scenes/models/bench.tscn" id="2_6oju8"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://scenes/ui/Bar_Overset.png" id="2_og0bt"]
@@ -264,5 +265,8 @@ offset_right = 1137.0
 offset_bottom = 45.0
 text = "Day time Button"
 script = ExtResource("20_tdr8o")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_2fc5u")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
