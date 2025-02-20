@@ -1,6 +1,5 @@
-[gd_scene load_steps=26 format=4 uid="uid://cbps161a76m82"]
+[gd_scene load_steps=25 format=4 uid="uid://cbps161a76m82"]
 
-[ext_resource type="Environment" uid="uid://dd47xvqg04in4" path="res://scenes/Days/NightTime.tres" id="1_2fc5u"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://scenes/models/tree.tscn" id="1_av0r8"]
 [ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://scenes/models/bench.tscn" id="2_6oju8"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://scenes/ui/Bar_Overset.png" id="2_og0bt"]
@@ -19,7 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://scenes/audio/glitch-transition-sfx-182152.mp3" id="11_gynyu"]
 [ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://scenes/audio/tv-glitch-6245.mp3" id="12_rb1rn"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://scenes/models/campfire.tscn" id="14_vdhmv"]
-[ext_resource type="PackedScene" path="res://scenes/models/stumpid.tscn" id="20_sqg77"]
+[ext_resource type="PackedScene" uid="uid://1g514l2w8mbo" path="res://scenes/models/stumpid.tscn" id="20_sqg77"]
 [ext_resource type="Script" path="res://scenes/Days/button.gd" id="20_tdr8o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afntl"]
@@ -168,7 +167,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04206, 1.46864, 28.6979)
 script = ExtResource("6_p5j5x")
 
 [node name="evil gilbert" parent="Bunnies" instance=ExtResource("7_vnmpn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 5.231, 5)
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 66.5373, 5.231, 5)
 script = ExtResource("8_v1lyj")
 
 [node name="Enviroment" type="Node" parent="."]
@@ -265,8 +264,5 @@ offset_right = 1137.0
 offset_bottom = 45.0
 text = "Day time Button"
 script = ExtResource("20_tdr8o")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("1_2fc5u")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
