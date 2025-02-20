@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://b5ejocpj6ewpf"]
+[gd_scene load_steps=26 format=4 uid="uid://b5ejocpj6ewpf"]
 
 [ext_resource type="Environment" uid="uid://dd47xvqg04in4" path="res://scenes/Days/NightTime.tres" id="1_6us30"]
 [ext_resource type="PackedScene" path="res://scenes/models/stumpid.tscn" id="1_e4sp2"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scenes/Days/button.gd" id="5_ls87q"]
 [ext_resource type="AudioStream" uid="uid://cxhyvfub26kmd" path="res://scenes/audio/music box loop _5.mp3" id="6_8tj34"]
 [ext_resource type="Script" path="res://scenes/scripts/audio_stream_player.gd" id="7_e5yff"]
+[ext_resource type="PackedScene" uid="uid://cfqiun1xq1wgv" path="res://scenes/models/game over.tscn" id="9_g2u0u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_npuwb"]
 albedo_color = Color(0.120631, 0.364504, 0.0299465, 1)
@@ -244,6 +245,7 @@ process_material = SubResource("ParticleProcessMaterial_oo2lj")
 draw_pass_1 = SubResource("SphereMesh_mm83c")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Campfire area/campfire/GPUParticles3D2/GPUParticles3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.254295, 0, 12.3454)
 light_color = Color(0.807337, 0.382361, 0.0726899, 1)
 light_energy = 3.101
 
@@ -304,5 +306,8 @@ volume_db = -6.701
 pitch_scale = 0.65
 autoplay = true
 script = ExtResource("7_e5yff")
+
+[node name="game over" parent="." instance=ExtResource("9_g2u0u")]
+transform = Transform3D(0.00306817, 0, 0.494778, 0, 0.999999, 0, -0.399524, 0, 0.00379968, -1.76148, 16.2682, 1.67411)
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
