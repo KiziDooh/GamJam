@@ -167,7 +167,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04206, 1.46864, 28.6979)
 script = ExtResource("6_p5j5x")
 
 [node name="evil gilbert" parent="Bunnies" instance=ExtResource("7_vnmpn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.45606, 5.23064, 74.3678)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 5.231, 5)
 script = ExtResource("8_v1lyj")
 
 [node name="Enviroment" type="Node" parent="."]
