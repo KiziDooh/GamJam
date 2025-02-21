@@ -1,4 +1,6 @@
-[gd_scene load_steps=14 format=4 uid="uid://b4rhlybavji58"]
+[gd_scene load_steps=16 format=4 uid="uid://b4rhlybavji58"]
+
+[ext_resource type="Script" path="res://Game/Scripts/hitbox.gd" id="1_4n74f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_abexb"]
 size = Vector3(3.47852, 4.70605, 2.30566)
@@ -225,6 +227,9 @@ _data = {
 "SphereAction": SubResource("Animation_oixi5")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_m160f"]
+size = Vector3(3.56812, 5.48816, 3.66263)
+
 [node name="bunny mean dance" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
@@ -320,3 +325,12 @@ root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_g2k8m")
 }
+
+[node name="HitBox" type="Area3D" parent="."]
+collision_layer = 128
+collision_mask = 0
+script = ExtResource("1_4n74f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0635986, -1.24823, 0.378769)
+shape = SubResource("BoxShape3D_m160f")
