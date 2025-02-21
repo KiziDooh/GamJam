@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://by8y8guhping7"]
 
-[ext_resource type="Material" uid="uid://sn11sbkwad3n" path="res://Game/Textures/Material/stumpidtext.tres" id="1_bbho1"]
-[ext_resource type="Texture2D" uid="uid://kd2pxwrfjgmf" path="res://Game/Textures/Image/bark_willow_02_disp_1k.png" id="2_oxsw1"]
+[ext_resource type="Material" uid="uid://sn11sbkwad3n" path="res://Game/Material/stumpidtext.tres" id="1_bbho1"]
+[ext_resource type="Texture2D" uid="uid://kd2pxwrfjgmf" path="res://Game/Image/bark_willow_02_disp_1k.png" id="2_oxsw1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c66po"]
 size = Vector3(1.57422, 2.3291, 1.5918)
