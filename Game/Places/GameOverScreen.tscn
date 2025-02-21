@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=4 uid="uid://b5ejocpj6ewpf"]
 
-[ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="1_idpjx"]
+[ext_resource type="Material" path="res://Game/Material/Grass.tres" id="1_idpjx"]
 [ext_resource type="Environment" uid="uid://dd47xvqg04in4" path="res://Game/Material/NightTime.tres" id="1_khpwj"]
 [ext_resource type="PackedScene" uid="uid://by8y8guhping7" path="res://Game/Sprites/Scenes/stumpid.tscn" id="2_bmfkk"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://Game/Sprites/Scenes/campfire.tscn" id="3_luh74"]
@@ -348,6 +348,7 @@ stream = ExtResource("7_c28nq")
 volume_db = -6.701
 pitch_scale = 0.65
 autoplay = true
+parameters/looping = true
 script = ExtResource("8_djoyc")
 
 [node name="game over" parent="." instance=ExtResource("9_04eg6")]
