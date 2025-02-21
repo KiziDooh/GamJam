@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://0l8ux0vp0py0"]
+[gd_scene load_steps=16 format=4 uid="uid://chaxwiie6xshq"]
 
 [ext_resource type="Material" uid="uid://pw7fjhcbpy3o" path="res://Game/Material/Leafeon.tres" id="1_u6t87"]
 [ext_resource type="Material" uid="uid://dags75qjd16lh" path="res://Game/Textures/thicktree.tres" id="2_qh520"]
