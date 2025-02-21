@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://0l8ux0vp0py0"]
+[gd_scene load_steps=18 format=4 uid="uid://chaxwiie6xshq"]
 
 [ext_resource type="Material" uid="uid://pw7fjhcbpy3o" path="res://Game/Material/Leafeon.tres" id="1_u6t87"]
 [ext_resource type="Texture2D" uid="uid://b5s3i32dnl12f" path="res://Game/Image/bark_willow_02_diff_1k.jpg" id="2_aq5q0"]
