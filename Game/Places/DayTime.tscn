@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://Game/Sprites/Scenes/tree.tscn" id="5_jma72"]
 [ext_resource type="PackedScene" uid="uid://xc776jhcg36a" path="res://Game/Sprites/Scenes/jankassflower.tscn" id="7_1wtfp"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="8_0t86d"]
-[ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
+[ext_resource type="Material" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="9_wh530"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="10_v3j5x"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="11_7qs4o"]
@@ -16,7 +16,7 @@
 [ext_resource type="Script" path="res://Game/Scripts/gilbertkillcode.gd" id="15_2dafk"]
 [ext_resource type="Script" path="res://Game/Scripts/LilGilsBlood.gd" id="16_t0krm"]
 [ext_resource type="AudioStream" uid="uid://ckcgqpaca5ylu" path="res://Game/Audio/squeeze-toy-104733.mp3" id="16_tjhgb"]
-[ext_resource type="Environment" uid="uid://b4mfgh4gm7ux" path="res://Game/Material/DayTime.tres" id="17_i1g0d"]
+[ext_resource type="Environment" uid="uid://d4h7ketyh5ljl" path="res://Game/Material/DayTime.tres" id="17_i1g0d"]
 [ext_resource type="PackedScene" uid="uid://dxmq2vnehj76u" path="res://Game/Sprites/Scenes/gilbert head.tscn" id="17_x7v4m"]
 [ext_resource type="Script" path="res://Game/Scripts/gilbert_head.gd" id="18_amavu"]
 [ext_resource type="PackedScene" uid="uid://cun06movtekqn" path="res://Game/Sprites/Scenes/mean bunny.tscn" id="19_pb8nh"]
@@ -211,7 +211,17 @@ render_target_update_mode = 0
 
 [node name="ProtoController" parent="Character" instance=ExtResource("4_baqm4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82688, 2.184, 0.277)
+can_move = null
+has_gravity = null
+can_jump = null
 can_sprint = true
+can_freefly = null
+look_speed = null
+base_speed = null
+jump_velocity = null
+sprint_speed = null
+freefly_speed = null
+input_freefly = null
 
 [node name="Plantus" type="Node" parent="."]
 
