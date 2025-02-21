@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://cla2lc84moemg"]
 
-[ext_resource type="Material" uid="uid://sn11sbkwad3n" path="res://Game/Textures/Material/stumpidtext.tres" id="1_5kcyn"]
+[ext_resource type="Material" uid="uid://sn11sbkwad3n" path="res://Game/Material/stumpidtext.tres" id="1_5kcyn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkdnw"]
 resource_name = "Material.002"
