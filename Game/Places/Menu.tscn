@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://Game/Sprites/Scenes/campfire.tscn" id="5_q4i7a"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://Game/Sprites/Scenes/tree.tscn" id="6_8e4ym"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="7_xev5h"]
-[ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="8_xgqm7"]
+[ext_resource type="Material" path="res://Game/Material/Grass.tres" id="8_xgqm7"]
 [ext_resource type="Script" path="res://Game/Scripts/button.gd" id="8_y0cyv"]
 [ext_resource type="Script" path="res://Game/Scripts/timer.gd" id="9_4iqvv"]
 [ext_resource type="AudioStream" uid="uid://d8uh3ynagmy" path="res://Game/Audio/mixkit-hard-typewriter-click-1119.mp3" id="10_8bxra"]
