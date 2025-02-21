@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=24 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://Game/Sprites/Scenes/knife.tscn" id="2_j8sau"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cla2lc84moemg" path="res://Game/Sprites/Scenes/stick.tscn" id="6_unflv"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://Game/UI/Images/Bar_Overset.png" id="7_ssvos"]
 [ext_resource type="Texture2D" uid="uid://bwv5xkxrcxr4h" path="res://Game/UI/Images/StaminaBar_Full.png" id="8_y2lov"]
+[ext_resource type="Script" path="res://Game/Sprites/Scenes/stick.gd" id="9_apxax"]
 [ext_resource type="Script" path="res://Game/Scripts/ray_cast_3d.gd" id="12_gdqeh"]
 [ext_resource type="AudioStream" uid="uid://dpx0txhouqn0n" path="res://Game/Audio/audio-editor-output.mp3" id="13_7h3ds"]
 [ext_resource type="Texture2D" uid="uid://cgex11n1d4upo" path="res://Game/UI/Images/EKeyInteractLight.png" id="13_k6xt2"]
@@ -40,7 +41,8 @@ input_jump = "Jump"
 input_sprint = "Sprint"
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1.09008, 0, 0, 0, 1, 0, 0.9, 0)
+transform = Transform3D(1, 0, 0, 0, 1.09008, 0, 0, 0, 1, 0, 0.9, 0.0656407)
+visible = false
 material_override = SubResource("StandardMaterial3D_iof21")
 cast_shadow = 0
 mesh = SubResource("CapsuleMesh_ucva2")
@@ -80,6 +82,8 @@ script = ExtResource("6_m784s")
 
 [node name="Stick" parent="Head/Camera3D" instance=ExtResource("6_unflv")]
 transform = Transform3D(-0.0261502, 0, -0.198283, 0, 0.2, 0, 0.198283, 0, -0.0261502, 0.519923, -0.846619, -0.939263)
+visible = false
+script = ExtResource("9_apxax")
 
 [node name="HurtBox" type="Area3D" parent="." node_paths=PackedStringArray("health")]
 collision_layer = 0

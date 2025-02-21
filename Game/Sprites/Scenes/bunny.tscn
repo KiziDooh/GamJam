@@ -331,7 +331,7 @@ mesh = SubResource("ArrayMesh_l5all")
 skeleton = NodePath("")
 
 [node name="Sphere_004" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(0.256184, 0, 0, 0, 0, 0.155654, 0, 0.556524, 0, -0.780309, -0.505675, -0.665905)
+transform = Transform3D(0.256184, 0, 0, 0, 0, 0.155654, 0, 0.556524, 0, -0.780309, -0.204111, -0.665905)
 mesh = SubResource("ArrayMesh_otn35")
 skeleton = NodePath("")
 
