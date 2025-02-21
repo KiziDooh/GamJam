@@ -41,6 +41,11 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ihc5o")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_p1yhb"]
+resource_local_to_scene = false
+resource_name = ""
+custom_solver_bias = 0.0
+margin = 0.04
+radius = 0.5
 
 [node name="Stick" type="Node3D"]
 

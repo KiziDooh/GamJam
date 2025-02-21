@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dhgn6u6mcbfyk" path="res://Game/UI/Images/Inv1E.png" id="20_wug26"]
 [ext_resource type="Texture2D" uid="uid://gmbe2xdcx8li" path="res://Game/UI/Images/Inv2E.png" id="21_pf1vh"]
 [ext_resource type="Texture2D" uid="uid://mvdi6x2ondmv" path="res://Game/UI/Images/Inv3E.png" id="22_gcfku"]
-[ext_resource type="PackedScene" uid="uid://cay8pwhpuvlfq" path="res://Game/Sprites/Scenes/sinige.tscn" id="24_x1xu3"]
+[ext_resource type="Texture2D" uid="uid://ba3cfj0rggvv6" path="res://Game/UI/Images/Exterminated0.png" id="24_qn5g4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -83,7 +83,6 @@ stream = ExtResource("4_0gog2")
 
 [node name="flashlight1" parent="Head/Camera3D" instance=ExtResource("3_ifqqc")]
 transform = Transform3D(-5.71455e-10, -0.0130734, 0.149429, 0.15, -6.55671e-09, 0, 6.53176e-09, 0.149429, 0.0130734, 0.502473, -0.335419, -0.892615)
-visible = false
 script = ExtResource("6_m784s")
 
 [node name="Stick" parent="Head/Camera3D" instance=ExtResource("6_unflv")]
@@ -192,7 +191,13 @@ layout_mode = 2
 texture = ExtResource("22_gcfku")
 expand_mode = 3
 
-[node name="sinige" parent="." instance=ExtResource("24_x1xu3")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.931426, 1.48865, 0.137833)
+[node name="TextureRect" type="TextureRect" parent="UI"]
+offset_left = 31.0
+offset_top = 25.0
+offset_right = 1888.0
+offset_bottom = 970.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("24_qn5g4")
+expand_mode = 3
 
 [connection signal="health_depleated" from="UI/Health" to="." method="_on_health_health_depleated"]

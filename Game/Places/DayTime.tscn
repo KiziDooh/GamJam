@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://Game/Sprites/Scenes/tree.tscn" id="5_jma72"]
 [ext_resource type="PackedScene" uid="uid://xc776jhcg36a" path="res://Game/Sprites/Scenes/jankassflower.tscn" id="7_1wtfp"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="8_0t86d"]
-[ext_resource type="Material" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
+[ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="9_wh530"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="10_v3j5x"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="11_7qs4o"]
@@ -116,9 +116,18 @@ radius = 0.1
 height = 0.2
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_athfl"]
+resource_local_to_scene = false
+resource_name = ""
+custom_solver_bias = 0.0
+margin = 0.04
 radius = 1.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_vdhnm"]
+resource_local_to_scene = false
+resource_name = ""
+custom_solver_bias = 0.0
+margin = 0.04
+radius = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
 resource_name = "Material.001"
