@@ -12,7 +12,7 @@ func _process(delta):
 		if (Global.get.name == "knife") and Input.is_key_pressed(KEY_E) and Global.knhold == false:
 			visible = true
 			Global.knhold = true
-		if Input.is_key_pressed(KEY_1) and Global.knhold == true:
+	if Input.is_key_pressed(KEY_1) and Global.knhold == true:
 			visible = true
-		if Input.is_key_pressed(KEY_2) and Global.knhold == true:
+	if Input.is_key_pressed(KEY_2) and Global.knhold == true:
 			visible = false
