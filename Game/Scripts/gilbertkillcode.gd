@@ -13,3 +13,6 @@ func _process(delta):
 			print("dead")
 			Global.gilbertded = true
 			$"gilbert head/Timer".start()
+		elif ((Global.get.name == "Bunny") and Input.is_key_pressed(KEY_E)):
+			Global.sqek = true
+			$AudioStreamPlayer3D.play()
