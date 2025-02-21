@@ -8,14 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="5_md3eg"]
 [ext_resource type="Script" path="res://Game/Scripts/button1.gd" id="6_qjc8k"]
 [ext_resource type="AudioStream" uid="uid://cxhyvfub26kmd" path="res://Game/Audio/music box loop _5.mp3" id="7_c28nq"]
+[ext_resource type="Texture2D" uid="uid://x2rfcexhd17k" path="res://Game/UI/Images/RestartButton.png" id="7_mg2h0"]
 [ext_resource type="Script" path="res://Game/Scripts/audio_stream_player.gd" id="8_djoyc"]
 [ext_resource type="PackedScene" uid="uid://cfqiun1xq1wgv" path="res://Game/Sprites/Scenes/game over.tscn" id="9_04eg6"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="10_lyuiu"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="11_07apa"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="12_egycu"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mit6i"]
-albedo_color = Color(0.341176, 0.462745, 0.811765, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
 resource_name = "Material.001"
@@ -223,12 +221,6 @@ material_override = ExtResource("1_idpjx")
 use_collision = true
 size = Vector3(156.062, 0.797852, 316.383)
 
-[node name="Grass2" type="CSGBox3D" parent="."]
-transform = Transform3D(0.151402, 0, 0.317036, 0, 0.744167, 0, -0.312978, 0, 0.153362, -2.54858, 17.8841, 1.44879)
-material_override = SubResource("StandardMaterial3D_mit6i")
-use_collision = true
-size = Vector3(3.28373, 1.05678, 1.97998)
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.439829, -0.147817, 0.463276, 0.346834, 0.937441, -0.0301708, -0.655549, 0.265294, 0.707018, -0.519019, 17.1856, 2.59757)
 
@@ -337,13 +329,18 @@ visible = false
 mesh = SubResource("ArrayMesh_wdim5")
 skeleton = NodePath("")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 360.0
-offset_top = 82.0
-offset_right = 548.295
-offset_bottom = 149.365
-rotation = 0.401426
-text = "Restart"
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 326.0
+offset_top = 80.0
+offset_right = 1398.0
+offset_bottom = 276.0
+rotation = 0.436332
+scale = Vector2(0.305, 0.305)
+texture_normal = ExtResource("7_mg2h0")
+texture_pressed = ExtResource("7_mg2h0")
+texture_hover = ExtResource("7_mg2h0")
+texture_disabled = ExtResource("7_mg2h0")
+texture_focused = ExtResource("7_mg2h0")
 script = ExtResource("6_qjc8k")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -426,4 +423,4 @@ transform = Transform3D(1.10033, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -8.44694, 1
 [node name="bigtree23" parent="." instance=ExtResource("5_md3eg")]
 transform = Transform3D(1.10033, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -23.7479, 15.334, -13.3919)
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

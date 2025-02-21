@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 Global="*res://Game/Scripts/Global.gd"
 SimpleGrass="*res://addons/simplegrasstextured/singleton.tscn"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
