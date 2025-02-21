@@ -17,3 +17,5 @@ func _process(delta):
 			visible = true
 	if Input.is_key_pressed(KEY_2) and Global.knhold == true:
 			visible = false
+	if Input.is_key_pressed(KEY_3) and Global.knhold == true:
+			visible = false

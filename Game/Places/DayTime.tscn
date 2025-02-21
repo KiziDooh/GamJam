@@ -21,8 +21,8 @@
 [ext_resource type="Script" path="res://Game/Scripts/gilbert_head.gd" id="18_amavu"]
 [ext_resource type="PackedScene" uid="uid://cun06movtekqn" path="res://Game/Sprites/Scenes/mean bunny.tscn" id="19_pb8nh"]
 [ext_resource type="Script" path="res://Game/Scripts/audio_stream_player.gd" id="21_atjv5"]
+[ext_resource type="AudioStream" uid="uid://d5r4fw17qd6l" path="res://Game/Audio/pixelated (1).mp3" id="22_3c3sh"]
 [ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://Game/Audio/glitch-01-231255.mp3" id="22_gxbbx"]
-[ext_resource type="AudioStream" uid="uid://dvyb8l3os71rs" path="res://Game/Audio/pixelated.mp3" id="22_tpdfw"]
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://Game/Audio/glitch-transition-sfx-182152.mp3" id="23_1carq"]
 [ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://Game/Audio/tv-glitch-6245.mp3" id="24_joa8b"]
 [ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://Game/Sprites/Scenes/bench.tscn" id="25_5bll1"]
@@ -676,9 +676,9 @@ environment = ExtResource("17_i1g0d")
 [node name="Sound" type="Node" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource("22_tpdfw")
-volume_db = -16.07
-pitch_scale = 0.65
+stream = ExtResource("22_3c3sh")
+volume_db = -0.18
+pitch_scale = 0.95
 autoplay = true
 parameters/looping = true
 script = ExtResource("21_atjv5")
