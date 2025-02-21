@@ -777,11 +777,6 @@ albedo_color = Color(0.87451, 0.345098, 0.0627451, 0.831373)
 material = SubResource("ORMMaterial3D_plsyu")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7qes2"]
-resource_local_to_scene = false
-resource_name = ""
-custom_solver_bias = 0.0
-margin = 0.04
-radius = 0.5
 
 [node name="campfire" type="Node3D"]
 
