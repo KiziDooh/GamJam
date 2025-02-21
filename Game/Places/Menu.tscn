@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://n5wj5kuegkmp"]
+[gd_scene load_steps=33 format=4 uid="uid://dinuq5splrywf"]
 
 [ext_resource type="Script" path="res://Game/Scripts/menu.gd" id="1_78okm"]
 [ext_resource type="AudioStream" uid="uid://cxhyvfub26kmd" path="res://Game/Audio/music box loop _5.mp3" id="2_drfpt"]

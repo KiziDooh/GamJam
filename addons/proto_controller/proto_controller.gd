@@ -238,3 +238,4 @@ func _on_health_health_depleated():
 func _process(delta):
 	Global.pz = position.z
 	Global.px = position.x
+	Global.pz = rotation.y

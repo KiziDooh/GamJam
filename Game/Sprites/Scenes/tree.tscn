@@ -134,7 +134,7 @@ mesh = SubResource("ArrayMesh_1wwg2")
 skeleton = NodePath("")
 
 [node name="Cone_002" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3845, 0)
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 2.11382, 0)
 material_override = ExtResource("2_dkjcg")
 mesh = SubResource("ArrayMesh_aifua")
 skeleton = NodePath("")
