@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://jblrt5xq2up3"]
 
 [ext_resource type="Material" uid="uid://pw7fjhcbpy3o" path="res://Game/Material/Leafeon.tres" id="1_nngb1"]
-[ext_resource type="Material" uid="uid://dags75qjd16lh" path="res://Game/Textures/thicktree.tres" id="2_dkjcg"]
+[ext_resource type="Material" uid="uid://dags75qjd16lh" path="res://Game/Material/thicktree.tres" id="2_dkjcg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ufctp"]
 resource_name = "Grean"
