@@ -11,3 +11,4 @@ func _process(delta):
 	if Global.yup == true:
 		if (Global.get.name == "FlashLight") and Input.is_key_pressed(KEY_E):
 			visible = true
+			$"../../../UI/HBoxContainer/TextureRect2".texture = load("res://Game/UI/Images/InvFlash.png")
