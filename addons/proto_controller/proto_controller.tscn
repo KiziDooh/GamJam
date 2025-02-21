@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=29 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://Game/Sprites/Scenes/knife.tscn" id="2_j8sau"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dhgn6u6mcbfyk" path="res://Game/UI/Images/Inv1E.png" id="20_wug26"]
 [ext_resource type="Texture2D" uid="uid://gmbe2xdcx8li" path="res://Game/UI/Images/Inv2E.png" id="21_pf1vh"]
 [ext_resource type="Texture2D" uid="uid://mvdi6x2ondmv" path="res://Game/UI/Images/Inv3E.png" id="22_gcfku"]
+[ext_resource type="PackedScene" uid="uid://cay8pwhpuvlfq" path="res://Game/Sprites/Scenes/sinige.tscn" id="24_x1xu3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -82,6 +83,7 @@ stream = ExtResource("4_0gog2")
 
 [node name="flashlight1" parent="Head/Camera3D" instance=ExtResource("3_ifqqc")]
 transform = Transform3D(-5.71455e-10, -0.0130734, 0.149429, 0.15, -6.55671e-09, 0, 6.53176e-09, 0.149429, 0.0130734, 0.502473, -0.335419, -0.892615)
+visible = false
 script = ExtResource("6_m784s")
 
 [node name="Stick" parent="Head/Camera3D" instance=ExtResource("6_unflv")]
@@ -189,5 +191,8 @@ texture = ExtResource("21_pf1vh")
 layout_mode = 2
 texture = ExtResource("22_gcfku")
 expand_mode = 3
+
+[node name="sinige" parent="." instance=ExtResource("24_x1xu3")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.931426, 1.48865, 0.137833)
 
 [connection signal="health_depleated" from="UI/Health" to="." method="_on_health_health_depleated"]
