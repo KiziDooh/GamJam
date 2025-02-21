@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dags75qjd16lh"]
+
+[ext_resource type="Texture2D" uid="uid://b5s3i32dnl12f" path="res://Game/Image/bark_willow_02_diff_1k.jpg" id="1_handb"]
+[ext_resource type="Texture2D" uid="uid://kd2pxwrfjgmf" path="res://Game/Image/bark_willow_02_disp_1k.png" id="2_k2mxa"]
+
+[resource]
+albedo_color = Color(0.73, 0.61612, 0.5402, 1)
+albedo_texture = ExtResource("1_handb")
+metallic_specular = 0.0
+normal_scale = -16.0
+rim = 0.0
+rim_tint = 1.0
+anisotropy = 1.0
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_k2mxa")
+ao_on_uv2 = true
+detail_mask = ExtResource("2_k2mxa")
+detail_blend_mode = 3
+uv1_scale = Vector3(0.16, 0.16, 0.16)
+uv1_offset = Vector3(0, 90, 0)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 150.0
+texture_filter = 2
