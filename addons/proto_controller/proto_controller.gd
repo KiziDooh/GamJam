@@ -128,7 +128,7 @@ func _physics_process(delta: float) -> void:
 		if current_stamina > 0:
 			move_speed = sprint_speed
 			current_stamina = current_stamina - 1.5
-			$"Stamina Bar".value = current_stamina
+			$"UI/Stamina Bar".value = current_stamina
 		else:
 			move_speed = base_speed	
 			can_sprint = false
@@ -138,7 +138,7 @@ func _physics_process(delta: float) -> void:
 	if ! Input.is_action_pressed(input_sprint):
 		if current_stamina < 300:
 			current_stamina = current_stamina + 1
-			$"Stamina Bar".value = current_stamina
+			$"UI/Stamina Bar".value = current_stamina
 
 	# Apply desired movement to velocity
 	if can_move:
