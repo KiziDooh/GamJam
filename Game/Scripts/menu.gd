@@ -19,7 +19,6 @@ func _process(delta):
 		$"Campfire area/campfire".visible = false
 		$"Campfire area/tree25".visible = false
 		$"Campfire area/tree26".visible = false
-		$"Campfire area/playbox".visible = false
 		$"Campfire area/Grass".visible = false
 		$MenuPlay.visible = false
 		#turns on black box

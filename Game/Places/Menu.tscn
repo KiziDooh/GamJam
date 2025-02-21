@@ -15,6 +15,7 @@
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="12_hj3fg"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="13_mo5ao"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="14_2wan2"]
+[ext_resource type="Texture2D" uid="uid://unsytq6gxn1u" path="res://Game/UI/Images/PlayButton.png" id="16_nx5sv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
 resource_name = "Material.001"
@@ -53,9 +54,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qt3os")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mit6i"]
-albedo_color = Color(0.341176, 0.462745, 0.811765, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5bt5"]
 resource_name = "Material.002"
@@ -345,12 +343,6 @@ material_override = ExtResource("8_xgqm7")
 use_collision = true
 size = Vector3(96.2909, 0.797852, 166.054)
 
-[node name="playbox" type="CSGBox3D" parent="Campfire area"]
-transform = Transform3D(0.613358, 0, 0.536254, 0, 0.75, 0, -0.367811, 0, 0.384459, -4.024, 17.9973, 1.27514)
-material_override = SubResource("StandardMaterial3D_mit6i")
-use_collision = true
-size = Vector3(3.28373, 1.05678, 2)
-
 [node name="bigtree11" parent="Campfire area" instance=ExtResource("7_xev5h")]
 transform = Transform3D(1.67814, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, 9.17389, 15.334, -14.9055)
 
@@ -490,12 +482,20 @@ transform = Transform3D(1.3189, -0.785462, -0.434721, 0.117176, 0.61152, -2.2059
 mesh = SubResource("ArrayMesh_wdim5")
 skeleton = NodePath("")
 
-[node name="MenuPlay" type="Button" parent="."]
-offset_left = 147.0
-offset_top = 332.0
-offset_right = 282.0
-offset_bottom = 363.0
-text = "Play"
+[node name="MenuPlay" type="TextureButton" parent="."]
+offset_left = 156.0
+offset_top = 247.0
+offset_right = 1051.0
+offset_bottom = 573.0
+rotation = 0.13439
+scale = Vector2(0.165, 0.165)
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.94
+texture_normal = ExtResource("16_nx5sv")
+texture_pressed = ExtResource("16_nx5sv")
+texture_hover = ExtResource("16_nx5sv")
+texture_disabled = ExtResource("16_nx5sv")
+texture_focused = ExtResource("16_nx5sv")
 script = ExtResource("8_y0cyv")
 
 [node name="Timer" type="Timer" parent="MenuPlay"]
