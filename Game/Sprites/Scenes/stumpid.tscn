@@ -123,7 +123,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225955, 0)
 shape = SubResource("BoxShape3D_c66po")
 
 [node name="Cylinder" type="MeshInstance3D" parent="StaticBody3D"]
-material_overlay = ExtResource("1_bbho1")
+material_override = ExtResource("1_bbho1")
 mesh = SubResource("ArrayMesh_rjit1")
 skeleton = NodePath("")
 
