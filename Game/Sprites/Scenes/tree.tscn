@@ -1,4 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://jblrt5xq2up3"]
+[gd_scene load_steps=12 format=4 uid="uid://jblrt5xq2up3"]
+
+[ext_resource type="Material" uid="uid://pw7fjhcbpy3o" path="res://Game/Material/Leafeon.tres" id="1_nngb1"]
+[ext_resource type="Material" uid="uid://dags75qjd16lh" path="res://Game/Textures/thicktree.tres" id="2_dkjcg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ufctp"]
 resource_name = "Grean"
@@ -120,16 +123,19 @@ radius = 0.356486
 
 [node name="Cone" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1.23839, 0, 0, 0, 1.23839, 0, 0, 0, 1.23839, 0, 2.45012, 0)
+material_override = ExtResource("1_nngb1")
 mesh = SubResource("ArrayMesh_km4kb")
 skeleton = NodePath("")
 
 [node name="Cone_001" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.59211, 0)
+material_override = ExtResource("1_nngb1")
 mesh = SubResource("ArrayMesh_1wwg2")
 skeleton = NodePath("")
 
 [node name="Cone_002" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3845, 0)
+material_override = ExtResource("2_dkjcg")
 mesh = SubResource("ArrayMesh_aifua")
 skeleton = NodePath("")
 
