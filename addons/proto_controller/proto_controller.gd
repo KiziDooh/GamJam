@@ -244,24 +244,30 @@ func _process(delta):
 	
 	
 	if Global.yup == true:
-		if (Global.get.name == "Anamlee1") and Input.is_key_pressed(KEY_E) and Global.Anomlies[0] == false:
+		if (Global.get.name == "Anamlee1") and Input.is_key_pressed(KEY_E) and Global.Anomlies[0] == false and Global.hold == false:
 			$Head/Camera3D/freddyfastbear.visible = true
 			Global.Anomlies[0] = true
-		if (Global.get.name == "Anamlee2") and Input.is_key_pressed(KEY_E) and Global.Anomlies[1] == false:
+			Global.hold = true
+		if (Global.get.name == "Anamlee2") and Input.is_key_pressed(KEY_E) and Global.Anomlies[1] == false and Global.hold == false:
 			$"Head/Camera3D/toy car".visible = true
 			Global.Anomlies[1] = true
-		if (Global.get.name == "Anamlee3") and Input.is_key_pressed(KEY_E) and Global.Anomlies[2] == false:
+			Global.hold = true
+		if (Global.get.name == "Anamlee3") and Input.is_key_pressed(KEY_E) and Global.Anomlies[2] == false and Global.hold == false:
 			$"Head/Camera3D/gilberts head".visible = true
 			Global.Anomlies[2] = true
-		if (Global.get.name == "Anamlee4") and Input.is_key_pressed(KEY_E) and Global.Anomlies[3] == false:
+			Global.hold = true
+		if (Global.get.name == "Anamlee4") and Input.is_key_pressed(KEY_E) and Global.Anomlies[3] == false and Global.hold == false:
 			$Head/Camera3D/ducky.visible = true
 			Global.Anomlies[3] = true
-		if (Global.get.name == "Anamlee5") and Input.is_key_pressed(KEY_E) and Global.Anomlies[4] == false:
+			Global.hold = true
+		if (Global.get.name == "Anamlee5") and Input.is_key_pressed(KEY_E) and Global.Anomlies[4] == false and Global.hold == false:
 			$Head/Camera3D/cupcake.visible = true
 			Global.Anomlies[4] = true
-		if (Global.get.name == "Anamlee6") and Input.is_key_pressed(KEY_E) and Global.Anomlies[5] == false:
+			Global.hold = true
+		if (Global.get.name == "Anamlee6") and Input.is_key_pressed(KEY_E) and Global.Anomlies[5] == false and Global.hold == false:
 			$Head/Camera3D/sinige.visible = true
 			Global.Anomlies[5] = true
+			Global.hold = true
 			
 			
 			
@@ -269,26 +275,32 @@ func _process(delta):
 			$Head/Camera3D/freddyfastbear.visible = false
 			Global.Anomlies[0] = false
 			Global.acount += 1
+			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[1] == true:
 			$"Head/Camera3D/toy car".visible = false
 			Global.Anomlies[1] = false
 			Global.acount += 1
+			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[2] == true:
 			$"Head/Camera3D/gilberts head".visible = false
 			Global.Anomlies[2] = false
 			Global.acount += 1
+			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[3] == true:
 			$Head/Camera3D/ducky.visible = false
 			Global.Anomlies[3] = false
 			Global.acount += 1
+			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[4] == true:
 			$Head/Camera3D/cupcake.visible = false
 			Global.Anomlies[4] = false
 			Global.acount += 1
+			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[5] == true:
 			$Head/Camera3D/sinige.visible = false
 			Global.Anomlies[5] = false
 			Global.acount += 1
+			Global.hold = false
 		
 		
 		
