@@ -17,23 +17,45 @@ func _process(delta):
 	#print(round(position.x))
 	#print(round(position.z))
 	#print(rotation.y)
-	
+	if (dirX == 0) and (dirZ == -1):
+		rotation_degrees.y = 180
+	if (dirX == -1) and (dirZ == -1):
+		rotation_degrees.y = 225
+	if (dirX == -1) and (dirZ == 0):
+		rotation_degrees.y = 270 
+	if (dirX == -1) and (dirZ == 1):
+		rotation_degrees.y = 315
+	if (dirX == 0) and (dirZ == 1):
+		rotation_degrees.y = 0
+	if (dirX == 1) and (dirZ == 1):
+		rotation_degrees.y = 45
+	if (dirX == 1) and (dirZ == 0):
+		rotation_degrees.y = 90
+	if (dirX == 1) and (dirZ == -1):
+		rotation_degrees.y = 135
 #supposed to change the rotation idk why its funky like it is
 
 	if ((Global.px <= (position.x+dis)) and (Global.px >= (position.x-dis))) and ((Global.pz <= (position.z+dis)) and (Global.pz >= (position.z-dis))):
 		print("rawr")
 		chase = true
 	if chase == true:
-		if position.z < Global.pz:
+		if position.z <= Global.pz:
 			position.z -= SPEED * delta
-		if position.z > Global.pz:
+			dirZ = -1
+		if position.z >= Global.pz:
 			position.z += SPEED * delta
-		if position.x < Global.px:
+			dirZ = 1
+		if round(position.z) == posZ:
+				dirZ = 0
+		if position.x <= Global.px:
 			position.x -= SPEED * delta
-		if position.x > Global.px:
+			dirX = -1
+		if position.x >= Global.px:
 			position.x += SPEED * delta
-		rotation_degrees.y = Global.py
-	#if (round(position.z) == posZ) and (round(position.x) == posX):
+			dirX = 1
+		if round(position.x) == posX:
+			dirX = 0
+	#if (round(position.z) == posZ) and (round(position.x) == posX) and chase == true:
 	#	chase = false
 	#	which1 = randi_range(0,2)
 	#	posZ = zlist[which1]
@@ -42,22 +64,7 @@ func _process(delta):
 	#	position.z = posX
 	#	which1 = randi_range(0,2)
 	else:
-		if (dirX == 0) and (dirZ == -1):
-			rotation_degrees.y = 180
-		if (dirX == -1) and (dirZ == -1):
-			rotation_degrees.y = 225
-		if (dirX == -1) and (dirZ == 0):
-			rotation_degrees.y = 270 
-		if (dirX == -1) and (dirZ == 1):
-			rotation_degrees.y = 315
-		if (dirX == 0) and (dirZ == 1):
-			rotation_degrees.y = 0
-		if (dirX == 1) and (dirZ == 1):
-			rotation_degrees.y = 45
-		if (dirX == 1) and (dirZ == 0):
-			rotation_degrees.y = 90
-		if (dirX == 1) and (dirZ == -1):
-			rotation_degrees.y = 135
+		
 			
 #checks if reached x and z
 		if (round(position.z) == posZ) and (round(position.x) == posX):
