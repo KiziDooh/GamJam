@@ -60,6 +60,7 @@ var freeflying : bool = false
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
 
+
 func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
@@ -86,12 +87,16 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	if cooldown >= 0:
 		cooldown -= delta
+	
+	if get_tree().current_scene.name == "Dark Time":
+		$Counter.visible = true
 		
 	if Input.is_key_pressed(KEY_F) and $Head/Camera3D/SpotLight3D.visible == true:
 		if cooldown <= 0:
 			$Head/Camera3D/SpotLight3D.visible = false
 			$Head/Camera3D/SpotLight3D/FlashOnSound2.play()
 			cooldown = 0.3
+			
 	elif Input.is_key_pressed(KEY_F) and $Head/Camera3D/SpotLight3D.visible == false:
 		if cooldown <= 0:
 			$Head/Camera3D/SpotLight3D.visible = true
@@ -283,36 +288,42 @@ func _process(delta):
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[0] == true:
 			$Head/Camera3D/freddyfastbear.visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
+			$Counter.texture = load("res://Game/UI/Images/Exterminated1.png")
 			Global.Anomlies[0] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[1] == true:
 			$"Head/Camera3D/toy car".visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
+			$Counter.texture = load("res://Game/UI/Images/Exterminated2.png")
 			Global.Anomlies[1] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[2] == true:
 			$"Head/Camera3D/gilberts head".visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
+			$Counter.texture = load("res://Game/UI/Images/Exterminated3.png")
 			Global.Anomlies[2] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[3] == true:
 			$Head/Camera3D/ducky.visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
+			$Counter.texture = load("res://Game/UI/Images/Exterminated4.png")
 			Global.Anomlies[3] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[4] == true:
 			$Head/Camera3D/cupcake.visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
+			$Counter.texture = load("res://Game/UI/Images/Exterminated5.png")
 			Global.Anomlies[4] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[5] == true:
 			$Head/Camera3D/sinige.visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
+			$Counter.texture = load("res://Game/UI/Images/Exterminated6.png")
 			Global.Anomlies[5] = false
 			Global.acount += 1
 			Global.hold = false

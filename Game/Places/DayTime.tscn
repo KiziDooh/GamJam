@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://Game/Sprites/Scenes/tree.tscn" id="5_jma72"]
 [ext_resource type="PackedScene" uid="uid://xc776jhcg36a" path="res://Game/Sprites/Scenes/jankassflower.tscn" id="7_1wtfp"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="8_0t86d"]
-[ext_resource type="Material" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
+[ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="9_wh530"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="10_v3j5x"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="11_7qs4o"]
@@ -253,7 +253,17 @@ script = ExtResource("33_satn3")
 
 [node name="ProtoController" parent="Character" instance=ExtResource("4_baqm4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82688, 2.184, 0.277)
+can_move = true
+has_gravity = true
+can_jump = true
 can_sprint = true
+can_freefly = false
+look_speed = 0.002
+base_speed = 7.0
+jump_velocity = 4.5
+sprint_speed = 12.0
+freefly_speed = 25.0
+input_freefly = "freefly"
 
 [node name="Plantus" type="Node" parent="."]
 
