@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 		elif cooldown2 <= 0:
 			$"../../TextureRect".visible = false
 			cooldown2 = 0.3
-		
+			
 func _process(delta):
 	if Global.yup == true:
 		if ((Global.get.name == "Bunny") and Input.is_key_pressed(KEY_E)) and Global.knhold == true:
