@@ -23,7 +23,7 @@ script = ExtResource("1_6s7ut")
 [node name="Camera3D" type="Camera3D" parent="walk cycle"]
 transform = Transform3D(-1, -4.37114e-08, -7.57103e-08, -7.48257e-09, 0.905643, -0.424041, 8.7102e-08, -0.424041, -0.905643, 0, 0.1, -3.338)
 projection = 1
-size = 7.667
+size = 2.5
 
 [node name="SpotLight3D" type="SpotLight3D" parent="walk cycle/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01387e-07, -0.121044, 1.40902)
