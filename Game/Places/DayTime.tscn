@@ -1,5 +1,6 @@
-[gd_scene load_steps=51 format=4 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=53 format=4 uid="uid://bkeycdakvh2p"]
 
+[ext_resource type="Shader" path="res://Game/Places/Glitch.gdshader" id="1_rmavb"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://Game/UI/Images/Bar_Overset.png" id="1_wtwf7"]
 [ext_resource type="Texture2D" uid="uid://cnaaiiymttto7" path="res://Game/UI/Images/HealthBarFullFixed.png" id="2_85otl"]
 [ext_resource type="Script" path="res://Game/Scripts/Health_Bar.gd" id="3_rchk0"]
@@ -7,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://Game/Sprites/Scenes/tree.tscn" id="5_jma72"]
 [ext_resource type="PackedScene" uid="uid://xc776jhcg36a" path="res://Game/Sprites/Scenes/jankassflower.tscn" id="7_1wtfp"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="8_0t86d"]
-[ext_resource type="Material" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
+[ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="9_wh530"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="10_v3j5x"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="11_7qs4o"]
@@ -189,6 +190,14 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_w5jsd")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xymqb"]
+shader = ExtResource("1_rmavb")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 0.2
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.01
 
 [node name="Day Time" type="Node3D"]
 
@@ -797,6 +806,21 @@ transform = Transform3D(-0.0163589, -0.0690629, -0.186983, 0.199239, -8.70901e-0
 
 [node name="Stick3" parent="Folage" instance=ExtResource("32_ed373")]
 transform = Transform3D(-0.00151376, 0.199244, -0.0173024, 0.199239, -8.19445e-09, -0.0174311, -0.0173653, -0.0173685, -0.198486, -16.8102, 1.43, 4.57565)
+
+[node name="Glitch Effect" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_xymqb")
+anchors_preset = -1
+anchor_right = 3.378
+anchor_bottom = 4.15
+offset_right = -2740.46
+offset_bottom = -2046.2
+stretch = true
+stretch_shrink = 3
+
+[node name="SubViewport" type="SubViewport" parent="Glitch Effect"]
+handle_input_locally = false
+size = Vector2i(383, 214)
+render_target_update_mode = 4
 
 [connection signal="pressed" from="UI/Button" to="UI/Button" method="_on_pressed"]
 [connection signal="timeout" from="Bunnies/bunny/gilbert head/Timer" to="Bunnies/bunny/gilbert head" method="_on_timer_timeout"]
