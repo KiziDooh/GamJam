@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=55 format=4 uid="uid://bkeycdakvh2p"]
 
 [ext_resource type="Shader" path="res://Game/Places/Glitch.gdshader" id="1_rmavb"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://Game/UI/Images/Bar_Overset.png" id="1_wtwf7"]
@@ -191,6 +191,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_w5jsd")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5bmqc"]
+blend_mode = 2
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xymqb"]
 shader = ExtResource("1_rmavb")
@@ -777,6 +780,7 @@ transform = Transform3D(-0.00151376, 0.199244, -0.0173024, 0.199239, -8.19445e-0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
+material = SubResource("CanvasItemMaterial_5bmqc")
 offset_left = 3.0
 offset_top = 4.0
 offset_right = 1960.0
