@@ -231,6 +231,7 @@ func check_input_mappings():
 
 func _on_health_health_depleated():
 	print("You Died") # Replace with function body.
+	queue_free()
 	get_tree().change_scene_to_file("res://Game/Places/scarytime.tscn")
 func _process(delta):
 	Global.pz = position.z
@@ -244,67 +245,81 @@ func _process(delta):
 	if Global.yup == true:
 		if (Global.get.name == "Anamlee1") and Input.is_key_pressed(KEY_E) and Global.Anomlies[0] == false and Global.hold == false:
 			$Head/Camera3D/freddyfastbear.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[0] = true
 			Global.hold = true
 		if (Global.get.name == "Anamlee2") and Input.is_key_pressed(KEY_E) and Global.Anomlies[1] == false and Global.hold == false:
 			$"Head/Camera3D/toy car".visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[1] = true
 			Global.hold = true
 		if (Global.get.name == "Anamlee3") and Input.is_key_pressed(KEY_E) and Global.Anomlies[2] == false and Global.hold == false:
 			$"Head/Camera3D/gilberts head".visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[2] = true
 			Global.hold = true
 		if (Global.get.name == "Anamlee4") and Input.is_key_pressed(KEY_E) and Global.Anomlies[3] == false and Global.hold == false:
 			$Head/Camera3D/ducky.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[3] = true
 			Global.hold = true
 		if (Global.get.name == "Anamlee5") and Input.is_key_pressed(KEY_E) and Global.Anomlies[4] == false and Global.hold == false:
 			$Head/Camera3D/cupcake.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[4] = true
 			Global.hold = true
 		if (Global.get.name == "Anamlee6") and Input.is_key_pressed(KEY_E) and Global.Anomlies[5] == false and Global.hold == false:
 			$Head/Camera3D/sinige.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[5] = true
 			Global.hold = true
 		if (Global.get.name == "sTICK eM uP") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
 			Global.stick = true
 			
 			
 			
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[0] == true:
 			$Head/Camera3D/freddyfastbear.visible = false
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
 			Global.Anomlies[0] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[1] == true:
 			$"Head/Camera3D/toy car".visible = false
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
 			Global.Anomlies[1] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[2] == true:
 			$"Head/Camera3D/gilberts head".visible = false
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
 			Global.Anomlies[2] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[3] == true:
 			$Head/Camera3D/ducky.visible = false
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
 			Global.Anomlies[3] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[4] == true:
 			$Head/Camera3D/cupcake.visible = false
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
 			Global.Anomlies[4] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[5] == true:
 			$Head/Camera3D/sinige.visible = false
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
 			Global.Anomlies[5] = false
 			Global.acount += 1
 			Global.hold = false
 			
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.stick == true:
 			$Head/Camera3D/Stick.visible = false
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
 			Global.stick = false
 			Global.scount += 1
 			Global.hold = false
