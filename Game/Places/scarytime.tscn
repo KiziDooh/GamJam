@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://dgfohwojfj7co"]
+
+[ext_resource type="Script" path="res://Game/Scripts/evil_gilbert.gd" id="1_6s7ut"]
+[ext_resource type="PackedScene" uid="uid://8e8d4gjveujy" path="res://Game/Sprites/Scenes/EVIL GILBERT.tscn" id="2_vlhb0"]
+[ext_resource type="AudioStream" uid="uid://cpourql2k5krp" path="res://Game/Audio/Scream.mp3" id="3_qvfj5"]
+[ext_resource type="Script" path="res://Game/Scripts/scream.gd" id="4_rrmf6"]
+[ext_resource type="Material" uid="uid://dhsvib7h51e7a" path="res://Game/Material/scarytime.tres" id="5_ednl0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_awymo"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_62h2r"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c23pm"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_6s7ut")
+
+[node name="walk cycle" parent="." instance=ExtResource("2_vlhb0")]
+
+[node name="Camera3D" type="Camera3D" parent="walk cycle"]
+transform = Transform3D(-0.998805, -0.0331567, -0.0358977, -0.0117765, 0.876263, -0.48169, 0.0474271, -0.480691, -0.875606, -0.477026, -0.133375, -2.67112)
+projection = 2
+size = 0.06
+
+[node name="SpotLight3D" type="SpotLight3D" parent="walk cycle/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01387e-07, -0.121044, 1.40902)
+spot_angle = 24.6697
+
+[node name="CSGBox3D" type="CSGBox3D" parent="walk cycle/Camera3D"]
+transform = Transform3D(32.8603, 0, 0, 0, 52.9812, 0, 0, 0, 41.6373, 0, 45.4896, 0)
+size = Vector3(3.12671, 0.0908203, 2.1084)
+material = SubResource("StandardMaterial3D_awymo")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="walk cycle/Camera3D"]
+transform = Transform3D(-1.43637e-06, -52.9812, 0, 32.8603, -2.31588e-06, 0, 0, 0, 41.6373, -44.8802, 30.877, 0)
+size = Vector3(3.12671, 0.0908203, 2.1084)
+material = SubResource("StandardMaterial3D_62h2r")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="walk cycle/Camera3D"]
+transform = Transform3D(-1.43637e-06, -52.9812, 0, 32.8603, -2.31588e-06, 0, 0, 0, 41.6373, 48.3918, 30.877, 0)
+size = Vector3(3.12671, 0.0908203, 2.1084)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="walk cycle/Camera3D"]
+transform = Transform3D(32.8603, 0, 0, 0, 52.9812, 0, 0, 0, 41.6373, 0, -16.5947, 0)
+size = Vector3(3.12671, 0.0908203, 2.1084)
+material = SubResource("StandardMaterial3D_c23pm")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="walk cycle/Camera3D"]
+transform = Transform3D(32.8603, 0, 0, 0, -2.31588e-06, -41.6373, 0, 52.9812, -1.82003e-06, 0, 16.6527, -38.4912)
+size = Vector3(3.12671, 0.0908203, 2.1084)
+material = SubResource("StandardMaterial3D_62h2r")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="walk cycle/Camera3D"]
+transform = Transform3D(32.8603, 0, 0, 0, -2.31588e-06, -41.6373, 0, 52.9812, -1.82003e-06, 0, 16.6527, 41.5838)
+size = Vector3(3.12671, 0.0908203, 2.1084)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qvfj5")
+autoplay = true
+script = ExtResource("4_rrmf6")
+
+[node name="Glitch Effect" type="SubViewportContainer" parent="."]
+material = ExtResource("5_ednl0")
+anchors_preset = -1
+anchor_right = 3.378
+anchor_bottom = 4.15
+offset_right = -2740.46
+offset_bottom = -2046.2
+stretch = true
+stretch_shrink = 3
+
+[node name="SubViewport" type="SubViewport" parent="Glitch Effect"]
+handle_input_locally = false
+size = Vector2i(383, 214)
+render_target_update_mode = 4

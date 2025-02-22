@@ -231,9 +231,7 @@ func check_input_mappings():
 
 func _on_health_health_depleated():
 	print("You Died") # Replace with function body.
-	get_tree().change_scene_to_file("res://Game/Places/GameOverScreen.tscn")
-
-	
+	get_tree().change_scene_to_file("res://Game/Places/scarytime.tscn")
 func _process(delta):
 	Global.pz = position.z
 	Global.px = position.x
