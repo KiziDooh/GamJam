@@ -11,6 +11,7 @@ func _process(delta):
 	if Global.yup == true:
 		if (Global.get.name == "knife") and Input.is_key_pressed(KEY_E) and Global.knhold == false:
 			visible = true
+			Global.active = 1
 			$"../../../UI/HBoxContainer/TextureRect".texture = load("res://Game/UI/Images/InvKnife.png")
 			Global.knhold = true
 	if Input.is_key_pressed(KEY_1) and Global.knhold == true:
@@ -19,3 +20,5 @@ func _process(delta):
 			visible = false
 	if Input.is_key_pressed(KEY_3) and Global.knhold == true:
 			visible = false
+	if 	Global.active != 1:
+		visible = false

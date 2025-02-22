@@ -10,6 +10,7 @@ var knhold = false
 var gilbertded = false
 var blackout = false
 var hold = false
+var active = 0
 var whichhold = true
 var stick = false
 var flashlight = false

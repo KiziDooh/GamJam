@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://Game/Sprites/Scenes/tree.tscn" id="5_jma72"]
 [ext_resource type="PackedScene" uid="uid://xc776jhcg36a" path="res://Game/Sprites/Scenes/jankassflower.tscn" id="7_1wtfp"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="8_0t86d"]
-[ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
+[ext_resource type="Material" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="9_wh530"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="10_v3j5x"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="11_7qs4o"]
@@ -18,7 +18,7 @@
 [ext_resource type="Script" path="res://Game/Scripts/LilGilsBlood.gd" id="16_t0krm"]
 [ext_resource type="AudioStream" uid="uid://ckcgqpaca5ylu" path="res://Game/Audio/squeeze-toy-104733.mp3" id="16_tjhgb"]
 [ext_resource type="Environment" uid="uid://b4mfgh4gm7ux" path="res://Game/Material/DayTime.tres" id="17_i1g0d"]
-[ext_resource type="PackedScene" uid="uid://dxmq2vnehj76u" path="res://Game/Sprites/Scenes/gilbert head.tscn" id="17_x7v4m"]
+[ext_resource type="PackedScene" uid="uid://camjhqcqhwnq4" path="res://Game/Sprites/Scenes/gilbert head.tscn" id="17_x7v4m"]
 [ext_resource type="Script" path="res://Game/Scripts/gilbert_head.gd" id="18_amavu"]
 [ext_resource type="PackedScene" uid="uid://cun06movtekqn" path="res://Game/Sprites/Scenes/mean bunny.tscn" id="19_pb8nh"]
 [ext_resource type="Script" path="res://Game/Scripts/audio_stream_player.gd" id="21_atjv5"]
@@ -619,7 +619,7 @@ draw_pass_1 = SubResource("SphereMesh_l3r35")
 script = ExtResource("16_t0krm")
 
 [node name="gilbert head" parent="Bunnies/bunny" instance=ExtResource("17_x7v4m")]
-transform = Transform3D(0.998239, -0.0593418, 0, 0.0593418, 0.998239, 0, 0, 0, 1, 0.0952837, 0.0241156, -0.0312023)
+transform = Transform3D(0.998239, -0.0593418, 0, 0.0593418, 0.998239, 0, 0, 0, 1, 0.0423833, 0.0160847, -0.0114498)
 script = ExtResource("18_amavu")
 
 [node name="Timer" type="Timer" parent="Bunnies/bunny/gilbert head"]
