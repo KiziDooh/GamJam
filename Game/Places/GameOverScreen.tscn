@@ -1,6 +1,6 @@
-[gd_scene load_steps=33 format=4 uid="uid://b5ejocpj6ewpf"]
+[gd_scene load_steps=32 format=4 uid="uid://b5ejocpj6ewpf"]
 
-[ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="1_idpjx"]
+[ext_resource type="Material" path="res://Game/Material/Grass.tres" id="1_idpjx"]
 [ext_resource type="Environment" uid="uid://dd47xvqg04in4" path="res://Game/Material/NightTime.tres" id="1_khpwj"]
 [ext_resource type="PackedScene" uid="uid://by8y8guhping7" path="res://Game/Sprites/Scenes/stumpid.tscn" id="2_bmfkk"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://Game/Sprites/Scenes/campfire.tscn" id="3_luh74"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="5_md3eg"]
 [ext_resource type="AudioStream" uid="uid://cxhyvfub26kmd" path="res://Game/Audio/music box loop _5.mp3" id="7_c28nq"]
 [ext_resource type="Texture2D" uid="uid://x2rfcexhd17k" path="res://Game/UI/Images/RestartButton.png" id="7_mg2h0"]
-[ext_resource type="Script" path="res://Game/Scripts/audio_stream_player.gd" id="8_djoyc"]
 [ext_resource type="Script" path="res://Game/Scripts/RestartButton.gd" id="8_fqiut"]
 [ext_resource type="PackedScene" uid="uid://cfqiun1xq1wgv" path="res://Game/Sprites/Scenes/game over.tscn" id="9_04eg6"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="10_lyuiu"]
@@ -349,7 +348,6 @@ volume_db = -6.701
 pitch_scale = 0.65
 autoplay = true
 parameters/looping = true
-script = ExtResource("8_djoyc")
 
 [node name="game over" parent="." instance=ExtResource("9_04eg6")]
 transform = Transform3D(0.00306817, 0, 0.494778, 0, 0.999999, 0, -0.399524, 0, 0.00379968, -1.76148, 16.2682, 1.67411)
