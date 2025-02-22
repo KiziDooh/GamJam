@@ -1,5 +1,6 @@
-[gd_scene load_steps=32 format=4 uid="uid://b5ejocpj6ewpf"]
+[gd_scene load_steps=33 format=4 uid="uid://b5ejocpj6ewpf"]
 
+[ext_resource type="Script" path="res://Game/Places/game_over_screen.gd" id="1_dxkf8"]
 [ext_resource type="Material" path="res://Game/Material/Grass.tres" id="1_idpjx"]
 [ext_resource type="Environment" uid="uid://dd47xvqg04in4" path="res://Game/Material/NightTime.tres" id="1_khpwj"]
 [ext_resource type="PackedScene" uid="uid://by8y8guhping7" path="res://Game/Sprites/Scenes/stumpid.tscn" id="2_bmfkk"]
@@ -210,6 +211,7 @@ buffer = PackedFloat32Array(0.794246, 0, 0.607597, -7.71049, 0, 1, 0, 16.4368, -
 
 [node name="Menu" type="Node3D"]
 transform = Transform3D(1.52512, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_dxkf8")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_khpwj")

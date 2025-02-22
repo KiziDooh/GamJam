@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=65 format=4 uid="uid://bkeycdakvh2p"]
 
 [ext_resource type="Shader" path="res://Game/Places/Glitch.gdshader" id="1_rmavb"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://Game/UI/Images/Bar_Overset.png" id="1_wtwf7"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://dq5jgidsk2le6" path="res://Game/Sprites/Scenes/flashlight.tscn" id="26_sup6f"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://Game/Sprites/Scenes/knife.tscn" id="27_1273f"]
 [ext_resource type="Script" path="res://Game/Scripts/groundknife.gd" id="28_cpvuk"]
+[ext_resource type="Script" path="res://Game/Sprites/Scenes/flashlight.gd" id="29_0o0pj"]
 [ext_resource type="PackedScene" uid="uid://by8y8guhping7" path="res://Game/Sprites/Scenes/stumpid.tscn" id="29_h10me"]
 [ext_resource type="Material" uid="uid://fajnspsc36qu" path="res://Game/Material/rockText.tres" id="30_dr5tw"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://Game/Sprites/Scenes/campfire.tscn" id="31_ygk44"]
@@ -729,6 +730,7 @@ transform = Transform3D(0.815087, 0, -0.579338, 0, 1, 0, 0.579338, 0, 0.815087, 
 
 [node name="flashlight" parent="Objects" instance=ExtResource("26_sup6f")]
 transform = Transform3D(-0.0235839, -0.0755194, 0.0611605, 0.0971648, -0.0172399, 0.01618, -0.00167503, 0.0632424, 0.0774441, -10.2492, 3.49869, -1.5711)
+script = ExtResource("29_0o0pj")
 
 [node name="FlashLight" type="Area3D" parent="Objects/flashlight"]
 
