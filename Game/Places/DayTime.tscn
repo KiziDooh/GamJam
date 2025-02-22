@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=64 format=4 uid="uid://bkeycdakvh2p"]
 
 [ext_resource type="Shader" path="res://Game/Places/Glitch.gdshader" id="1_rmavb"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://Game/UI/Images/Bar_Overset.png" id="1_wtwf7"]
@@ -121,6 +121,56 @@ height = 0.2
 radius = 1.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_vdhnm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qlgm8"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="Gradient" id="Gradient_vqd26"]
+colors = PackedColorArray(0.231373, 1, 0.129412, 1, 1, 0, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_uh6hi"]
+gradient = SubResource("Gradient_vqd26")
+
+[sub_resource type="Curve" id="Curve_wxujf"]
+min_value = -2.0
+max_value = 2.0
+_data = [Vector2(0.0434783, -0.285714), 0.0, 0.0, 0, 0, Vector2(0.978261, 2), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_dhrir"]
+width = 258
+curve = SubResource("Curve_wxujf")
+
+[sub_resource type="Curve" id="Curve_7mp7o"]
+_data = [Vector2(0.666667, 0.901099), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_feckn"]
+curve = SubResource("Curve_7mp7o")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hic1n"]
+emission_shape_scale = Vector3(0.5, 0.5, 0.5)
+emission_shape = 1
+emission_sphere_radius = 3.0
+angle_min = 1.07288e-05
+angle_max = 10.0
+direction = Vector3(0, 0, 0)
+spread = 5.0
+orbit_velocity_min = -0.598
+orbit_velocity_max = -0.229
+orbit_velocity_curve = SubResource("CurveTexture_dhrir")
+radial_velocity_min = -2.23517e-05
+radial_velocity_max = 4.99998
+radial_velocity_curve = SubResource("CurveTexture_feckn")
+gravity = Vector3(0, 0, 0)
+color = Color(1, 0, 1, 1)
+color_ramp = SubResource("GradientTexture1D_uh6hi")
+
+[sub_resource type="BoxMesh" id="BoxMesh_5nhfw"]
+size = Vector3(0.2, 0.1, 0.01)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
 resource_name = "Material.001"
@@ -695,6 +745,13 @@ script = ExtResource("28_cpvuk")
 [node name="knife" type="CollisionShape3D" parent="Objects/knife/knife"]
 transform = Transform3D(30, 0, -1.13687e-13, 0, 30, 1.42109e-13, 3.41061e-13, -1.7053e-13, 30, -1.75064, 4.12425, -8.10097)
 shape = SubResource("SphereShape3D_vdhnm")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Objects/knife"]
+material_override = SubResource("StandardMaterial3D_qlgm8")
+amount = 20
+speed_scale = 0.2
+process_material = SubResource("ParticleProcessMaterial_hic1n")
+draw_pass_1 = SubResource("BoxMesh_5nhfw")
 
 [node name="Campfire area" type="Node" parent="."]
 
