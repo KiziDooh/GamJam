@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=54 format=4 uid="uid://bkeycdakvh2p"]
 
 [ext_resource type="Shader" path="res://Game/Places/Glitch.gdshader" id="1_rmavb"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://Game/UI/Images/Bar_Overset.png" id="1_wtwf7"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://Game/Sprites/Scenes/campfire.tscn" id="31_ygk44"]
 [ext_resource type="PackedScene" uid="uid://cla2lc84moemg" path="res://Game/Sprites/Scenes/stick.tscn" id="32_ed373"]
 [ext_resource type="Script" path="res://Game/Scripts/button1.gd" id="33_satn3"]
+[ext_resource type="Texture2D" uid="uid://ddu0w8e0vt6d5" path="res://Game/UI/Images/CANHAPPEN.png" id="36_0jw0a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rdcxu"]
 size = Vector3(27.4219, 2.35059, 32.2557)
@@ -194,10 +195,10 @@ shadow_mesh = SubResource("ArrayMesh_w5jsd")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xymqb"]
 shader = ExtResource("1_rmavb")
 shader_parameter/shake_power = 0.03
-shader_parameter/shake_rate = 0.2
-shader_parameter/shake_speed = 5.0
+shader_parameter/shake_rate = 0.245
+shader_parameter/shake_speed = 5.32
 shader_parameter/shake_block_size = 30.5
-shader_parameter/shake_color_rate = 0.01
+shader_parameter/shake_color_rate = 0.02
 
 [node name="Day Time" type="Node3D"]
 
@@ -630,39 +631,6 @@ transform = Transform3D(3.32746, -0.197806, 0, 0.197806, 3.32746, 0, 0, 0, 3.333
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.33299e-08, 0.159729, 0)
 shape = SubResource("SphereShape3D_athfl")
 
-[node name="Nothing Wrong can Happen" type="TextEdit" parent="Bunnies/bunny"]
-visible = false
-clip_children = 2
-offset_left = 1.0
-offset_top = 5.0
-offset_right = 1154.0
-offset_bottom = 710.0
-text = "Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen
-Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen Nothing wrong can happen"
-editable = false
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Bunnies/bunny"]
 stream = ExtResource("16_tjhgb")
 
@@ -807,7 +775,17 @@ transform = Transform3D(-0.0163589, -0.0690629, -0.186983, 0.199239, -8.70901e-0
 [node name="Stick3" parent="Folage" instance=ExtResource("32_ed373")]
 transform = Transform3D(-0.00151376, 0.199244, -0.0173024, 0.199239, -8.19445e-09, -0.0174311, -0.0173653, -0.0173685, -0.198486, -16.8102, 1.43, 4.57565)
 
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1960.0
+offset_bottom = 1095.0
+scale = Vector2(0.59, 0.59)
+texture = ExtResource("36_0jw0a")
+
 [node name="Glitch Effect" type="SubViewportContainer" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_xymqb")
 anchors_preset = -1
 anchor_right = 3.378
@@ -820,7 +798,7 @@ stretch_shrink = 3
 [node name="SubViewport" type="SubViewport" parent="Glitch Effect"]
 handle_input_locally = false
 size = Vector2i(383, 214)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [connection signal="pressed" from="UI/Button" to="UI/Button" method="_on_pressed"]
 [connection signal="timeout" from="Bunnies/bunny/gilbert head/Timer" to="Bunnies/bunny/gilbert head" method="_on_timer_timeout"]
