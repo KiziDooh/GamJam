@@ -1,4 +1,6 @@
-[gd_scene load_steps=26 format=4 uid="uid://c7h80mskb4v0b"]
+[gd_scene load_steps=27 format=4 uid="uid://c7h80mskb4v0b"]
+
+[ext_resource type="Material" uid="uid://cmbx6nuf0nodi" path="res://Game/Material/Gilbert.tres" id="1_w8w0v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3p70"]
 resource_name = "bunny"
@@ -327,16 +329,19 @@ shadow_mesh = SubResource("ArrayMesh_nk5n0")
 
 [node name="Sphere" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 0, -0.686034, 0, 1.1097, 0, 0, 0, 0)
+material_override = ExtResource("1_w8w0v")
 mesh = SubResource("ArrayMesh_l5all")
 skeleton = NodePath("")
 
 [node name="Sphere_004" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.256184, 0, 0, 0, 0, 0.155654, 0, 0.556524, 0, -0.780309, -0.204111, -0.665905)
+material_override = ExtResource("1_w8w0v")
 mesh = SubResource("ArrayMesh_otn35")
 skeleton = NodePath("")
 
 [node name="Sphere_005" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.366073, 0, 0, 0, 0.366073, 0, 0, 0, 0.366073, 0, 0.600228, 1.02996)
+material_override = ExtResource("1_w8w0v")
 mesh = SubResource("ArrayMesh_o08jn")
 skeleton = NodePath("")
 
@@ -362,30 +367,27 @@ draw_pass_1 = SubResource("SphereMesh_v1tna")
 
 [node name="Sphere_001" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.83544, 0, 0, 0, 0.83544, 0, 0, 0, 0.83544, 0, 0.613728, -1.04981)
-visible = false
+material_override = ExtResource("1_w8w0v")
 mesh = SubResource("ArrayMesh_oexbi")
 skeleton = NodePath("")
 
 [node name="Sphere_002" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.27315, -0.389736, 0.0125441, 0.0835643, 0.977437, 0.0218831, 0.0888318, 0.278924, -0.0591575, -0.562401, 1.66499, -1.00285)
-visible = false
+material_override = ExtResource("1_w8w0v")
 mesh = SubResource("ArrayMesh_36cip")
 skeleton = NodePath("")
 
 [node name="Sphere_003" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.124871, 0, 0, 0, 0.124871, 0, 0, 0, 0.124871, -0.32837, 0.804354, -1.77789)
-visible = false
 mesh = SubResource("ArrayMesh_g51f3")
 skeleton = NodePath("")
 
 [node name="Cone" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(-0.132467, 1.80554e-08, -1.31707e-09, -1.80554e-08, -0.131064, 0.0192235, 1.31707e-09, 0.0192235, 0.131064, 0, 0.471044, -1.75768)
-visible = false
 mesh = SubResource("ArrayMesh_23rug")
 skeleton = NodePath("")
 
 [node name="Sphere_006" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.196463, -0.280317, 0.00902234, 0.0601035, 0.70302, 0.0157394, 0.0638921, 0.200615, -0.0425489, -0.544548, 1.69613, -1.02643)
-visible = false
 mesh = SubResource("ArrayMesh_8howx")
 skeleton = NodePath("")

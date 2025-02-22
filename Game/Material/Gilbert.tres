@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cmbx6nuf0nodi"]
+
+[ext_resource type="Texture2D" uid="uid://b2a0uu8sbt42l" path="res://Game/Image/fluff.jpg" id="1_s7dr8"]
+
+[resource]
+albedo_color = Color(0.955963, 0.955963, 0.955963, 1)
+albedo_texture = ExtResource("1_s7dr8")
+detail_mask = ExtResource("1_s7dr8")
+detail_blend_mode = 3
+uv1_scale = Vector3(5.81, 5.81, 5.81)
