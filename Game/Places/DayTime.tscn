@@ -253,17 +253,7 @@ script = ExtResource("33_satn3")
 
 [node name="ProtoController" parent="Character" instance=ExtResource("4_baqm4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82688, 2.184, 0.277)
-can_move = true
-has_gravity = true
-can_jump = true
 can_sprint = true
-can_freefly = false
-look_speed = 0.002
-base_speed = 7.0
-jump_velocity = 4.5
-sprint_speed = 12.0
-freefly_speed = 25.0
-input_freefly = "freefly"
 
 [node name="Plantus" type="Node" parent="."]
 

@@ -75,8 +75,7 @@ func _process(delta):
 		$"Dark mode/CSGBox3D4".visible = true
 		$"Dark mode/Text_003".visible = true
 		$"Dark mode/Text_004".visible = true
-	
-
+		$"Glitch Effect".visible = true
 
 func _on_timer_timeout():
 	get_tree().change_scene_to_file("res://Game/Places/DayTime.tscn")
