@@ -238,3 +238,18 @@ func _process(delta):
 	Global.pz = position.z
 	Global.px = position.x
 	Global.pz = rotation.y
+	
+	
+	
+	
+	
+	if Global.yup == true:
+		if (Global.get.name == "Anamlee1") and Input.is_key_pressed(KEY_E) and Global.Anomlies[0] == false:
+			$Head/Camera3D/freddyfastbear.visible = true
+			Global.Anomlies[0] = true
+	if Input.is_key_pressed(KEY_1) and Global.Anomlies[0] == true:
+			$Head/Camera3D/freddyfastbear.visible = false
+	if Input.is_key_pressed(KEY_2) and Global.Anomlies[0] == true:
+			$Head/Camera3D/freddyfastbear.visible = false
+	if Input.is_key_pressed(KEY_3) and Global.Anomlies[0] == true:
+			$Head/Camera3D/freddyfastbear.visible = true

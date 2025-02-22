@@ -10,3 +10,8 @@ func _ready():
 func _process(delta):
 	pass
 #	Global.get.name
+	#Global.Anomlies[1]
+	if Global.yup == true:
+		#print(Global.Anomlies[1])
+		if Global.get.name == "Anamlee1":
+			print("yippie")
