@@ -1,0 +1,32 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://c4yjwja6ikeaf"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yupmk"]
+sky_top_color = Color(0.47, 0.505333, 1, 1)
+sky_horizon_color = Color(0.96, 1, 0.76, 1)
+sky_curve = 0.0891905
+sky_energy_multiplier = 0.75
+ground_bottom_color = Color(0.87451, 1, 0.470588, 1)
+ground_horizon_color = Color(0.960784, 1, 0.760784, 1)
+
+[sub_resource type="Sky" id="Sky_ygm3h"]
+sky_material = SubResource("ProceduralSkyMaterial_yupmk")
+
+[resource]
+background_mode = 2
+background_energy_multiplier = 0.66
+sky = SubResource("Sky_ygm3h")
+ambient_light_color = Color(0.86, 0.837927, 0.1978, 1)
+tonemap_mode = 2
+tonemap_exposure = 1.06
+tonemap_white = 1.51
+glow_enabled = true
+glow_intensity = 3.21
+glow_bloom = 1.0
+glow_hdr_threshold = 4.0
+glow_hdr_scale = 4.0
+glow_hdr_luminance_cap = 39.48
+fog_enabled = true
+adjustment_enabled = true
+adjustment_brightness = 0.75
+adjustment_contrast = 1.18
+adjustment_saturation = 1.45
