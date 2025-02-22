@@ -1,14 +1,13 @@
-[gd_scene load_steps=38 format=4 uid="uid://dinuq5splrywf"]
+[gd_scene load_steps=40 format=4 uid="uid://dinuq5splrywf"]
 
 [ext_resource type="Script" path="res://Game/Scripts/menu.gd" id="1_78okm"]
 [ext_resource type="AudioStream" uid="uid://cxhyvfub26kmd" path="res://Game/Audio/music box loop _5.mp3" id="2_drfpt"]
 [ext_resource type="Script" path="res://Game/Scripts/audio_stream_player.gd" id="3_uknjg"]
-[ext_resource type="Environment" uid="uid://c4yjwja6ikeaf" path="res://Game/Material/Credits.tres" id="4_rv0m8"]
 [ext_resource type="PackedScene" uid="uid://by8y8guhping7" path="res://Game/Sprites/Scenes/stumpid.tscn" id="4_ws1ir"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://Game/Sprites/Scenes/campfire.tscn" id="5_q4i7a"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://Game/Sprites/Scenes/tree.tscn" id="6_8e4ym"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="7_xev5h"]
-[ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="8_xgqm7"]
+[ext_resource type="Material" path="res://Game/Material/Grass.tres" id="8_xgqm7"]
 [ext_resource type="Script" path="res://Game/Scripts/button.gd" id="8_y0cyv"]
 [ext_resource type="Script" path="res://Game/Scripts/timer.gd" id="9_4iqvv"]
 [ext_resource type="AudioStream" uid="uid://d8uh3ynagmy" path="res://Game/Audio/mixkit-hard-typewriter-click-1119.mp3" id="10_8bxra"]
@@ -16,6 +15,20 @@
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="13_mo5ao"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="14_2wan2"]
 [ext_resource type="Texture2D" uid="uid://unsytq6gxn1u" path="res://Game/UI/Images/PlayButton.png" id="16_nx5sv"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8is6d"]
+sky_top_color = Color(0.157331, 0.391332, 0.943009, 1)
+sky_horizon_color = Color(0.648272, 0.692654, 0.814213, 1)
+ground_bottom_color = Color(0.435758, 0.379282, 0.313842, 1)
+ground_horizon_color = Color(0.648272, 0.692654, 0.814213, 1)
+
+[sub_resource type="Sky" id="Sky_l30n1"]
+sky_material = SubResource("ProceduralSkyMaterial_8is6d")
+
+[sub_resource type="Environment" id="Environment_6vbg0"]
+background_mode = 2
+sky = SubResource("Sky_l30n1")
+tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
 resource_name = "Material.001"
@@ -275,6 +288,9 @@ buffer = PackedFloat32Array(-0.802949, 0, 0.596047, -0.911403, 0, 1, 0, 16.4368,
 transform = Transform3D(1.52512, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_78okm")
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6vbg0")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_drfpt")
 volume_db = -6.701
@@ -282,9 +298,6 @@ pitch_scale = 0.65
 autoplay = true
 parameters/looping = true
 script = ExtResource("3_uknjg")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("4_rv0m8")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 1.98784, 10.9215, 9.26941)
