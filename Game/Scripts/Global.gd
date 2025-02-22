@@ -16,3 +16,4 @@ var flashlight = false
 var Anomlies = [false,false,false,false,false,false]
 var acount = 0
 var scount = 0
+var whichstick = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,]
