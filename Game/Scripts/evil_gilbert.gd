@@ -33,31 +33,31 @@ func _process(delta):
 		if position.x > Global.px:
 			position.x += SPEED * delta
 		rotation_degrees.y = Global.py
-	if (round(position.z) == posZ) and (round(position.x) == posX):
-		chase = false
-		which1 = randi_range(0,2)
-		posZ = zlist[which1]
-		posX = xlist[which1]
-		position.x = posX
-		position.z = posX
-		which1 = randi_range(0,2)
+	#if (round(position.z) == posZ) and (round(position.x) == posX):
+	#	chase = false
+	#	which1 = randi_range(0,2)
+	#	posZ = zlist[which1]
+	#	posX = xlist[which1]
+	#	position.x = posX
+	#	position.z = posX
+	#	which1 = randi_range(0,2)
 	else:
-		if (dirX == 2) and (dirZ == 1):
-			rotation_degrees.y = 360
-		if (dirX == 0) and (dirZ == 1):
-			rotation_degrees.y = 45
-		if (dirX == 0) and (dirZ == 2):
-			rotation_degrees.y = 90 
-		if (dirX == 0) and (dirZ == 0):
-			rotation_degrees.y = 135
-		if (dirX == 1) and (dirZ == 0):
-			rotation_degrees.y = 225
-		if (dirX == 2) and (dirZ == 0):
+		if (dirX == 0) and (dirZ == -1):
 			rotation_degrees.y = 180
-		if (dirX == 1) and (dirZ == 2):
-			rotation_degrees.y = 270
-		if (dirX == 1) and (dirZ == 1):
+		if (dirX == -1) and (dirZ == -1):
+			rotation_degrees.y = 225
+		if (dirX == -1) and (dirZ == 0):
+			rotation_degrees.y = 270 
+		if (dirX == -1) and (dirZ == 1):
 			rotation_degrees.y = 315
+		if (dirX == 0) and (dirZ == 1):
+			rotation_degrees.y = 0
+		if (dirX == 1) and (dirZ == 1):
+			rotation_degrees.y = 45
+		if (dirX == 1) and (dirZ == 0):
+			rotation_degrees.y = 90
+		if (dirX == 1) and (dirZ == -1):
+			rotation_degrees.y = 135
 			
 #checks if reached x and z
 		if (round(position.z) == posZ) and (round(position.x) == posX):
@@ -69,18 +69,18 @@ func _process(delta):
 #changes z
 			if position.z < posZ:
 				position.z -= SPEED * delta
-				dirZ = 0
+				dirZ = -1
 			if position.z > posZ:
 				position.z += SPEED * delta
 				dirZ = 1
 			if round(position.z) == posZ:
-				dirZ = 2
+				dirZ = 0
 #changes x
 			if position.x < posX:
 				position.x -= SPEED * delta
-				dirX = 0
+				dirX = -1
 			if position.x > posX:
 				position.x += SPEED * delta
 				dirX = 1
 			if round(position.x) == posX:
-				dirX = 2
+				dirX = 0

@@ -56,7 +56,6 @@ func _process(delta):
 			
 	if timer == -1:
 		Global.gameover = true
-		print(Global.gameover)
 		get_tree().change_scene_to_file("res://Game/Places/GameOverScreen.tscn")
 		Global.yup = false
 		Global.isnight = false
