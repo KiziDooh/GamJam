@@ -20,7 +20,11 @@ func _process(delta):
 		$Anomlies/cupcake.visible = false
 	if Global.Anomlies[5] == true:
 		$Anomlies/sinige.visible = false
+	if Global.Anomlies[6] == true:
+		$"Anomlies/8ballin".visible = false
+	if Global.Anomlies[7] == true:
+		$Anomlies/skullforglitch.visible = false
 		
-	if Global.acount == 6:
+	if Global.acount == 8:
 		get_tree().change_scene_to_file("res://Game/Places/Credits.tscn")
 		Global.yup = false

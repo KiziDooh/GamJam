@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=37 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://Game/Sprites/Scenes/knife.tscn" id="2_j8sau"]
@@ -22,7 +22,9 @@
 [ext_resource type="AudioStream" uid="uid://tb6volrsbiyb" path="res://Game/Audio/WalkingSound2.mp3" id="14_m26ht"]
 [ext_resource type="PackedScene" uid="uid://clqx60trer42q" path="res://Game/Sprites/Scenes/ducky.tscn" id="14_raou3"]
 [ext_resource type="Script" path="res://addons/proto_controller/e_key_pop_up.gd" id="16_00tf1"]
+[ext_resource type="PackedScene" uid="uid://q3koueaumaf0" path="res://Game/Sprites/Scenes/8ballin.tscn" id="19_ssnsj"]
 [ext_resource type="Script" path="res://addons/proto_controller/h_box_container.gd" id="20_cah1j"]
+[ext_resource type="PackedScene" uid="uid://kon2i8di0wux" path="res://Game/Sprites/Scenes/skullforglitch.tscn" id="20_strl4"]
 [ext_resource type="Texture2D" uid="uid://dhgn6u6mcbfyk" path="res://Game/UI/Images/Inv1E.png" id="20_wug26"]
 [ext_resource type="Texture2D" uid="uid://gmbe2xdcx8li" path="res://Game/UI/Images/Inv2E.png" id="21_pf1vh"]
 [ext_resource type="Texture2D" uid="uid://mvdi6x2ondmv" path="res://Game/UI/Images/Inv3E.png" id="22_gcfku"]
@@ -120,6 +122,14 @@ visible = false
 
 [node name="toy car" parent="Head/Camera3D" instance=ExtResource("29_4rsvb")]
 transform = Transform3D(0.117424, 0, 0.1619, 0, 0.2, 0, -0.1619, 0, 0.117424, 1.07458, -0.620324, -1.07973)
+visible = false
+
+[node name="8ballin" parent="Head/Camera3D" instance=ExtResource("19_ssnsj")]
+transform = Transform3D(0.10892, -0.100979, -0.0209681, 0.0173305, 0.0479835, -0.141058, 0.101667, 0.100004, 0.0465092, 0.82735, -0.342332, -0.870281)
+visible = false
+
+[node name="skullforglitch" parent="Head/Camera3D" instance=ExtResource("20_strl4")]
+transform = Transform3D(0.111358, 0, 0.166131, 0, 0.2, 0, -0.166131, 0, 0.111358, 0.655109, -0.375585, -1.00809)
 visible = false
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]

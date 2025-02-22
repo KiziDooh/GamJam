@@ -283,6 +283,19 @@ func _process(delta):
 			Global.Anomlies[5] = true
 			Global.hold = true
 			Global.active = 3
+		if (Global.get.name == "Anamlee7") and Input.is_key_pressed(KEY_E) and Global.Anomlies[6] == false and Global.hold == false:
+			$"Head/Camera3D/8ballin".visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
+			Global.Anomlies[6] = true
+			Global.hold = true
+			Global.active = 3
+		if (Global.get.name == "Anamlee8") and Input.is_key_pressed(KEY_E) and Global.Anomlies[7] == false and Global.hold == false:
+			$Head/Camera3D/skullforglitch.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
+			Global.Anomlies[7] = true
+			Global.hold = true
+			Global.active = 3
+			
 		if (Global.get.name == "sTICK eM uP") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -327,13 +340,25 @@ func _process(delta):
 			Global.Anomlies[5] = false
 			Global.acount += 1
 			Global.hold = false
-			
+		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[6] == true:
+			$"Head/Camera3D/8ballin".visible = false
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
+			Global.Anomlies[6] = false
+			Global.acount += 1
+			Global.hold = false
+		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[7] == true:
+			$Head/Camera3D/skullforglitch.visible = false
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
+			Global.Anomlies[7] = false
+			Global.acount += 1
+			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.stick == true:
 			$Head/Camera3D/Stick.visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
 			Global.stick = false
 			Global.scount += 1
 			Global.hold = false
+			
 		
 		if Global.acount == 0:
 			$Counter.texture = load("res://Game/UI/Images/Exterminated0.png")
@@ -398,6 +423,20 @@ func _process(delta):
 	if Input.is_key_pressed(KEY_3) and Global.Anomlies[5] == true:
 		$Head/Camera3D/sinige.visible = true
 
+	if Input.is_key_pressed(KEY_1) and Global.Anomlies[6] == true:
+		$"Head/Camera3D/8ballin".visible = false
+	if Input.is_key_pressed(KEY_2) and Global.Anomlies[6] == true:
+		$"Head/Camera3D/8ballin".visible = false
+	if Input.is_key_pressed(KEY_3) and Global.Anomlies[6] == true:
+		$"Head/Camera3D/8ballin".visible = true
+
+	if Input.is_key_pressed(KEY_1) and Global.Anomlies[7] == true:
+		$Head/Camera3D/skullforglitch.visible = false
+	if Input.is_key_pressed(KEY_2) and Global.Anomlies[7] == true:
+		$Head/Camera3D/skullforglitch.visible = false
+	if Input.is_key_pressed(KEY_3) and Global.Anomlies[7] == true:
+		$Head/Camera3D/skullforglitch.visible = true
+
 	if Input.is_key_pressed(KEY_1) and Global.stick == true:
 		$Head/Camera3D/Stick.visible = false
 	if Input.is_key_pressed(KEY_2) and Global.stick == true:
@@ -414,3 +453,5 @@ func _process(delta):
 		$"Head/Camera3D/gilberts head".visible = false
 		$"Head/Camera3D/toy car".visible = false
 		$Head/Camera3D/freddyfastbear.visible = false
+		$"Head/Camera3D/8ballin".visible = false
+		$Head/Camera3D/skullforglitch.visible = false
