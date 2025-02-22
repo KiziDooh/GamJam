@@ -328,23 +328,24 @@ func _process(delta):
 			Global.scount += 1
 			Global.hold = false
 		
-		if Global.scount == 0:
+		print(Global.acount)
+		if Global.acount == 0:
 			$Counter.texture = load("res://Game/UI/Images/Exterminated0.png")
-		if Global.scount == 1:
+		if Global.acount == 1:
 			$Counter.texture = load("res://Game/UI/Images/Exterminated1.png")
-		if Global.scount == 2:
+		if Global.acount == 2:
 			$Counter.texture = load("res://Game/UI/Images/Exterminated2.png")
-		if Global.scount == 3:
+		if Global.acount == 3:
 			$Counter.texture = load("res://Game/UI/Images/Exterminated3.png")
-		if Global.scount == 4:
+		if Global.acount == 4:
 			$Counter.texture = load("res://Game/UI/Images/Exterminated4.png")
-		if Global.scount == 5:
+		if Global.acount == 5:
 			$Counter.texture = load("res://Game/UI/Images/Exterminated5.png")
-		if Global.scount == 6:
+		if Global.acount == 6:
 			$Counter.texture = load("res://Game/UI/Images/Exterminated6.png")
-		if Global.scount == 7:
+		if Global.acount == 7:
 			$Counter.texture = load("res://Game/UI/Images/Exterminated7.png")
-		if Global.scount == 8:
+		if Global.acount == 8:
 			$Counter.texture = load("res://Game/UI/Images/Exterminated8.png")
 		
 		
