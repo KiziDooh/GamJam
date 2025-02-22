@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://Game/Sprites/Scenes/tree.tscn" id="5_jma72"]
 [ext_resource type="PackedScene" uid="uid://xc776jhcg36a" path="res://Game/Sprites/Scenes/jankassflower.tscn" id="7_1wtfp"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="8_0t86d"]
-[ext_resource type="Material" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
+[ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="9_wh530"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="10_v3j5x"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="11_7qs4o"]
@@ -703,7 +703,7 @@ transform = Transform3D(-0.0235839, -0.0755194, 0.0611605, 0.0971648, -0.0172399
 [node name="FlashLight" type="Area3D" parent="Objects/flashlight"]
 
 [node name="flashlight" type="CollisionShape3D" parent="Objects/flashlight/FlashLight"]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
+transform = Transform3D(15, -8.9407e-08, -5.96046e-08, -1.93715e-07, 15, 0, 4.02331e-07, 9.53674e-07, 15, -0.190327, -0.086937, 0.00268555)
 shape = SubResource("SphereShape3D_vdhnm")
 
 [node name="knife" parent="Objects" instance=ExtResource("27_1273f")]

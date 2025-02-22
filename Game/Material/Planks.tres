@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://yqnr52q8rp5x"]
+
+[ext_resource type="Texture2D" uid="uid://cbx4ex3n4qiaw" path="res://Game/Image/worn_planks_diff_1k.jpg" id="1_wtufj"]
+
+[resource]
+albedo_color = Color(0.6, 0.4409, 0.342, 1)
+albedo_texture = ExtResource("1_wtufj")
+normal_scale = 16.0
+anisotropy = -1.0
+heightmap_scale = -1.89
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 32
+subsurf_scatter_strength = 1.0
+refraction_scale = -1.0
+uv1_scale = Vector3(0.41, 0.41, 0.41)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 12.8066

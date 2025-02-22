@@ -1,7 +1,8 @@
-[gd_scene load_steps=20 format=4 uid="uid://by8y8guhping7"]
+[gd_scene load_steps=23 format=4 uid="uid://by8y8guhping7"]
 
 [ext_resource type="Material" uid="uid://sn11sbkwad3n" path="res://Game/Material/stumpidtext.tres" id="1_bbho1"]
 [ext_resource type="Texture2D" uid="uid://kd2pxwrfjgmf" path="res://Game/Image/bark_willow_02_disp_1k.png" id="2_oxsw1"]
+[ext_resource type="Texture2D" uid="uid://3aufv6y7p5ft" path="res://Game/Image/wood_0065_ao_1k.jpg" id="3_xg7c1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c66po"]
 size = Vector3(1.57422, 2.3291, 1.5918)
@@ -114,6 +115,9 @@ rim = 0.1
 rim_tint = 1.0
 uv1_scale = Vector3(40, 40, 40)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bcwuc"]
+albedo_color = Color(0.26, 0.18486, 0.1274, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qo68h"]
 resource_name = "Material.001"
 cull_mode = 2
@@ -179,6 +183,11 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_w4ilx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_up85t"]
+albedo_color = Color(0.57, 0.38874, 0.2679, 1)
+albedo_texture = ExtResource("3_xg7c1")
+uv1_scale = Vector3(1.985, 1.985, 1.985)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rhitt"]
 resource_name = "Material.003"
@@ -267,6 +276,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225955, 0)
 shape = SubResource("BoxShape3D_c66po")
 
 [node name="Cylinder" type="MeshInstance3D" parent="StaticBody3D"]
+visible = false
 material_override = ExtResource("1_bbho1")
 mesh = SubResource("ArrayMesh_rjit1")
 skeleton = NodePath("")
@@ -278,16 +288,16 @@ mesh = SubResource("ArrayMesh_rjit1")
 skeleton = NodePath("")
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
-visible = false
+material_override = SubResource("StandardMaterial3D_bcwuc")
 mesh = SubResource("ArrayMesh_t236e")
 skeleton = NodePath("")
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="."]
-visible = false
+material_override = SubResource("StandardMaterial3D_up85t")
 mesh = SubResource("ArrayMesh_3s1gn")
 skeleton = NodePath("")
 
 [node name="Cylinder_002" type="MeshInstance3D" parent="."]
-visible = false
+material_override = ExtResource("1_bbho1")
 mesh = SubResource("ArrayMesh_cb1tl")
 skeleton = NodePath("")

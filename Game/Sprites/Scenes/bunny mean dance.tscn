@@ -236,6 +236,7 @@ size = Vector3(3.56812, 5.48816, 3.66263)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.23989, 1.03363)
+visible = false
 shape = SubResource("BoxShape3D_abexb")
 
 [node name="Sphere_001" type="MeshInstance3D" parent="StaticBody3D"]
