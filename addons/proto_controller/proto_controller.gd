@@ -246,7 +246,6 @@ func _process(delta):
 	
 	
 	
-	
 	if Global.yup == true:
 		if (Global.get.name == "Anamlee1") and Input.is_key_pressed(KEY_E) and Global.Anomlies[0] == false and Global.hold == false:
 			$Head/Camera3D/freddyfastbear.visible = true
@@ -288,42 +287,36 @@ func _process(delta):
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[0] == true:
 			$Head/Camera3D/freddyfastbear.visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
-			$Counter.texture = load("res://Game/UI/Images/Exterminated1.png")
 			Global.Anomlies[0] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[1] == true:
 			$"Head/Camera3D/toy car".visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
-			$Counter.texture = load("res://Game/UI/Images/Exterminated2.png")
 			Global.Anomlies[1] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[2] == true:
 			$"Head/Camera3D/gilberts head".visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
-			$Counter.texture = load("res://Game/UI/Images/Exterminated3.png")
 			Global.Anomlies[2] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[3] == true:
 			$Head/Camera3D/ducky.visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
-			$Counter.texture = load("res://Game/UI/Images/Exterminated4.png")
 			Global.Anomlies[3] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[4] == true:
 			$Head/Camera3D/cupcake.visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
-			$Counter.texture = load("res://Game/UI/Images/Exterminated5.png")
 			Global.Anomlies[4] = false
 			Global.acount += 1
 			Global.hold = false
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[5] == true:
 			$Head/Camera3D/sinige.visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")
-			$Counter.texture = load("res://Game/UI/Images/Exterminated6.png")
 			Global.Anomlies[5] = false
 			Global.acount += 1
 			Global.hold = false
@@ -335,7 +328,24 @@ func _process(delta):
 			Global.scount += 1
 			Global.hold = false
 		
-		
+		if Global.scount == 0:
+			$Counter.texture = load("res://Game/UI/Images/Exterminated0.png")
+		if Global.scount == 1:
+			$Counter.texture = load("res://Game/UI/Images/Exterminated1.png")
+		if Global.scount == 2:
+			$Counter.texture = load("res://Game/UI/Images/Exterminated2.png")
+		if Global.scount == 3:
+			$Counter.texture = load("res://Game/UI/Images/Exterminated3.png")
+		if Global.scount == 4:
+			$Counter.texture = load("res://Game/UI/Images/Exterminated4.png")
+		if Global.scount == 5:
+			$Counter.texture = load("res://Game/UI/Images/Exterminated5.png")
+		if Global.scount == 6:
+			$Counter.texture = load("res://Game/UI/Images/Exterminated6.png")
+		if Global.scount == 7:
+			$Counter.texture = load("res://Game/UI/Images/Exterminated7.png")
+		if Global.scount == 8:
+			$Counter.texture = load("res://Game/UI/Images/Exterminated8.png")
 		
 		
 		
