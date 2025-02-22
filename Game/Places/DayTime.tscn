@@ -90,7 +90,7 @@ buffer = PackedFloat32Array(0.0293573, 0, 0.999569, -9.86127, 0, 1, 0, 1.44976, 
 [sub_resource type="Gradient" id="Gradient_tm7rx"]
 colors = PackedColorArray(0.968627, 0, 0, 1, 0.436058, 8.66354e-07, 1.68458e-07, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_4afc6"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0c677"]
 gradient = SubResource("Gradient_tm7rx")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_q0lgh"]
@@ -101,9 +101,9 @@ spread = 16.907
 gravity = Vector3(0, -9.8, -1)
 scale_min = 0.01
 scale_max = 0.8
-color_ramp = SubResource("GradientTexture1D_4afc6")
+color_ramp = SubResource("GradientTexture1D_0c677")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yqaux"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sf6qj"]
 blend_mode = 3
 depth_draw_mode = 1
 albedo_color = Color(0.627451, 0, 0, 0.435294)
@@ -111,7 +111,7 @@ metallic_specular = 0.4
 roughness = 0.28
 
 [sub_resource type="SphereMesh" id="SphereMesh_l3r35"]
-material = SubResource("StandardMaterial3D_yqaux")
+material = SubResource("StandardMaterial3D_sf6qj")
 radius = 0.1
 height = 0.2
 

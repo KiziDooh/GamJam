@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=34 format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://Game/Sprites/Scenes/knife.tscn" id="2_j8sau"]
@@ -14,16 +14,21 @@
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://Game/UI/Images/Bar_Overset.png" id="7_ssvos"]
 [ext_resource type="Texture2D" uid="uid://bwv5xkxrcxr4h" path="res://Game/UI/Images/StaminaBar_Full.png" id="8_y2lov"]
 [ext_resource type="Script" path="res://Game/Sprites/Scenes/stick.gd" id="9_apxax"]
+[ext_resource type="PackedScene" uid="uid://dksrpd0afrp5o" path="res://Game/Sprites/Scenes/freddyfastbear.tscn" id="11_63fjv"]
 [ext_resource type="Script" path="res://Game/Scripts/ray_cast_3d.gd" id="12_gdqeh"]
+[ext_resource type="PackedScene" uid="uid://b02utf4a25goe" path="res://Game/Sprites/Scenes/gilberts head.tscn" id="12_snd5r"]
 [ext_resource type="AudioStream" uid="uid://dpx0txhouqn0n" path="res://Game/Audio/audio-editor-output.mp3" id="13_7h3ds"]
 [ext_resource type="Texture2D" uid="uid://cgex11n1d4upo" path="res://Game/UI/Images/EKeyInteractLight.png" id="13_k6xt2"]
 [ext_resource type="AudioStream" uid="uid://tb6volrsbiyb" path="res://Game/Audio/WalkingSound2.mp3" id="14_m26ht"]
+[ext_resource type="PackedScene" uid="uid://clqx60trer42q" path="res://Game/Sprites/Scenes/ducky.tscn" id="14_raou3"]
 [ext_resource type="Script" path="res://addons/proto_controller/e_key_pop_up.gd" id="16_00tf1"]
 [ext_resource type="Script" path="res://addons/proto_controller/h_box_container.gd" id="20_cah1j"]
 [ext_resource type="Texture2D" uid="uid://dhgn6u6mcbfyk" path="res://Game/UI/Images/Inv1E.png" id="20_wug26"]
 [ext_resource type="Texture2D" uid="uid://gmbe2xdcx8li" path="res://Game/UI/Images/Inv2E.png" id="21_pf1vh"]
 [ext_resource type="Texture2D" uid="uid://mvdi6x2ondmv" path="res://Game/UI/Images/Inv3E.png" id="22_gcfku"]
 [ext_resource type="PackedScene" uid="uid://cay8pwhpuvlfq" path="res://Game/Sprites/Scenes/sinige.tscn" id="24_x1xu3"]
+[ext_resource type="PackedScene" uid="uid://cp1s5obgyu7j7" path="res://Game/Sprites/Scenes/cupcake.tscn" id="27_x00kl"]
+[ext_resource type="PackedScene" uid="uid://bqguoa4wq7n1q" path="res://Game/Sprites/Scenes/toy car.tscn" id="29_4rsvb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -93,6 +98,23 @@ script = ExtResource("9_apxax")
 
 [node name="sinige" parent="Head/Camera3D" instance=ExtResource("24_x1xu3")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.776809, -0.166368, -1.3973)
+visible = false
+
+[node name="freddyfastbear" parent="Head/Camera3D" instance=ExtResource("11_63fjv")]
+transform = Transform3D(-0.287128, 0, 0.086935, 0, 0.3, 0, -0.086935, 0, -0.287128, 0.602633, -0.349995, -1.04889)
+visible = false
+
+[node name="gilberts head" parent="Head/Camera3D" instance=ExtResource("12_snd5r")]
+transform = Transform3D(-0.196113, 0, 0.0392406, 0, 0.2, 0, -0.0392406, 0, -0.196113, 0.639013, -0.47636, -1.03295)
+visible = false
+
+[node name="cupcake" parent="Head/Camera3D" instance=ExtResource("27_x00kl")]
+transform = Transform3D(-0.262226, 0, 0.145731, 0, 0.3, 0, -0.145731, 0, -0.262226, 0.894379, -0.969544, -1.31207)
+visible = false
+
+[node name="ducky" parent="Head/Camera3D" instance=ExtResource("14_raou3")]
+transform = Transform3D(-0.0754893, 0, -0.0655848, 0, 0.1, 0, 0.0655848, 0, -0.0754893, 0.461184, -0.378527, -0.670639)
+visible = false
 
 [node name="HurtBox" type="Area3D" parent="." node_paths=PackedStringArray("health")]
 collision_layer = 0
@@ -194,5 +216,8 @@ texture = ExtResource("21_pf1vh")
 layout_mode = 2
 texture = ExtResource("22_gcfku")
 expand_mode = 3
+
+[node name="toy car" parent="." instance=ExtResource("29_4rsvb")]
+transform = Transform3D(-0.0889739, 0, 0.179119, 0, 0.2, 0, -0.179119, 0, -0.0889739, 0.0748668, 1.51798, -1.88532)
 
 [connection signal="health_depleated" from="UI/Health" to="." method="_on_health_health_depleated"]
