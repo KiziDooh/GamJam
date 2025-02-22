@@ -1,6 +1,6 @@
 extends Node3D
-var posZ = Global.pz
-var posX = Global.px
+var posZ = -5
+var posX = 75
 const SPEED = -10
 var xlist = [-5,45,65]
 var zlist = [75,55,10]

@@ -5,6 +5,7 @@ extends Node3D
 func _ready():
 	Global.isnight = true
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Global.Anomlies[0] == true:

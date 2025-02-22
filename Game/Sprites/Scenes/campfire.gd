@@ -1,12 +1,13 @@
 extends Node3D
 
+var blank = 0
 var timer = 6
 var timerstart = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#$GPUParticles3D.amount = 50
 	#$GPUParticles3D/OmniLight3D.light_energy = 3
-	pass
+	timer = 6
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -56,10 +57,14 @@ func _process(delta):
 			
 	if timer == -1:
 		Global.gameover = true
+		#Global.die = true
 		get_tree().change_scene_to_file("res://Game/Places/GameOverScreen.tscn")
 		Global.yup = false
 		Global.isnight = false
-	
+		
+	if blank < Global.scount:
+		blank += 1
+		timer += 1
 
 func _on_timer_timeout():
 	timer = timer - 1

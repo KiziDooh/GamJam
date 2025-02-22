@@ -65,6 +65,11 @@ func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
+	if Global.knhold == true:
+		$UI/HBoxContainer/TextureRect.texture = load("res://Game/UI/Images/InvKnife.png")
+	if Global.flashlight == true:
+		$UI/HBoxContainer/TextureRect2.texture = load("res://Game/UI/Images/InvFlash.png")
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
@@ -72,7 +77,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		capture_mouse()
 	if Input.is_key_pressed(KEY_ESCAPE):
 		release_mouse()
-	
+	#if Global.die == true:
+		#release_mouse()
+		
 	# Look around
 	if mouse_captured and event is InputEventMouseMotion:
 		rotate_look(event.relative)
@@ -90,18 +97,18 @@ func _physics_process(delta: float) -> void:
 	
 	if get_tree().current_scene.name == "Dark Time":
 		$Counter.visible = true
-		
-	if Input.is_key_pressed(KEY_F) and $Head/Camera3D/SpotLight3D.visible == true:
-		if cooldown <= 0:
-			$Head/Camera3D/SpotLight3D.visible = false
-			$Head/Camera3D/SpotLight3D/FlashOnSound2.play()
-			cooldown = 0.3
-			
-	elif Input.is_key_pressed(KEY_F) and $Head/Camera3D/SpotLight3D.visible == false:
-		if cooldown <= 0:
-			$Head/Camera3D/SpotLight3D.visible = true
-			$Head/Camera3D/SpotLight3D/FlashOnSound.play()
-			cooldown = 0.3
+	if Global.flashlight == true and Global.active == 2:	
+		if Input.is_key_pressed(KEY_F) and $Head/Camera3D/SpotLight3D.visible == true:
+			if cooldown <= 0:
+				$Head/Camera3D/SpotLight3D.visible = false
+				$Head/Camera3D/SpotLight3D/FlashOnSound2.play()
+				cooldown = 0.3
+				
+		elif Input.is_key_pressed(KEY_F) and $Head/Camera3D/SpotLight3D.visible == false:
+			if cooldown <= 0:
+				$Head/Camera3D/SpotLight3D.visible = true
+				$Head/Camera3D/SpotLight3D/FlashOnSound.play()
+				cooldown = 0.3
 
 		
 	# If freeflying, handle freefly and nothing else
