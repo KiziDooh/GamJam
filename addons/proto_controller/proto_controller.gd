@@ -264,6 +264,36 @@ func _process(delta):
 			Global.Anomlies[5] = true
 			
 			
+			
+		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[0] == true:
+			$Head/Camera3D/freddyfastbear.visible = false
+			Global.Anomlies[0] = false
+			Global.acount += 1
+		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[1] == true:
+			$"Head/Camera3D/toy car".visible = false
+			Global.Anomlies[1] = false
+			Global.acount += 1
+		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[2] == true:
+			$"Head/Camera3D/gilberts head".visible = false
+			Global.Anomlies[2] = false
+			Global.acount += 1
+		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[3] == true:
+			$Head/Camera3D/ducky.visible = false
+			Global.Anomlies[3] = false
+			Global.acount += 1
+		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[4] == true:
+			$Head/Camera3D/cupcake.visible = false
+			Global.Anomlies[4] = false
+			Global.acount += 1
+		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[5] == true:
+			$Head/Camera3D/sinige.visible = false
+			Global.Anomlies[5] = false
+			Global.acount += 1
+		
+		
+		
+		
+		
 	if Input.is_key_pressed(KEY_1) and Global.Anomlies[0] == true:
 			$Head/Camera3D/freddyfastbear.visible = false
 	if Input.is_key_pressed(KEY_2) and Global.Anomlies[0] == true:

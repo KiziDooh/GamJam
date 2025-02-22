@@ -14,3 +14,5 @@ var whichhold = true
 var stick = false
 var flashlight = false
 var Anomlies = [false,false,false,false,false,false]
+var acount = 0
+var scount = 0
