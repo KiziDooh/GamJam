@@ -1,9 +1,30 @@
-[gd_scene load_steps=7 format=4 uid="uid://bqguoa4wq7n1q"]
+[gd_scene load_steps=11 format=4 uid="uid://bqguoa4wq7n1q"]
+
+[ext_resource type="Texture2D" uid="uid://cbx4ex3n4qiaw" path="res://Game/Image/worn_planks_diff_1k.jpg" id="1_en7jl"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sca2q"]
+load_path = "res://.godot/imported/worn_planks_diff_1k.jpg-abaa9b891cd780d62bde79f5ee7b1a3c.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wsrx2"]
+albedo_color = Color(0.384509, 0.271016, 0.200047, 1)
+albedo_texture = SubResource("CompressedTexture2D_sca2q")
+normal_scale = 16.0
+anisotropy = -1.0
+heightmap_scale = -1.89
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 32
+subsurf_scatter_strength = 1.0
+refraction_scale = -1.0
+uv1_scale = Vector3(0.41, 0.41, 0.41)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 12.8066
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b81y2"]
 resource_name = "Material.001"
 cull_mode = 2
 albedo_color = Color(0.391666, 0.275826, 0.244396, 1)
+albedo_texture = ExtResource("1_en7jl")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_840h5"]
@@ -39,6 +60,22 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_840h5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whl73"]
+albedo_color = Color(0.503475, 0.147626, 0.105429, 1)
+albedo_texture = ExtResource("1_en7jl")
+metallic_specular = 0.06
+normal_scale = 16.0
+anisotropy = -1.0
+heightmap_scale = -1.89
+heightmap_deep_parallax = true
+heightmap_min_layers = 1
+heightmap_max_layers = 32
+subsurf_scatter_strength = 1.0
+refraction_scale = -1.0
+uv1_scale = Vector3(0.41, 0.41, 0.41)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 12.8066
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hklyf"]
 resource_name = "Material"
@@ -82,10 +119,12 @@ shadow_mesh = SubResource("ArrayMesh_ovwe3")
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0.178351, 0, -0.630342, 0, 0, 0, 0, 0.630342, 1.20375, -0.117219, 0.630884)
+material_override = SubResource("StandardMaterial3D_wsrx2")
 mesh = SubResource("ArrayMesh_vjp71")
 skeleton = NodePath("")
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.643911, 0, 0, 0, 1.26876, 0, 0.506525, -2.16652)
+material_override = SubResource("StandardMaterial3D_whl73")
 mesh = SubResource("ArrayMesh_ddtyv")
 skeleton = NodePath("")

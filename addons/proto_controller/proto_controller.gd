@@ -247,9 +247,62 @@ func _process(delta):
 		if (Global.get.name == "Anamlee1") and Input.is_key_pressed(KEY_E) and Global.Anomlies[0] == false:
 			$Head/Camera3D/freddyfastbear.visible = true
 			Global.Anomlies[0] = true
+		if (Global.get.name == "Anamlee2") and Input.is_key_pressed(KEY_E) and Global.Anomlies[1] == false:
+			$"Head/Camera3D/toy car".visible = true
+			Global.Anomlies[1] = true
+		if (Global.get.name == "Anamlee3") and Input.is_key_pressed(KEY_E) and Global.Anomlies[2] == false:
+			$"Head/Camera3D/gilberts head".visible = true
+			Global.Anomlies[2] = true
+		if (Global.get.name == "Anamlee4") and Input.is_key_pressed(KEY_E) and Global.Anomlies[3] == false:
+			$Head/Camera3D/ducky.visible = true
+			Global.Anomlies[3] = true
+		if (Global.get.name == "Anamlee5") and Input.is_key_pressed(KEY_E) and Global.Anomlies[4] == false:
+			$Head/Camera3D/cupcake.visible = true
+			Global.Anomlies[4] = true
+		if (Global.get.name == "Anamlee6") and Input.is_key_pressed(KEY_E) and Global.Anomlies[5] == false:
+			$Head/Camera3D/sinige.visible = true
+			Global.Anomlies[5] = true
+			
+			
 	if Input.is_key_pressed(KEY_1) and Global.Anomlies[0] == true:
 			$Head/Camera3D/freddyfastbear.visible = false
 	if Input.is_key_pressed(KEY_2) and Global.Anomlies[0] == true:
 			$Head/Camera3D/freddyfastbear.visible = false
 	if Input.is_key_pressed(KEY_3) and Global.Anomlies[0] == true:
 			$Head/Camera3D/freddyfastbear.visible = true
+			
+		
+	if Input.is_key_pressed(KEY_1) and Global.Anomlies[1] == true:
+			$"Head/Camera3D/toy car".visible = false
+	if Input.is_key_pressed(KEY_2) and Global.Anomlies[1] == true:
+			$"Head/Camera3D/toy car".visible = false
+	if Input.is_key_pressed(KEY_3) and Global.Anomlies[1] == true:
+			$"Head/Camera3D/toy car".visible = true
+	
+	if Input.is_key_pressed(KEY_1) and Global.Anomlies[2] == true:
+			$"Head/Camera3D/gilberts head".visible = false
+	if Input.is_key_pressed(KEY_2) and Global.Anomlies[2] == true:
+			$"Head/Camera3D/gilberts head".visible = false
+	if Input.is_key_pressed(KEY_3) and Global.Anomlies[2] == true:
+			$"Head/Camera3D/gilberts head".visible = true
+			
+	if Input.is_key_pressed(KEY_1) and Global.Anomlies[3] == true:
+			$Head/Camera3D/ducky.visible = false
+	if Input.is_key_pressed(KEY_2) and Global.Anomlies[3] == true:
+			$Head/Camera3D/ducky.visible = false
+	if Input.is_key_pressed(KEY_3) and Global.Anomlies[3] == true:
+			$Head/Camera3D/ducky.visible = true
+			
+	if Input.is_key_pressed(KEY_1) and Global.Anomlies[4] == true:
+			$Head/Camera3D/cupcake.visible = false
+	if Input.is_key_pressed(KEY_2) and Global.Anomlies[4] == true:
+			$Head/Camera3D/cupcake.visible = false
+	if Input.is_key_pressed(KEY_3) and Global.Anomlies[4] == true:
+			$Head/Camera3D/cupcake.visible = true
+	
+	if Input.is_key_pressed(KEY_1) and Global.Anomlies[5] == true:
+			$Head/Camera3D/sinige.visible = false
+	if Input.is_key_pressed(KEY_2) and Global.Anomlies[5] == true:
+			$Head/Camera3D/sinige.visible = false
+	if Input.is_key_pressed(KEY_3) and Global.Anomlies[5] == true:
+			$Head/Camera3D/sinige.visible = true
