@@ -8,9 +8,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Global.whichstick[0] == true:
-		$Folage/Stick.visible = false
-	if Global.whichstick[1] == true:
-		$Folage/Stick1.visible = false
-	if Global.whichstick[2] == true:
-		$Folage/Stick2.visible = false
+	if Global.whichstick[16] == true:
+		$Folage/Stick16.visible = false
+	if Global.whichstick[17] == true:
+		$Folage/Stick17.visible = false
+	if Global.whichstick[18] == true:
+		$Folage/Stick18.visible = false
