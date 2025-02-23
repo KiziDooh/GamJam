@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://by8y8guhping7" path="res://Game/Sprites/Scenes/stumpid.tscn" id="1_dl6qw"]
 [ext_resource type="Material" uid="uid://dvqdt6wddvosh" path="res://Game/Material/Planks.tres" id="2_5u5p2"]
-[ext_resource type="PackedScene" uid="uid://blh5n5lt61ejc" path="res://Game/bed.tscn" id="3_ipuy3"]
+[ext_resource type="PackedScene" uid="uid://blh5n5lt61ejc" path="res://Game/Sprites/Scenes/bed.tscn" id="3_ipuy3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7ptkb"]
 size = Vector3(1.83014, 12.1113, 2.78961)
