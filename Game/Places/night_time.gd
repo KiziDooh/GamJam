@@ -4,7 +4,8 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.isnight = true
-
+	$"Anomlies/gilberts head".visible = false
+	$"Anomlies/toy car/GPUParticles3D".amount = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -24,8 +25,14 @@ func _process(delta):
 		$"Anomlies/8ballin".visible = false
 	if Global.Anomlies[7] == true:
 		$Anomlies/skullforglitch.visible = false
-		
-		
+	
+	
+	if Global.acount == 1:
+		$"cage/sleeping gilly".visible = false
+		$"Bunnies/evil gilbert".visible = true
+	if Global.acount == 7 and Global.Anomlies[2] == false:
+		$"Anomlies/gilberts head".visible = true
+		$"Anomlies/toy car/GPUParticles3D".amount = 20
 	if Global.acount == 8:
 		get_tree().change_scene_to_file("res://Game/Places/Credits.tscn")
 		Global.yup = false

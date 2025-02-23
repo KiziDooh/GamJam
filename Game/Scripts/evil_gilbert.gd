@@ -2,8 +2,8 @@ extends Node3D
 var posZ = -5
 var posX = 75
 const SPEED = -10
-var xlist = [-5,45,65]
-var zlist = [75,55,10]
+var xlist = [-5,45,65,-5,70,35,-15,-15,-5,-45]
+var zlist = [75,55,10,100,100,-65,-55,-15,25,65]
 var which1 = 1
 var dirX = 1
 var dirZ = 1
@@ -55,14 +55,10 @@ func _process(delta):
 			dirX = 1
 		if round(position.x) == posX:
 			dirX = 0
-	#if (round(position.z) == posZ) and (round(position.x) == posX) and chase == true:
-	#	chase = false
-	#	which1 = randi_range(0,2)
-	#	posZ = zlist[which1]
-	#	posX = xlist[which1]
-	#	position.x = posX
-	#	position.z = posX
-	#	which1 = randi_range(0,2)
+	if (round(position.z) == posZ) and (round(position.x) == posX) and chase == true:
+		position.z = 5
+		position.x = -50
+		chase = false
 	else:
 		
 			
@@ -71,7 +67,7 @@ func _process(delta):
 		
 			posZ = zlist[which1]
 			posX = xlist[which1]
-			which1 = randi_range(0,2)
+			which1 = randi_range(0,9)
 		else:
 #changes z
 			if position.z < posZ:
