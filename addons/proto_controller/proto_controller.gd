@@ -303,14 +303,105 @@ func _process(delta):
 			Global.hold = true
 			Global.active = 3
 			
-		if (Global.get.name == "sTICK eM uP") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+		if (Global.get.name == "sx") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
 			Global.stick = true
+			Global.whichstick[0] = true
 			Global.active = 3
+		if (Global.get.name == "s1") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[1] = true
+			Global.active = 3
+		if (Global.get.name == "s2") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[2] = true
+			Global.active = 3
+		if (Global.get.name == "s3") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[3] = true
+			Global.active = 3
+		if (Global.get.name == "s4") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[4] = true
+			Global.active = 3	
+		if (Global.get.name == "s5") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[5] = true
+			Global.active = 3
+		if (Global.get.name == "s6") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[6] = true
+			Global.active = 3	
+		if (Global.get.name == "s7") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[7] = true
+			Global.active = 3	
+		if (Global.get.name == "s8") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[8] = true
+			Global.active = 3	
+		if (Global.get.name == "s9") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[9] = true
+			Global.active = 3	
+		if (Global.get.name == "s10") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[10] = true
+			Global.active = 3	
+		if (Global.get.name == "s11") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[11] = true
+			Global.active = 3
+		if (Global.get.name == "s12") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[12] = true
+			Global.active = 3	
+		if (Global.get.name == "s13") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[13] = true
+			Global.active = 3	
+		if (Global.get.name == "s14") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[14] = true
+			Global.active = 3	
+		if (Global.get.name == "s14") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
+			$Head/Camera3D/Stick.visible = true
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			Global.stick = true
+			Global.whichstick[14] = true
+			Global.active = 3	
 			
-			
-			
+				
+				
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[0] == true:
 			$Head/Camera3D/freddyfastbear.visible = false
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/Inv3E.png")

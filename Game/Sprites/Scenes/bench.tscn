@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=4 uid="uid://bxcwolnar5pyh"]
 
-[ext_resource type="Material" uid="uid://yqnr52q8rp5x" path="res://Game/Material/Planks.tres" id="1_ko8ek"]
+[ext_resource type="Material" uid="uid://dvqdt6wddvosh" path="res://Game/Material/Planks.tres" id="1_ko8ek"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sm7pu"]
 resource_name = "Material.001"
@@ -8,7 +8,7 @@ cull_mode = 2
 albedo_color = Color(0.579168, 0.362388, 0.119736, 1)
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_er4c7"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ssobq"]
 _surfaces = [{
 "aabb": AABB(-1, -1, -1, 2, 2, 2),
 "format": 34896613377,
@@ -38,7 +38,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP///78AAAAA////vwAAAAD//1TVAAD//////78AAP///////wAA/////1TVAAAAAAAA//8AAAAAAAD/vwAAAAAAAFTVAAD//wAA//8AAP//AAD//wAA//8AAFTV//8AAP///7///wAA////v///AAD//1TV/////////7///////////////////1TV//8AAAAA/////wAAAAD/v///AAAAAFTV/////wAA////////AAD///////8AAFTV/////wAA/39U1VTV//////9//79U1VTV/7//vwAA/39U1VTV/7//v/9//79U1VTV/////wAA/3+qKqoq//////9//7+qKqoq/7//vwAA/3+qKqoq/7//v/9//7+qKqoq")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_er4c7")
+shadow_mesh = SubResource("ArrayMesh_ssobq")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8kadb"]
 _surfaces = [{
@@ -78,7 +78,7 @@ cull_mode = 2
 albedo_color = Color(0.383332, 0.288198, 0.210642, 1)
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_kjsu8"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_uv8q2"]
 _surfaces = [{
 "aabb": AABB(-46.4287, -1, -1, 47.4287, 2, 2),
 "format": 34896613377,
@@ -108,7 +108,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("M/UAAP//isEz9QAA////vzP1AAD//4rOM/X//z2WisEz9f//PZb//zP1//89lhLfM/UAAAAAvvQz9QAAAAD/vzP1AAAAAMzMM/X//8FpvvQz9f//wWn//zP1///BaenV//8AAP//isH//wAA////v///AAD//8zM/////z2WisH/////PZb///////89lunV//8AAAAAvvT//wAAAAD/v///AAAAAIrO/////8FpvvT/////wWn////////BaRLfywoAAP//dD7LCgAA//8AAMsKAAD//yMjywr//z2WdD7LCv//PZb/P8sK//89ljIzywoAAAAAQAvLCgAAAAAAAMsKAAAAAOwgywr//8FpQAvLCv//wWn/P8sK///BaT4rAAAAAP//dD4AAAAA//8AAAAAAAD//+wgAAD//z2WdD4AAP//PZb/PwAA//89lj4rAAAAAAAAQAsAAAAAAAAAAAAAAAAAACMjAAD//8FpQAsAAP//wWn/PwAA///BaTIz0O0uEgAA/38WzPPZ0O0uEv9//7/q3wnQOLo4ugAA/38+yV/bOLo4uv9//78H1vrU0O0uEgAA/3/ANp8k0O0uEv9//7/3KQQrOLo4ugAA/3/oMwsmOLo4uv9//78UIPUv0O0uEv9//z9TItUu0O0uEv///3/ANp8kOLo4uv9//z8UIPUvOLo4uv///39fK1Aq0O0uEv9//z/q3wnQ0O0uEv///3+f1K7VOLo4uv9//z+r3SnROLo4uv///38+yV/b")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_kjsu8")
+shadow_mesh = SubResource("ArrayMesh_uv8q2")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5f0c5"]
 _surfaces = [{

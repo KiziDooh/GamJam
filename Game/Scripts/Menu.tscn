@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dat1iuv2mxiov"]
+[gd_scene load_steps=23 format=4 uid="uid://bve5ge5sg1lxp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yupmk"]
 sky_top_color = Color(0.603357, 0.658461, 0.997595, 1)
@@ -246,45 +246,6 @@ shadow_enabled = true
 
 [node name="Campfire area" type="Node" parent="."]
 
-[node name="stumpid3" parent="Campfire area"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.08965, 16.5568, 2.8141)
-script = null
-
-[node name="Log" parent="Campfire area"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(0.155465, 3.06144, 0.226311, -1.26376, 0.396939, -6.11734e-09, -0.0361203, -0.711291, 0.974055, 5.10624, 16.5568, -3.50389)
-script = null
-
-[node name="stumpid" parent="Campfire area"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00357, 16.6132, 1.28821)
-script = null
-
 [node name="Rock" type="MeshInstance3D" parent="Campfire area"]
 transform = Transform3D(0.749035, 0.355526, 0.167114, 0.0138163, -0.23449, 0.64149, 0.62244, -0.42263, -0.215341, 1.26055, 16.7493, -2.26066)
 mesh = SubResource("ArrayMesh_6p6im")
@@ -299,71 +260,6 @@ skeleton = NodePath("")
 transform = Transform3D(-0.710806, 0.375106, 0.192874, 0.0138163, -0.23449, 0.64149, 0.665763, 0.405351, 0.192611, 0.950853, 16.7493, -3.236)
 mesh = SubResource("ArrayMesh_6p6im")
 skeleton = NodePath("")
-
-[node name="campfire" parent="Campfire area"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.21905, 16.614, 0)
-script = null
-
-[node name="tree25" parent="Campfire area"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(1.67814, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -18.7486, 15.3393, -15.1078)
-script = null
-
-[node name="tree26" parent="Campfire area"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(1.67814, 0, 0, 0, 1.99644, 0, 0, 0, 1.15215, -1.01693, 15.4559, -17.5895)
-script = null
-
-[node name="stumpid5" parent="Campfire area"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 1, 5.20263, 16.4785, 5.74928)
-script = null
-
-[node name="tree27" parent="Campfire area"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(-0.576379, 0, 1.65027, 0, 1.99644, 0, -1.0334, 0, -0.395722, -15.8957, 15.4559, -0.578518)
-script = null
 
 [node name="Grass" type="CSGBox3D" parent="Campfire area"]
 transform = Transform3D(1.10855, 0, 0, 0, 1, 0, 0, 0, 0.694215, -3.06081, 16.0379, -8.59012)
