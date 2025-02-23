@@ -8,6 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if is_colliding():
+	#if is_colliding():
 		#get = get_collider()
-		print(get_collider().name)
+		#print(get_collider().name)
+	pass

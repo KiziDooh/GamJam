@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=4 uid="uid://bkeycdakvh2p"]
+[gd_scene load_steps=75 format=4 uid="uid://bkeycdakvh2p"]
 
 [ext_resource type="Shader" path="res://Game/Places/Glitch.gdshader" id="1_rmavb"]
 [ext_resource type="Script" path="res://Game/Places/day_time.gd" id="1_skhgv"]
@@ -25,9 +25,14 @@
 [ext_resource type="Script" path="res://Game/Scripts/audio_stream_player.gd" id="21_atjv5"]
 [ext_resource type="AudioStream" uid="uid://d5r4fw17qd6l" path="res://Game/Audio/pixelated (1).mp3" id="22_3c3sh"]
 [ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://Game/Audio/glitch-01-231255.mp3" id="22_gxbbx"]
+[ext_resource type="AudioStream" uid="uid://brkdmrsfj7s25" path="res://Game/Audio/FriendHey.mp3" id="22_nt7k7"]
 [ext_resource type="AudioStream" uid="uid://c48o2w0yel72c" path="res://Game/Audio/glitch-transition-sfx-182152.mp3" id="23_1carq"]
+[ext_resource type="AudioStream" uid="uid://c6o6d04ucku1m" path="res://Game/Audio/Lovely.mp3" id="23_t2tdb"]
+[ext_resource type="AudioStream" uid="uid://cvji220w7dbbs" path="res://Game/Audio/Moshmallows.mp3" id="24_4u4fa"]
 [ext_resource type="AudioStream" uid="uid://bck2jsgf586x6" path="res://Game/Audio/tv-glitch-6245.mp3" id="24_joa8b"]
 [ext_resource type="PackedScene" uid="uid://bxcwolnar5pyh" path="res://Game/Sprites/Scenes/bench.tscn" id="25_5bll1"]
+[ext_resource type="AudioStream" uid="uid://d11lpmluteee8" path="res://Game/Audio/YourBestestBuddy.mp3" id="25_h3fnt"]
+[ext_resource type="AudioStream" uid="uid://cynnp3dyah5ao" path="res://Game/Audio/ScawyStowies.mp3" id="26_2nhj7"]
 [ext_resource type="PackedScene" uid="uid://dq5jgidsk2le6" path="res://Game/Sprites/Scenes/flashlight.tscn" id="26_sup6f"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://Game/Sprites/Scenes/knife.tscn" id="27_1273f"]
 [ext_resource type="Script" path="res://Game/Scripts/groundknife.gd" id="28_cpvuk"]
@@ -302,6 +307,7 @@ character = NodePath("../../../Character/ProtoController")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="UI"]
+visible = false
 offset_left = 984.0
 offset_top = 15.0
 offset_right = 1134.0
@@ -703,6 +709,28 @@ shape = SubResource("SphereShape3D_athfl")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Bunnies/bunny"]
 stream = ExtResource("16_tjhgb")
 
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Bunnies/bunny"]
+transform = Transform3D(3.33334, 0, 0, 0, 3.33334, 0, 0, 0, 3.33333, 0, 0, 0)
+stream = ExtResource("22_nt7k7")
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="Bunnies/bunny"]
+stream = ExtResource("23_t2tdb")
+
+[node name="AudioStreamPlayer3D4" type="AudioStreamPlayer3D" parent="Bunnies/bunny"]
+transform = Transform3D(3.33334, 0, 0, 0, 3.33334, 0, 0, 0, 3.33333, 0, 0, 0)
+stream = ExtResource("24_4u4fa")
+
+[node name="AudioStreamPlayer3D5" type="AudioStreamPlayer3D" parent="Bunnies/bunny"]
+transform = Transform3D(3.33334, 0, 0, 0, 3.33334, 0, 0, 0, 3.33333, 0, 0, 0)
+stream = ExtResource("25_h3fnt")
+
+[node name="AudioStreamPlayer3D6" type="AudioStreamPlayer3D" parent="Bunnies/bunny"]
+stream = ExtResource("26_2nhj7")
+
+[node name="Timer" type="Timer" parent="Bunnies/bunny"]
+process_callback = 0
+one_shot = true
+
 [node name="mean bunny" parent="Bunnies" instance=ExtResource("19_pb8nh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02828, 4.96509, 26.4596)
 visible = false
@@ -723,7 +751,7 @@ environment = ExtResource("17_i1g0d")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource("22_3c3sh")
-volume_db = -0.18
+volume_db = -14.234
 pitch_scale = 0.95
 autoplay = true
 parameters/looping = true
@@ -1144,3 +1172,4 @@ render_target_update_mode = 0
 
 [connection signal="pressed" from="UI/Button" to="UI/Button" method="_on_pressed"]
 [connection signal="timeout" from="Bunnies/bunny/gilbert head/Timer" to="Bunnies/bunny/gilbert head" method="_on_timer_timeout"]
+[connection signal="timeout" from="Bunnies/bunny/Timer" to="Bunnies/bunny" method="_on_timer_timeout"]

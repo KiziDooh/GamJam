@@ -245,10 +245,10 @@ func _on_health_health_depleated():
 	print("You Died") # Replace with function body.
 	queue_free()
 	get_tree().change_scene_to_file("res://Game/Places/scarytime.tscn")
+	Global.yup = false
 func _process(delta):
 	Global.pz = position.z
 	Global.px = position.x
-	Global.py = rotation.y
 	
 	
 	
