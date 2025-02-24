@@ -4,6 +4,8 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	visible = false 
+	if Global.stick == true:
+		$"../../../UI/HBoxContainer/TextureRect3".texture = load("res://Game/UI/Images/InvStick.png")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
