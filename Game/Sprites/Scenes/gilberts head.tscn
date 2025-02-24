@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://b02utf4a25goe"]
+[gd_scene load_steps=24 format=4 uid="uid://vhjkn3kruvq1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7uam1"]
 resource_name = "bunny"
@@ -340,3 +340,14 @@ randomness = 0.34
 trail_lifetime = 0.01
 process_material = SubResource("ParticleProcessMaterial_qtcyv")
 draw_pass_1 = SubResource("SphereMesh_6lc5b")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.999761, -0.000429561, -0.0218805, 0, 0.999807, -0.0196284, 0.0218847, 0.0196237, 0.999568, 0.27746, 0.321741, 0.49909)
+light_color = Color(0.669961, 0.27944, 0.755194, 1)
+light_energy = 0.515
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 0.295
+light_specular = 0.0
+distance_fade_enabled = true
+omni_range = 4.79588

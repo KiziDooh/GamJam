@@ -6,6 +6,8 @@ func _ready():
 	Global.isnight = true
 	$"Anomlies/gilberts head".visible = false
 	$"Anomlies/gilberts head/GPUParticles3D2".amount = 0
+	if Global.restart == true:
+		Global.restart = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
