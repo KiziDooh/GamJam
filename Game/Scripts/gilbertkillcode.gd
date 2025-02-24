@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 			
 func _process(delta):
 	if Global.yup == true:
-		if ((Global.get.name == "Bunny") and Input.is_key_pressed(KEY_E)) and Global.knhold == true:
+		if ((Global.get.name == "Bunny") and Input.is_key_pressed(KEY_E)) and Global.knhold == true and Global.active == 1:
 			print("dead")
 			Global.gilbertded = true
 			$"../../Glitch Effect".visible = true
