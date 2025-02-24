@@ -22,3 +22,5 @@ var scount = 0
 var camp = false
 var die = false
 var whichstick = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
+var restart = false
+var Firetimer = 30

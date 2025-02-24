@@ -6,6 +6,11 @@ func _ready():
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Input.is_key_pressed(KEY_ENTER):
+		$MenuPlay/Timer.start()
+		Global.blackout = true
+		$"MenuPlay/Lights out".play()
+		
 	if Global.blackout == true:
 		#turns everything off
 		$MeshInstance3D.visible = false

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://8e8d4gjveujy" path="res://Game/Sprites/Scenes/EVIL GILBERT.tscn" id="2_vlhb0"]
 [ext_resource type="AudioStream" uid="uid://cpourql2k5krp" path="res://Game/Audio/Scream.mp3" id="3_qvfj5"]
 [ext_resource type="Script" path="res://Game/Scripts/scream.gd" id="4_rrmf6"]
-[ext_resource type="Material" path="res://Game/Material/scarytime.tres" id="5_ednl0"]
+[ext_resource type="Material" uid="uid://dhsvib7h51e7a" path="res://Game/Material/scarytime.tres" id="5_ednl0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_awymo"]
 shading_mode = 0
