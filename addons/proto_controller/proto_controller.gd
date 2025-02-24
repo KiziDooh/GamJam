@@ -76,12 +76,12 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
+	#if Global.gameover == false:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		capture_mouse()
 	if Input.is_key_pressed(KEY_ESCAPE):
 		release_mouse()
-	#if Global.die == true:
-		#release_mouse()
+
 		
 	# Look around
 	if mouse_captured and event is InputEventMouseMotion:

@@ -14,8 +14,6 @@ func _process(delta):
 	if Global.isnight == true:
 		if Global.die == true:
 			Global.gameover = false
-			#$GPUParticles3D.amount = 50
-			#$GPUParticles3D/OmniLight3D.light_energy = 3
 			timer = 6
 			Global.die = false
 		if timerstart == false:
