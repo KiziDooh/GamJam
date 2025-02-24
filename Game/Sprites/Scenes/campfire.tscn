@@ -929,8 +929,11 @@ process_material = SubResource("ParticleProcessMaterial_rd3w1")
 draw_pass_1 = SubResource("SphereMesh_4pkj5")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="GPUParticles3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.55392, 0)
 light_color = Color(0.807337, 0.382361, 0.0726899, 1)
-light_energy = 3.5
+light_energy = 3.603
+light_indirect_energy = 5.525
+omni_range = 6.38011
 
 [node name="CAMPFIRE" type="Area3D" parent="."]
 
