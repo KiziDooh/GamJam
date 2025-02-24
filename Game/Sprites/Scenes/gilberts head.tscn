@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://vhjkn3kruvq1"]
+[gd_scene load_steps=24 format=4 uid="uid://b02utf4a25goe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7uam1"]
 resource_name = "bunny"
