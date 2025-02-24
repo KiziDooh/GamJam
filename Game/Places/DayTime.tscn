@@ -792,6 +792,7 @@ transform = Transform3D(30, 0, -1.13687e-13, 0, 30, 1.42109e-13, 3.41061e-13, -1
 shape = SubResource("SphereShape3D_vdhnm")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Objects/knife"]
+transform = Transform3D(-0.279052, 0.288537, -0.915903, -0.959291, -0.126975, 0.25227, -0.0435079, 0.949012, 0.312224, -0.35199, 3.25181, 0)
 material_override = SubResource("StandardMaterial3D_qlgm8")
 amount = 20
 speed_scale = 0.2
