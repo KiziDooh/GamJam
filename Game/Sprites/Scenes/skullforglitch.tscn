@@ -174,3 +174,14 @@ skeleton = NodePath("")
 [node name="Monotone eye wholes_002" type="MeshInstance3D" parent="Monotone Brain Holder_006"]
 mesh = SubResource("ArrayMesh_jhubv")
 skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.999761, -0.000429561, -0.0218805, 0, 0.999807, -0.0196284, 0.0218847, 0.0196237, 0.999568, 0.27746, -0.207576, 0.311208)
+light_color = Color(0.669961, 0.27944, 0.755194, 1)
+light_energy = 0.515
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 0.295
+light_specular = 0.0
+distance_fade_enabled = true
+omni_range = 3.27093

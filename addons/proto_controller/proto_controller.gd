@@ -526,7 +526,7 @@ func _process(delta):
 			Global.scount += 1
 			Global.hold = false
 			Global.camp = false
-			Global.Firetimer = 20
+			Global.Firetimer = Global.Firetimer + 30
 			
 		
 		if Global.acount == 0:

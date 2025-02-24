@@ -53,3 +53,14 @@ transform = Transform3D(0.128019, -0.000237342, -0.00304982, -0.00175359, 0.4241
 material_override = ExtResource("1_5kcyn")
 mesh = SubResource("ArrayMesh_0f3k7")
 skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.999761, -0.000429561, -0.0218805, 0, 0.999807, -0.0196284, 0.0218847, 0.0196237, 0.999568, 0.27746, 2.87221, 0.311208)
+light_color = Color(0.735486, 0.346761, 0.234936, 1)
+light_energy = 0.515
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 0.295
+light_specular = 0.0
+distance_fade_enabled = true
+omni_range = 2.65424

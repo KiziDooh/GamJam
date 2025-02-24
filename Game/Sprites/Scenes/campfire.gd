@@ -13,21 +13,21 @@ func _process(delta):
 	if Global.isnight == true:
 		if Global.die == true:
 			Global.gameover = false
-			Global.Firetimer = 30
+			Global.Firetimer = 40
 			Global.die = false
 		if timerstart == false:
 			$Timer.start()
 			timerstart = true
 	#print(timer)
-	if Global.Firetimer > 25:
+	if Global.Firetimer > 30:
 		$GPUParticles3D.amount = 70
 		$GPUParticles3D/OmniLight3D.light_energy = 30
 		
-	if Global.Firetimer == 25:
+	if Global.Firetimer == 30:
 		$GPUParticles3D.amount = 60
 		$GPUParticles3D/OmniLight3D.light_energy = 25
 		
-	if Global.Firetimer == 20:
+	if Global.Firetimer == 25:
 		$GPUParticles3D.amount = 50
 		$GPUParticles3D/OmniLight3D.light_energy = 20
 		

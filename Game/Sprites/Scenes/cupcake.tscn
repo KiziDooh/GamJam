@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cp1s5obgyu7j7"]
+[gd_scene load_steps=19 format=4 uid="uid://ytpuwcycsiym"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xj61p"]
 resource_name = "Material.002"
@@ -269,3 +269,14 @@ skeleton = NodePath("")
 transform = Transform3D(0.124871, 0, 0, 0, 0.124871, 0, 0, 0, 0.124871, -0.32837, 1.35413, -0.559775)
 mesh = SubResource("ArrayMesh_prqqg")
 skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.999761, -0.000429561, -0.0218805, 0, 0.999807, -0.0196284, 0.0218847, 0.0196237, 0.999568, 0.169102, 1.09373, 0.311208)
+light_color = Color(0.669961, 0.27944, 0.755194, 1)
+light_energy = 0.515
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 0.295
+light_specular = 0.0
+distance_fade_enabled = true
+omni_range = 1.90294
