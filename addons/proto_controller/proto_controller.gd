@@ -100,6 +100,12 @@ func _physics_process(delta: float) -> void:
 	
 	if get_tree().current_scene.name == "Dark Time":
 		$Counter.visible = true
+		Global.flashlight = true
+		Global.active = 2
+		$UI/HBoxContainer/TextureRect2.texture = load("res://Game/UI/Images/InvFlash.png")
+		if Global.stick == true:
+			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
+			
 	if Global.flashlight == true and Global.active == 2:	
 		if Input.is_key_pressed(KEY_F) and $Head/Camera3D/SpotLight3D.visible == true:
 			if cooldown <= 0:
