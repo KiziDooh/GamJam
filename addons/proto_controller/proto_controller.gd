@@ -263,48 +263,57 @@ func _process(delta):
 			Global.Anomlies[0] = true
 			Global.hold = true
 			Global.active = 3
+			Global.camp = true
 		if (Global.get.name == "Anamlee2") and Input.is_key_pressed(KEY_E) and Global.Anomlies[1] == false and Global.hold == false and Global.stick == false:
 			$"Head/Camera3D/toy car".visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[1] = true
 			Global.hold = true
 			Global.active = 3
+			Global.camp = true
 		if (Global.get.name == "Anamlee3") and Input.is_key_pressed(KEY_E) and Global.Anomlies[2] == false and Global.hold == false and Global.stick == false:
 			$"Head/Camera3D/gilberts head".visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[2] = true
 			Global.hold = true
 			Global.active = 3
+			Global.camp = true
 		if (Global.get.name == "Anamlee4") and Input.is_key_pressed(KEY_E) and Global.Anomlies[3] == false and Global.hold == false and Global.stick == false:
 			$Head/Camera3D/ducky.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[3] = true
 			Global.hold = true
 			Global.active = 3
+			Global.camp = true
 		if (Global.get.name == "Anamlee5") and Input.is_key_pressed(KEY_E) and Global.Anomlies[4] == false and Global.hold == false and Global.stick == false:
 			$Head/Camera3D/cupcake.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[4] = true
 			Global.hold = true
 			Global.active = 3
+			Global.camp = true
 		if (Global.get.name == "Anamlee6") and Input.is_key_pressed(KEY_E) and Global.Anomlies[5] == false and Global.hold == false and Global.stick == false:
 			$Head/Camera3D/sinige.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[5] = true
 			Global.hold = true
 			Global.active = 3
+			Global.camp = true
 		if (Global.get.name == "Anamlee7") and Input.is_key_pressed(KEY_E) and Global.Anomlies[6] == false and Global.hold == false and Global.stick == false:
 			$"Head/Camera3D/8ballin".visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[6] = true
 			Global.hold = true
 			Global.active = 3
+			Global.camp = true
 		if (Global.get.name == "Anamlee8") and Input.is_key_pressed(KEY_E) and Global.Anomlies[7] == false and Global.hold == false and Global.stick == false:
 			$Head/Camera3D/skullforglitch.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvAnamoly.png")
 			Global.Anomlies[7] = true
 			Global.hold = true
 			Global.active = 3
+			Global.camp = true
+
 			
 		if (Global.get.name == "sx") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
@@ -313,7 +322,7 @@ func _process(delta):
 			Global.whichstick[0] = true
 			Global.active = 3
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s1") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -321,7 +330,7 @@ func _process(delta):
 			Global.whichstick[1] = true
 			Global.active = 3
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s2") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -329,7 +338,7 @@ func _process(delta):
 			Global.whichstick[2] = true
 			Global.active = 3
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s3") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -337,7 +346,7 @@ func _process(delta):
 			Global.whichstick[3] = true
 			Global.active = 3
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s4") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -345,7 +354,7 @@ func _process(delta):
 			Global.whichstick[4] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s5") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -353,7 +362,7 @@ func _process(delta):
 			Global.whichstick[5] = true
 			Global.active = 3
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s6") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -361,7 +370,7 @@ func _process(delta):
 			Global.whichstick[6] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s7") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -369,7 +378,7 @@ func _process(delta):
 			Global.whichstick[7] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s8") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -377,7 +386,7 @@ func _process(delta):
 			Global.whichstick[8] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s9") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -385,7 +394,7 @@ func _process(delta):
 			Global.whichstick[9] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s10") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -393,7 +402,7 @@ func _process(delta):
 			Global.whichstick[10] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s11") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -401,7 +410,7 @@ func _process(delta):
 			Global.whichstick[11] = true
 			Global.active = 3
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s12") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -409,7 +418,7 @@ func _process(delta):
 			Global.whichstick[12] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s13") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -417,7 +426,7 @@ func _process(delta):
 			Global.whichstick[13] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s14") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -425,7 +434,7 @@ func _process(delta):
 			Global.whichstick[14] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s15") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -433,7 +442,7 @@ func _process(delta):
 			Global.whichstick[15] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s16") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -441,7 +450,7 @@ func _process(delta):
 			Global.whichstick[16] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s17") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -449,7 +458,7 @@ func _process(delta):
 			Global.whichstick[17] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 		if (Global.get.name == "s18") and Input.is_key_pressed(KEY_E) and Global.stick == false and Global.hold == false:
 			$Head/Camera3D/Stick.visible = true
 			$UI/HBoxContainer/TextureRect3.texture = load("res://Game/UI/Images/InvStick.png")
@@ -457,7 +466,7 @@ func _process(delta):
 			Global.whichstick[18] = true
 			Global.active = 3	
 			Global.hold = true
-			Global.camp = false
+			Global.camp = true
 				
 				
 		if (Global.get.name == "CAMPFIRE") and Input.is_key_pressed(KEY_E) and Global.Anomlies[0] == true:

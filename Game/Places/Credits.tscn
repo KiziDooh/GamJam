@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://bww0xjyosskv1" path="res://Game/Audio/the-path.mp3" id="6_h4v8m"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://Game/Sprites/Scenes/tree.tscn" id="7_l06c7"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="8_htjpd"]
-[ext_resource type="Material" path="res://Game/Material/Grass.tres" id="9_uy8l8"]
+[ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="9_uy8l8"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="14_0onvc"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="15_iy3fd"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="16_d77jr"]
