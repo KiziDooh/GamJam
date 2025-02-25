@@ -6,6 +6,7 @@ func _ready():
 	Global.isnight = true
 	$"Anomlies/gilberts head".visible = false
 	$"Anomlies/gilberts head/GPUParticles3D2".amount = 0
+	Global.flashlight = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -42,6 +43,7 @@ func _process(delta):
 	if Global.acount == 7 and Global.Anomlies[2] == false:
 		$"Anomlies/gilberts head".visible = true
 		$"Anomlies/toy car/GPUParticles3D".amount = 20
+		$"Bunnies/evil gilbert".visible = false
 	if Global.acount == 8:
 		get_tree().change_scene_to_file("res://Game/Places/Credits.tscn")
 		Global.yup = false

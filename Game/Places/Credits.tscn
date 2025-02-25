@@ -1,9 +1,8 @@
-[gd_scene load_steps=31 format=4 uid="uid://cmmwmaehw23nx"]
+[gd_scene load_steps=30 format=4 uid="uid://cmmwmaehw23nx"]
 
 [ext_resource type="Texture2D" uid="uid://dcn8p2n3bax33" path="res://Game/UI/Images/Credits.png" id="2_4wnle"]
 [ext_resource type="Texture2D" uid="uid://b8qkyn8wsp8e7" path="res://Game/UI/Images/PhoboName.png" id="2_txpg2"]
 [ext_resource type="Texture2D" uid="uid://clb4fqpiheebt" path="res://Game/UI/Images/Drnope999Name.png" id="3_bpq5e"]
-[ext_resource type="Script" path="res://Game/Scripts/audio_stream_player.gd" id="3_der7i"]
 [ext_resource type="Texture2D" uid="uid://ccpb33j4v7qyp" path="res://Game/UI/Images/KiziBName.png" id="4_p3ycy"]
 [ext_resource type="Environment" uid="uid://dsls6bios3ca0" path="res://Game/Material/Credits.tres" id="4_y4gkx"]
 [ext_resource type="PackedScene" uid="uid://by8y8guhping7" path="res://Game/Sprites/Scenes/stumpid.tscn" id="5_yu0f7"]
@@ -231,7 +230,6 @@ stream = ExtResource("6_h4v8m")
 volume_db = -6.701
 autoplay = true
 parameters/looping = true
-script = ExtResource("3_der7i")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("4_y4gkx")

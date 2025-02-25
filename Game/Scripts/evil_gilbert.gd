@@ -12,7 +12,7 @@ var chase = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Global.acount > 0:
+	if Global.acount > 0 and Global.acount < 8:
 		#print(Global.px)
 		#print(Global.pz)
 		#print(round(position.x))
