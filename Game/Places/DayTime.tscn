@@ -1,28 +1,28 @@
 [gd_scene load_steps=75 format=4 uid="uid://bkeycdakvh2p"]
 
-[ext_resource type="Shader" path="res://Game/Places/Glitch.gdshader" id="1_rmavb"]
-[ext_resource type="Script" path="res://Game/Places/day_time.gd" id="1_skhgv"]
+[ext_resource type="Shader" uid="uid://dqdpc3185s06q" path="res://Game/Places/Glitch.gdshader" id="1_rmavb"]
+[ext_resource type="Script" uid="uid://doxcyrwmu0e14" path="res://Game/Places/day_time.gd" id="1_skhgv"]
 [ext_resource type="Texture2D" uid="uid://b4usxgecf43rb" path="res://Game/UI/Images/Bar_Overset.png" id="1_wtwf7"]
 [ext_resource type="Texture2D" uid="uid://cnaaiiymttto7" path="res://Game/UI/Images/HealthBarFullFixed.png" id="2_85otl"]
-[ext_resource type="Script" path="res://Game/Scripts/Health_Bar.gd" id="3_rchk0"]
+[ext_resource type="Script" uid="uid://cb4isev81bc64" path="res://Game/Scripts/Health_Bar.gd" id="3_rchk0"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="4_baqm4"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://Game/Sprites/Scenes/tree.tscn" id="5_jma72"]
 [ext_resource type="PackedScene" uid="uid://xc776jhcg36a" path="res://Game/Sprites/Scenes/jankassflower.tscn" id="7_1wtfp"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="8_0t86d"]
 [ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="8_yuhbk"]
-[ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="9_wh530"]
+[ext_resource type="Shader" uid="uid://cj8sue15aektq" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="9_wh530"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="10_v3j5x"]
-[ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="11_7qs4o"]
+[ext_resource type="Script" uid="uid://bv6jptibrttpp" path="res://addons/simplegrasstextured/grass.gd" id="11_7qs4o"]
 [ext_resource type="Material" uid="uid://b5b301dsms5hp" path="res://Game/Material/WallText.tres" id="13_du0hv"]
 [ext_resource type="PackedScene" uid="uid://c7h80mskb4v0b" path="res://Game/Sprites/Scenes/bunny.tscn" id="14_6fyy3"]
-[ext_resource type="Script" path="res://Game/Scripts/gilbertkillcode.gd" id="15_2dafk"]
-[ext_resource type="Script" path="res://Game/Scripts/LilGilsBlood.gd" id="16_t0krm"]
+[ext_resource type="Script" uid="uid://d124td8jdv4ua" path="res://Game/Scripts/gilbertkillcode.gd" id="15_2dafk"]
+[ext_resource type="Script" uid="uid://bymoomkbwgagf" path="res://Game/Scripts/LilGilsBlood.gd" id="16_t0krm"]
 [ext_resource type="AudioStream" uid="uid://ckcgqpaca5ylu" path="res://Game/Audio/squeeze-toy-104733.mp3" id="16_tjhgb"]
 [ext_resource type="Environment" uid="uid://b4mfgh4gm7ux" path="res://Game/Material/DayTime.tres" id="17_i1g0d"]
 [ext_resource type="PackedScene" uid="uid://camjhqcqhwnq4" path="res://Game/Sprites/Scenes/gilbert head.tscn" id="17_x7v4m"]
-[ext_resource type="Script" path="res://Game/Scripts/gilbert_head.gd" id="18_amavu"]
+[ext_resource type="Script" uid="uid://l0acn14stvlu" path="res://Game/Scripts/gilbert_head.gd" id="18_amavu"]
 [ext_resource type="PackedScene" uid="uid://cun06movtekqn" path="res://Game/Sprites/Scenes/mean bunny.tscn" id="19_pb8nh"]
-[ext_resource type="Script" path="res://Game/Scripts/audio_stream_player.gd" id="21_atjv5"]
+[ext_resource type="Script" uid="uid://8o2hiqid6rw4" path="res://Game/Scripts/audio_stream_player.gd" id="21_atjv5"]
 [ext_resource type="AudioStream" uid="uid://d5r4fw17qd6l" path="res://Game/Audio/pixelated (1).mp3" id="22_3c3sh"]
 [ext_resource type="AudioStream" uid="uid://cw28unuiawi0s" path="res://Game/Audio/glitch-01-231255.mp3" id="22_gxbbx"]
 [ext_resource type="AudioStream" uid="uid://brkdmrsfj7s25" path="res://Game/Audio/FriendHey.mp3" id="22_nt7k7"]
@@ -35,13 +35,13 @@
 [ext_resource type="AudioStream" uid="uid://cynnp3dyah5ao" path="res://Game/Audio/ScawyStowies.mp3" id="26_2nhj7"]
 [ext_resource type="PackedScene" uid="uid://dq5jgidsk2le6" path="res://Game/Sprites/Scenes/flashlight.tscn" id="26_sup6f"]
 [ext_resource type="PackedScene" uid="uid://oexmwtld15jb" path="res://Game/Sprites/Scenes/knife.tscn" id="27_1273f"]
-[ext_resource type="Script" path="res://Game/Scripts/groundknife.gd" id="28_cpvuk"]
-[ext_resource type="Script" path="res://Game/Sprites/Scenes/flashlight.gd" id="29_0o0pj"]
+[ext_resource type="Script" uid="uid://baq2ym8h4ta5p" path="res://Game/Scripts/groundknife.gd" id="28_cpvuk"]
+[ext_resource type="Script" uid="uid://jv4gjd5a4xs2" path="res://Game/Sprites/Scenes/flashlight.gd" id="29_0o0pj"]
 [ext_resource type="PackedScene" uid="uid://by8y8guhping7" path="res://Game/Sprites/Scenes/stumpid.tscn" id="29_h10me"]
 [ext_resource type="Material" uid="uid://fajnspsc36qu" path="res://Game/Material/rockText.tres" id="30_dr5tw"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://Game/Sprites/Scenes/campfire.tscn" id="31_ygk44"]
 [ext_resource type="PackedScene" uid="uid://cla2lc84moemg" path="res://Game/Sprites/Scenes/stick.tscn" id="32_ed373"]
-[ext_resource type="Script" path="res://Game/Scripts/button1.gd" id="33_satn3"]
+[ext_resource type="Script" uid="uid://bkvfhbrt344vf" path="res://Game/Scripts/button1.gd" id="33_satn3"]
 [ext_resource type="Texture2D" uid="uid://ddu0w8e0vt6d5" path="res://Game/UI/Images/CANHAPPEN.png" id="36_0jw0a"]
 [ext_resource type="PackedScene" uid="uid://cu7j6m8smld4s" path="res://Game/Sprites/Scenes/rock.tscn" id="37_1vn4f"]
 [ext_resource type="PackedScene" uid="uid://ctjmmgphxp0rd" path="res://Game/Sprites/Scenes/cabin.tscn" id="37_7r244"]
@@ -54,6 +54,7 @@ resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("9_wh530")
 shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("10_v3j5x")
 shader_parameter/texture_frames = Vector2(1, 1)
 shader_parameter/light_mode = 1
 shader_parameter/alpha_scissor_threshold = 0.5
@@ -75,7 +76,6 @@ shader_parameter/grass_size_y = 1.0
 shader_parameter/interactive_mode = true
 shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
-shader_parameter/texture_albedo = ExtResource("10_v3j5x")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gs4rt"]
 _surfaces = [{
@@ -144,8 +144,7 @@ colors = PackedColorArray(0.231373, 1, 0.129412, 1, 1, 0, 1, 1)
 gradient = SubResource("Gradient_vqd26")
 
 [sub_resource type="Curve" id="Curve_wxujf"]
-min_value = -2.0
-max_value = 2.0
+_limits = [-2.0, 2.0, 0.0, 1.0]
 _data = [Vector2(0.0434783, -0.285714), 0.0, 0.0, 0, 0, Vector2(0.978261, 2), 0.0, 0.0, 0, 0]
 point_count = 2
 
@@ -677,7 +676,7 @@ script = ExtResource("15_2dafk")
 transform = Transform3D(0.998239, 0.0593418, 5.18782e-09, 0.0593418, -0.998239, -8.72688e-08, 0, 8.74228e-08, -1, 0.117977, -0.357627, -1.1717)
 visible = false
 gi_mode = 2
-gi_lightmap_scale = 2
+gi_lightmap_texel_scale = 4.0
 amount = 50
 amount_ratio = 0.8075
 lifetime = 0.76

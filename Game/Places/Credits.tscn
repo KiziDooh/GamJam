@@ -11,9 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://Game/Sprites/Scenes/tree.tscn" id="7_l06c7"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="8_htjpd"]
 [ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="9_uy8l8"]
-[ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="14_0onvc"]
+[ext_resource type="Shader" uid="uid://cj8sue15aektq" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="14_0onvc"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="15_iy3fd"]
-[ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="16_d77jr"]
+[ext_resource type="Script" uid="uid://bv6jptibrttpp" path="res://addons/simplegrasstextured/grass.gd" id="16_d77jr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
 resource_name = "Material.001"
@@ -145,6 +145,7 @@ resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("14_0onvc")
 shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("15_iy3fd")
 shader_parameter/texture_frames = Vector2(1, 1)
 shader_parameter/light_mode = 1
 shader_parameter/alpha_scissor_threshold = 0.5
@@ -166,7 +167,6 @@ shader_parameter/grass_size_y = 1.0
 shader_parameter/interactive_mode = true
 shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
-shader_parameter/texture_albedo = ExtResource("15_iy3fd")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_cvu61"]
 _surfaces = [{

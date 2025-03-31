@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=4 uid="uid://b4rhlybavji58"]
 
-[ext_resource type="Script" path="res://Game/Scripts/hitbox.gd" id="1_4n74f"]
+[ext_resource type="Script" uid="uid://beobi4c6q5vba" path="res://Game/Scripts/hitbox.gd" id="1_4n74f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_abexb"]
 size = Vector3(3.47852, 4.70605, 2.30566)
@@ -224,7 +224,7 @@ length = 0.875
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g2k8m"]
 _data = {
-"SphereAction": SubResource("Animation_oixi5")
+&"SphereAction": SubResource("Animation_oixi5")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m160f"]

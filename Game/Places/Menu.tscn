@@ -1,23 +1,23 @@
 [gd_scene load_steps=41 format=4 uid="uid://b7pn1qmy40c4s"]
 
-[ext_resource type="Script" path="res://Game/Scripts/menu.gd" id="1_78okm"]
+[ext_resource type="Script" uid="uid://bkljiuy6fwjlx" path="res://Game/Scripts/menu.gd" id="1_78okm"]
 [ext_resource type="AudioStream" uid="uid://cxhyvfub26kmd" path="res://Game/Audio/music box loop _5.mp3" id="2_drfpt"]
 [ext_resource type="Environment" uid="uid://b4mfgh4gm7ux" path="res://Game/Material/DayTime.tres" id="2_p8mk8"]
-[ext_resource type="Script" path="res://Game/Scripts/audio_stream_player.gd" id="3_uknjg"]
+[ext_resource type="Script" uid="uid://8o2hiqid6rw4" path="res://Game/Scripts/audio_stream_player.gd" id="3_uknjg"]
 [ext_resource type="PackedScene" uid="uid://by8y8guhping7" path="res://Game/Sprites/Scenes/stumpid.tscn" id="4_ws1ir"]
 [ext_resource type="PackedScene" uid="uid://we54u8qnqh5x" path="res://Game/Sprites/Scenes/campfire.tscn" id="5_q4i7a"]
 [ext_resource type="Material" uid="uid://fajnspsc36qu" path="res://Game/Material/rockText.tres" id="6_5l5p0"]
 [ext_resource type="PackedScene" uid="uid://jblrt5xq2up3" path="res://Game/Sprites/Scenes/tree.tscn" id="6_8e4ym"]
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="7_xev5h"]
 [ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="8_xgqm7"]
-[ext_resource type="Script" path="res://Game/Scripts/button.gd" id="8_y0cyv"]
-[ext_resource type="Script" path="res://Game/Scripts/timer.gd" id="9_4iqvv"]
+[ext_resource type="Script" uid="uid://bwwwxmwhag313" path="res://Game/Scripts/button.gd" id="8_y0cyv"]
+[ext_resource type="Script" uid="uid://c0nfhwsbwvwpu" path="res://Game/Scripts/timer.gd" id="9_4iqvv"]
 [ext_resource type="AudioStream" uid="uid://d8uh3ynagmy" path="res://Game/Audio/mixkit-hard-typewriter-click-1119.mp3" id="10_8bxra"]
-[ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="12_hj3fg"]
+[ext_resource type="Shader" uid="uid://cj8sue15aektq" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="12_hj3fg"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="13_mo5ao"]
-[ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="14_2wan2"]
+[ext_resource type="Script" uid="uid://bv6jptibrttpp" path="res://addons/simplegrasstextured/grass.gd" id="14_2wan2"]
 [ext_resource type="Texture2D" uid="uid://unsytq6gxn1u" path="res://Game/UI/Images/PlayButton.png" id="16_nx5sv"]
-[ext_resource type="Shader" path="res://Game/Places/Glitch.gdshader" id="18_k0bc3"]
+[ext_resource type="Shader" uid="uid://dqdpc3185s06q" path="res://Game/Places/Glitch.gdshader" id="18_k0bc3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
 resource_name = "Material.001"
@@ -229,6 +229,7 @@ resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("12_hj3fg")
 shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("13_mo5ao")
 shader_parameter/texture_frames = Vector2(1, 1)
 shader_parameter/light_mode = 1
 shader_parameter/alpha_scissor_threshold = 0.5
@@ -250,7 +251,6 @@ shader_parameter/grass_size_y = 1.0
 shader_parameter/interactive_mode = true
 shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
-shader_parameter/texture_albedo = ExtResource("13_mo5ao")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_cvu61"]
 _surfaces = [{

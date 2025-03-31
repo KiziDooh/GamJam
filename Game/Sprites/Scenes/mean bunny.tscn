@@ -1,6 +1,6 @@
 [gd_scene load_steps=49 format=4 uid="uid://cun06movtekqn"]
 
-[ext_resource type="Script" path="res://Game/Scripts/hitbox.gd" id="1_i3f15"]
+[ext_resource type="Script" uid="uid://beobi4c6q5vba" path="res://Game/Scripts/hitbox.gd" id="1_i3f15"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y1xax"]
 resource_name = "bunny"

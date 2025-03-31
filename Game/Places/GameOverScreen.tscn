@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=4 uid="uid://b5ejocpj6ewpf"]
 
-[ext_resource type="Script" path="res://Game/Places/game_over_screen.gd" id="1_dxkf8"]
+[ext_resource type="Script" uid="uid://bxh3wif5wiri8" path="res://Game/Places/game_over_screen.gd" id="1_dxkf8"]
 [ext_resource type="Material" uid="uid://bpuk32gy6xfpx" path="res://Game/Material/Grass.tres" id="1_idpjx"]
 [ext_resource type="Environment" uid="uid://dd47xvqg04in4" path="res://Game/Material/NightTime.tres" id="1_khpwj"]
 [ext_resource type="PackedScene" uid="uid://by8y8guhping7" path="res://Game/Sprites/Scenes/stumpid.tscn" id="2_bmfkk"]
@@ -9,11 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://ukba4smtygcu" path="res://Game/Sprites/Scenes/bigtree.tscn" id="5_md3eg"]
 [ext_resource type="AudioStream" uid="uid://cxhyvfub26kmd" path="res://Game/Audio/music box loop _5.mp3" id="7_c28nq"]
 [ext_resource type="Texture2D" uid="uid://x2rfcexhd17k" path="res://Game/UI/Images/RestartButton.png" id="7_mg2h0"]
-[ext_resource type="Script" path="res://Game/Scripts/RestartButton.gd" id="8_fqiut"]
+[ext_resource type="Script" uid="uid://d2f1oxx3hck7w" path="res://Game/Scripts/RestartButton.gd" id="8_fqiut"]
 [ext_resource type="PackedScene" uid="uid://cfqiun1xq1wgv" path="res://Game/Sprites/Scenes/game over.tscn" id="9_04eg6"]
-[ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="10_lyuiu"]
+[ext_resource type="Shader" uid="uid://cj8sue15aektq" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="10_lyuiu"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="11_07apa"]
-[ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="12_egycu"]
+[ext_resource type="Script" uid="uid://bv6jptibrttpp" path="res://addons/simplegrasstextured/grass.gd" id="12_egycu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
 resource_name = "Material.001"
@@ -165,6 +165,7 @@ resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("10_lyuiu")
 shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("11_07apa")
 shader_parameter/texture_frames = Vector2(1, 1)
 shader_parameter/light_mode = 1
 shader_parameter/alpha_scissor_threshold = 0.5
@@ -186,7 +187,6 @@ shader_parameter/grass_size_y = 1.0
 shader_parameter/interactive_mode = true
 shader_parameter/interactive_level_xz = 3.0
 shader_parameter/interactive_level_y = 0.3
-shader_parameter/texture_albedo = ExtResource("11_07apa")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_x4cnl"]
 _surfaces = [{
@@ -269,7 +269,7 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.21905, 16.614, 0)
 [node name="GPUParticles3D2" type="GPUParticles3D" parent="Campfire area/campfire"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.964088, 3.23046)
 gi_mode = 2
-gi_lightmap_scale = 2
+gi_lightmap_texel_scale = 4.0
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_oo2lj")
 draw_pass_1 = SubResource("SphereMesh_mm83c")
@@ -281,7 +281,7 @@ light_energy = 9.404
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Campfire area/campfire/GPUParticles3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.964088, -6.18925)
 gi_mode = 2
-gi_lightmap_scale = 2
+gi_lightmap_texel_scale = 4.0
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_oo2lj")
 draw_pass_1 = SubResource("SphereMesh_mm83c")
@@ -294,7 +294,7 @@ light_energy = 3.101
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Campfire area/campfire/GPUParticles3D2/GPUParticles3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75113, 0.964088, 0.518403)
 gi_mode = 2
-gi_lightmap_scale = 2
+gi_lightmap_texel_scale = 4.0
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_oo2lj")
 draw_pass_1 = SubResource("SphereMesh_mm83c")

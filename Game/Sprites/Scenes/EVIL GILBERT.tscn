@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=4 uid="uid://8e8d4gjveujy"]
 
-[ext_resource type="Script" path="res://Game/Scripts/hitbox.gd" id="1_3jxhc"]
+[ext_resource type="Script" uid="uid://beobi4c6q5vba" path="res://Game/Scripts/hitbox.gd" id="1_3jxhc"]
 [ext_resource type="Texture2D" uid="uid://b2a0uu8sbt42l" path="res://Game/Image/fluff.jpg" id="1_s2jr3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f555r"]
@@ -443,7 +443,7 @@ tracks/10/keys = PackedFloat32Array(0, 1, 0.88486, -0.206663, -0.0442042, 0.4151
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yleq1"]
 _data = {
-"ArmatureAction": SubResource("Animation_vu8ue")
+&"ArmatureAction": SubResource("Animation_vu8ue")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nklb2"]

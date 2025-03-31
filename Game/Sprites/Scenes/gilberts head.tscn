@@ -329,7 +329,7 @@ skeleton = NodePath("")
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.998238, 0.0593417, -8.74228e-08, 0.0593417, -0.998238, -8.72686e-08, -9.24474e-08, 8.1927e-08, -1, 0.0213867, -1.0169, -0.0328182)
 gi_mode = 2
-gi_lightmap_scale = 2
+gi_lightmap_texel_scale = 4.0
 amount = 50
 amount_ratio = 0.8075
 lifetime = 0.76

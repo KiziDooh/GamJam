@@ -1,7 +1,7 @@
 [gd_scene load_steps=58 format=4 uid="uid://we54u8qnqh5x"]
 
 [ext_resource type="Material" uid="uid://fajnspsc36qu" path="res://Game/Material/rockText.tres" id="1_caclm"]
-[ext_resource type="Script" path="res://Game/Sprites/Scenes/campfire.gd" id="1_n4h0u"]
+[ext_resource type="Script" uid="uid://c2gdmat0272da" path="res://Game/Sprites/Scenes/campfire.gd" id="1_n4h0u"]
 [ext_resource type="Material" uid="uid://sn11sbkwad3n" path="res://Game/Material/stumpidtext.tres" id="2_pc7mc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwjiw"]
@@ -923,7 +923,7 @@ skeleton = NodePath("")
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.964087, 0)
 gi_mode = 2
-gi_lightmap_scale = 2
+gi_lightmap_texel_scale = 4.0
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_rd3w1")
 draw_pass_1 = SubResource("SphereMesh_4pkj5")
